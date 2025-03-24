@@ -2,7 +2,7 @@
 
 A curated collection of open source tools and resources developed through the collaboration between [Open Culture Foundation (OCF)](https://ocf.tw/en/) and [Worcester Polytechnic Institute (WPI)](https://www.wpi.edu/).
 
-[![GitHub stars](https://img.shields.io/github/stars/OCF-WPI/open-source-tools.svg?style=social&label=Star&maxAge=2592000)](https://github.com/OCF-WPI/open-source-tools/stargazers/)
+[![GitHub stars](https://img.shields.io/github/stars/adequatej/open-source-tools.svg?style=social&label=Star&maxAge=2592000)](https://github.com/adequatej/open-source-tools/stargazers/)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
