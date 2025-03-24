@@ -1,6 +1,6 @@
 name: New Tool Submission
 description: Submit a new open source tool for evaluation
-title: "[New Tool]: "
+title: "[New Tool]: Tool Name - Category"
 labels: ["new-tool", "needs-review"]
 assignees: []
 body:
