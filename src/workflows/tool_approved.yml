@@ -1,0 +1,3 @@
+# GitHub Actions workflow that handles the automation process when a tool is approved.
+# This workflow is triggered when a tool submission is approved and handles the necessary
+# updates to the repository, such as updating the tools list and documentation.

@@ -1,0 +1,3 @@
+# GitHub Actions workflow that automatically updates the README.md file.
+# This workflow runs periodically or when triggered by changes to keep the tools list,
+# statistics, and other dynamic content in the README up to date.

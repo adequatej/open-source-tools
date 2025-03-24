@@ -1,0 +1,29 @@
+# Just a basic .gitignore for now
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+secrets.json
+credentials.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
