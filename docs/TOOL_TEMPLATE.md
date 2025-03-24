@@ -1,0 +1,1 @@
+# Template for a tool's documentation
