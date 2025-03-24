@@ -28,6 +28,7 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 - [Contributing Guidelines](CONTRIBUTING.md)
 - [Tool Submission Process](#tool-submission-process)
 - [Tools List](#tools-list)
+- [Scripts README](.github/README-scripts.md)
 
 Stay informed about new tools and updates by subscribing to our mailing list:
 - 📫 [Subscribe to Updates](https://example.com/subscribe) <!-- for if we want to add a mailing list for 

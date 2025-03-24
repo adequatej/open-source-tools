@@ -99,6 +99,7 @@ Thank you for your interest in contributing to our open source tools collection!
    - Make requested revisions
    - Tool is added to the list upon approval
 
+
 Note: This is an iterative process focused on thorough evaluation and documentation. The goal is to provide 
 comprehensive, reliable information about each tool's usability, security, and effectiveness for both 
 technical and non-technical users.
@@ -127,6 +128,24 @@ technical and non-technical users.
    - OCF/WPI team approval
    - Automatic integration
    - README update
+
+## New tool approval
+For a more in-depth perspective on how our automation and approval process works, look [here](.github/README-scripts.md).
+
+### When issue is labeled "approved":
+1. GitHub Action triggers
+2. Script reads issue form data
+3. Extracts tool information
+4. Updates tool listing
+5. Generates documentation
+6. Commits changes
+7. Closes issue
+
+General:
+You'll need a GitHub Action workflow that:
+Triggers when a label is added to an issue
+Checks if the label is "approved"
+If approved, processes the issue form data.
 
 ## Style Guidelines
 
