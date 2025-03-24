@@ -16,61 +16,108 @@ Worcester Polytechnic Institute (WPI) is a technological university known for it
 
 ## About WPI's collaboration with OCF
 
-This collaboration between WPI and OCF represents a unique partnership aimed at fostering open source development while providing valuable real-world experience to students. Through this initiative, WPI students survey, test, develop, and maintain a list of open source tools that benefit the broader technology community. 
+This collaboration between WPI and OCF represents a unique partnership aimed at fostering open source development while providing valuable real-world experience to students. Through this initiative, WPI students survey, test, develop, and maintain a list of open source tools that benefit the broader technology community, with a focus on:
 
-## Using this repo
-
-This repository serves as a central hub for discovering and accessing open source tools developed through the WPI-OCF collaboration. Each tool is thoroughly documented and maintained, making it easy for users to find and implement solutions for their needs.
+- Evaluating usability for both technical and non-technical users
+- Assessing security and privacy implications
+- Testing deployment and maintenance requirements
+- Providing comprehensive documentation and guides
+- Suggesting alternatives when appropriate
 
 ### Quick Links
 - [Contributing Guidelines](CONTRIBUTING.md)
 - [Tool Submission Process](#tool-submission-process)
 - [Tools List](#tools-list)
 
-## Subscribe for email updates!
-
 Stay informed about new tools and updates by subscribing to our mailing list:
-- 📫 [Subscribe to Updates](https://example.com/subscribe) <!-- for if we want to add a mailing list for subscriptions later -->
-
-## Documentation
-
-Each tool in this repository includes:
-- Detailed installation instructions
-- Usage examples
-- API documentation (where applicable)
-- Contribution guidelines
-- Licensing information
+- 📫 [Subscribe to Updates](https://example.com/subscribe) <!-- for if we want to add a mailing list for 
+subscriptions later -->
 
 ## Tools List
 
 ### Legend
-🌟 - Featured Tool
-⭐ - Highly Rated
-🆕 - Recently Added
-🔧 - Utility
-📊 - Data Analysis
-🤖 - AI/ML
-🔒 - Security
-🌐 - Web Tool
-<!-- add more as we categorize tools -->
+- 🌟 Featured Tool
+- ⭐ Highly Rated
+- 🆕 Recently Added
+- 🔧 Utility
+- 📊 Data Analysis
+- 🤖 AI/ML
+- 🔒 Security
+- 🌐 Web Tool
+- 📱 Mobile App
+- 🔍 Privacy
+- 🤝 Collaboration
 
-### Tools
+### Evaluated Tools
 
 <!-- BEGIN TOOLS -->
-<!-- Tools will be automatically populated here by the update_readme.yml workflow -->
+| Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
+|----------|-----------|-------------|---------|------------|-----------------|---------------|
+| 🔒 Privacy | Privacy Badger | Browser extension for blocking trackers | Active | Browser Extension | Beginner | [Details](tools/privacy/privacy-badger.md) |
 <!-- END TOOLS -->
+
+## Tool Evaluation Process
+
+Each tool in our repository undergoes a thorough evaluation process:
+
+1. **Initial Assessment**
+   - Documentation review
+   - Installation requirements
+   - Dependencies analysis
+   - Deployment options
+
+2. **Technical Testing**
+   - Functionality verification
+   - Performance testing
+   - Security assessment
+   - Scalability evaluation
+
+3. **User Experience Testing**
+   - Non-technical user perspective
+   - Interface evaluation
+   - Documentation clarity
+   - Setup complexity
+
+4. **Deployment Testing**
+   - Local installation
+   - Cloud deployment (if applicable)
+   - Configuration requirements
+   - Maintenance needs
+
+## Documentation Structure
+
+Each tool in our repository includes detailed documentation covering:
+
+1. **Overview**
+   - Tool purpose and features
+   - Use cases and benefits
+   - Target audience
+
+2. **Technical Details**
+   - System requirements
+   - Dependencies
+   - Installation guides
+   - Configuration options
+
+3. **User Guides**
+   - Step-by-step setup
+   - Basic usage
+   - Advanced features
+   - Troubleshooting
+
+4. **Evaluation Results**
+   - Performance metrics
+   - Security assessment
+   - Usability findings
+   - Recommended alternatives
 
 ## Contributing
 
-We welcome contributions from the community! Whether you're a WPI student, OCF member, or an open source enthusiast, there are many ways to contribute:
-
-1. Submit new tools
-2. Improve existing tools
-3. Update documentation
-4. Report bugs
-5. Suggest enhancements
-
-Please read our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on how to contribute.
+We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for:
+- Tool submission process
+- Documentation requirements
+- Testing guidelines
+- Review process
 
 ## License
 
