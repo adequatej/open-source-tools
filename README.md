@@ -8,15 +8,15 @@ A curated collection of open source tools and resources developed through the co
 
 ## About OCF
 
-The Open Source Collective Foundation (OCF) is a non-profit organization dedicated to supporting and advancing open source software development, assessibility, security, and privacy. 
+The Open Source Collective Foundation (OCF) is a non-profit organization dedicated to supporting and advancing open source software development, assessibility, security, and privacy.
 
 ## About WPI
 
-Worcester Polytechnic Institute (WPI) is a technological university known for its innovative project-based curriculum and commitment to applying technology for social good. WPI's motto "Theory and Practice" reflects its dedication to combining academic excellence with practical application.
+Worcester Polytechnic Institute (WPI) is a technological university known for its innovative project-based curriculum and commitment to applying technology for social good. WPI's motto "Theory and Practice" reflects its dedication to combining academic excellence with practical application. 
 
 ## About WPI's collaboration with OCF
 
-This collaboration between WPI and OCF represents a unique partnership aimed at fostering open source development while providing valuable real-world experience to students. Through this initiative, WPI students survey, test, develop, and maintain a list of open source tools that benefit the broader technology community, with a focus on:
+This collaboration between WPI and OCF represents a unique partnership aimed at fostering open source development, accessibility, privacy, and security for Civil Society Organizations in East Asia. Through this initiative, WPI students survey, test, develop, and maintain a list of open source tools that benefit the broader technology community, with a focus on:
 
 - Evaluating usability for both technical and non-technical users
 - Assessing security and privacy implications
