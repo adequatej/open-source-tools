@@ -56,29 +56,57 @@ Thank you for your interest in contributing to our open source tools collection!
 
 ## Submission Process
 
-1. **Fork and Clone**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/open-source-tools.git
-   cd open-source-tools
-   ```
+1. **Initial Submission**
+   - Create a new issue using the "New Tool Submission" template
+   - Provide basic tool information (name, URL, category)
+   - Describe deployment method and requirements
+   - Explain target users and use cases
 
-2. **Create a Branch**
-   ```bash
-   git checkout -b tool/your-tool-name
-   ```
+2. **Initial Review**
+   - OCF/WPI team reviews the submission
+   - Assess if tool meets basic criteria:
+     - Open source
+     - Active maintenance
+     - Clear documentation
+     - Appropriate license
+   - Determine if tool warrants full evaluation
+   cases
 
-3. **Add Tool Information**
-   - Copy `.github/TOOL_TEMPLATE.md`
-   - Fill in all required information
-   - Add to appropriate category
+3. **Evaluation Phase**
+   - Install and test the tool
+   - Document installation process
+   - Test with both technical and non-technical users
+   - Assess security implications
+   - Evaluate accessibility and usability
+   - Compare with similar tools
+   - Document any issues or limitations
 
-4. **Submit Pull Request**
-   - Push changes to your fork
-   - Create a pull request
-   - Fill in the PR template
-   - Wait for review
+4. **Documentation Creation**
+   - Create a new branch: `tools/your-tool-name`
+   - Add tool documentation in `docs/tools/$category$/tool-name.md`
+   - Include:
+     - Installation guide
+     - Usage instructions
+     - Test results
+     - Security assessment
+     - User feedback
+     - Screenshots/examples
+
+5. **Final Review & Integration**
+   - Submit pull request with documentation
+   - Team reviews documentation completeness
+   - Community feedback period
+   - Make requested revisions
+   - Tool is added to the list upon approval
+
+Note: This is an iterative process focused on thorough evaluation and documentation. The goal is to provide 
+comprehensive, reliable information about each tool's usability, security, and effectiveness for both 
+technical and non-technical users.
+
 
 ## Review Process
+
+*not a complete/comprehensive process yet, but will be refined as we test*
 
 1. **Initial Check**
    - All required information provided
@@ -115,9 +143,8 @@ Thank you for your interest in contributing to our open source tools collection!
 - Update timestamps when needed
 
 ## Need Help?
-
-- Check existing issues and discussions
-- Join our community chat
+- Check existing issues
+- Join our community chat (*coming soon*) 
 - Contact maintainers
 - Review existing submissions
 

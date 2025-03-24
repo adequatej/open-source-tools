@@ -1,0 +1,121 @@
+name: New Tool Submission
+description: Submit a new open source tool for evaluation
+title: "[New Tool]: "
+labels: ["new-tool", "needs-review"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to submit a tool for evaluation! Please fill out this form as completely as possible.
+  
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      description: What is the name of the tool?
+      placeholder: e.g., Privacy Badger
+    validations:
+      required: true
+
+  - type: input
+    id: tool-url
+    attributes:
+      label: Tool URL
+      description: Link to the tool's website or repository
+      placeholder: e.g., https://github.com/EFForg/privacybadger
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What category best fits this tool?
+      options:
+        - Privacy
+        - Security
+        - Communication
+        - Accessibility
+        - Utility
+        - Web Tool
+        - Mobile App
+        - AI/ML
+        - Data Analysis
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment Type
+      description: How is this tool deployed/installed?
+      multiple: true
+      options:
+        - Browser Extension
+        - Desktop Application
+        - Mobile App
+        - Web Application
+        - Command Line Tool
+        - Self-hosted Service
+        - Docker Container
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Briefly describe what the tool does and its main features
+      placeholder: This tool helps users to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-users
+    attributes:
+      label: Target Users
+      description: Who is this tool designed for? Consider both technical and non-technical users.
+      placeholder: |
+        - Technical Users: ...
+        - Non-technical Users: ...
+        - Use Cases: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing-status
+    attributes:
+      label: Testing Status
+      description: Have you tested this tool? What were your findings?
+      placeholder: |
+        - Installation tested: Yes/No
+        - Platforms tested: ...
+        - User testing completed: Yes/No
+        - Security review: ...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: evaluation-checklist
+    attributes:
+      label: Evaluation Checklist
+      description: Please check all that apply
+      options:
+        - label: I have tested this tool personally
+        - label: I have reviewed the tool's documentation
+        - label: I have checked the tool's license
+        - label: I have tested with non-technical users
+        - label: I have assessed security implications
+        - label: I have documented installation steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other relevant information about this tool
+      placeholder: Additional context, concerns, or notes...

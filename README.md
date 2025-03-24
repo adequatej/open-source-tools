@@ -33,6 +33,18 @@ Stay informed about new tools and updates by subscribing to our mailing list:
 - 📫 [Subscribe to Updates](https://example.com/subscribe) <!-- for if we want to add a mailing list for 
 subscriptions later -->
 
+## Tool Submission Process
+
+We welcome submissions of open source tools that can benefit both technical and non-technical users. The submission process involves:
+
+1. **Initial Submission** - Submit a tool using our issue template
+2. **Evaluation** - Tool is tested for usability, security, and effectiveness
+3. **Documentation** - Comprehensive documentation is created
+4. **Review** - Community feedback and team review
+5. **Integration** - Tool is added to our curated list
+
+For detailed submission guidelines, templates, and evaluation criteria, please see our [Contributing Guidelines](CONTRIBUTING.md).
+
 ## Tools List
 
 ### Legend
@@ -53,7 +65,7 @@ subscriptions later -->
 <!-- BEGIN TOOLS -->
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
-| 🔒 Privacy | Privacy Badger | Browser extension for blocking trackers | Active | Browser Extension | Beginner | [Details](tools/privacy/privacy-badger.md) |
+| 🔍 Privacy | Privacy Badger | Browser extension for blocking trackers | Active | Browser Extension | Beginner | [Details](docs/tools/privacy/privacy-badger.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
