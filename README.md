@@ -8,7 +8,7 @@ A curated collection of open source tools and resources developed through the co
 
 ## About OCF
 
-The Open Source Collective Foundation (OCF) is a non-profit organization dedicated to supporting and advancing open source software development, assessibility, security, and privacy.
+The Open Culture Foundation (OCF) is a non-profit organization dedicated to supporting and advancing open source software development, assessibility, security, and privacy.
 
 ## About WPI
 
