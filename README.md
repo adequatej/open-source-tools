@@ -124,6 +124,87 @@ Each tool in our repository includes detailed documentation covering:
    - Usability findings
    - Recommended alternatives
 
+## Tool Assessment Data Structure and Comparability Metrics
+Each tool will be assessed using the following structured data fields:
+
+
+## Data Structure
+| Field Name                  | Data Type  | Example Values |
+|-----------------------------|------------|----------------|
+| Tool Name                   | String     | "Tor Browser" |
+| Category                    | List     | "Secure Communication" |
+| Status                      | Boolean (Y/N)   | Y |
+| OS Compatibility            | List       | [Windows, macOS, Linux, Android, iOS] |
+| Installation Manual      | Boolean (Y/N) | Y |
+| User Documentation  | Boolean (Y/N) | Y |
+| Required Technical Knowledge  | String | No Experience Required / Beginner / Advanced |
+| Security Features | List | E2E, etc. |
+| Data Collection Practices   | List     | "AES-256, RSA-4096" |
+| Active Development     |  Boolean (Y/N) | Y |
+| Community Support     | String | Strong |
+| Last Update Date        | String | 11/2/24 |
+| License     | String | OSI |
+| Subscription needed     | Boolean (Y/N) | Y |
+| External Links    | String | URL |
+
+
+
+---
+
+
+### 2. Metrics for Comparability
+These five categories contribute to the overall tool assessment score. Each category has sub-metrics with assigned weights, and the category score is calculated as a weighted average of its sub-metrics.
+
+#### **1. Operational Functionality (Weight: 20%)**
+| Sub-Metric                      | Weight | Data Type | Example Value |
+|---------------------------------|--------|----------|--------------|
+| Offline Functionality | 30%    | Integer (1-5) | 3 |
+| Localization and Language Support       | 50%    | Integer (1-5) | 5 |
+| Mobile Accessibility   | 20%    | Integer (1-5) | 2 |
+
+#### **2. Usability for Non-Technical Users (Weight: 25%)**
+| Sub-Metric                      | Weight | Data Type | Example Value |
+|---------------------------------|--------|----------|--------------|
+| Ease of installation/deployment | 40%    | Integer (1-5) | 3 |
+| User onboarding experience      | 35%    | Integer (1-5) | 4 |
+| Technical experience required   | 25%    | Integer (1-5) | 2 |
+
+#### **3. Security & Privacy Strength (Weight: 30%)**
+| Sub-Metric                      | Weight | Data Type | Example Value |
+|---------------------------------|--------|----------|--------------|
+| Encryption standards            | 30%    | Integer (1-5) | 5 |
+| Resilience against known threats| 25%    | Integer (1-5) | 4 |
+| Compliance with security best practices | 20% | Integer (1-5) | 3 |
+| Data minimization               | 15%    | Integer (1-5) | 4 |
+| Privacy policy transparency     | 10%    | Integer (1-5) | 5 |
+
+#### **4. Maintenance & Sustainability (Weight: 15%)**
+| Sub-Metric                      | Weight | Data Type | Example Value |
+|---------------------------------|--------|----------|--------------|
+| Active development              | 50%    | Integer (1-5) | 5 |
+| Community support               | 30%    | Integer (1-5) | 3 |
+| Funding & sponsorship           | 20%    | Integer (1-5) | 2 |
+
+#### **5. Performance Efficiency (Weight: 10%)**
+| Sub-Metric                      | Weight | Data Type | Example Value |
+|---------------------------------|--------|----------|--------------|
+| CSO Function          | 50%    | Integer (1-5) | 4 |
+| Relevance    | 30%    | Integer (1-5) | 3 |
+| Effectiveness | 20% | Integer (1-5) | 2 |
+
+---
+
+### **Final Scoring Calculation**
+Each category is scored as a weighted average of its sub-metrics. The final tool score is then computed as a weighted sum of all five categories:
+
+
+$$
+\text{Final Score} = (0.20 \times \text{Relevance}) + (0.25 \times \text{Usability}) + (0.30 \times \text{Security}) + (0.15 \times \text{Maintenance}) + (0.10 \times \text{Performance})
+$$
+
+This system allows users to adjust weights dynamically on a webpage to find tools that match their specific needs.
+
+
 ## Contributing
 
 We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for:
