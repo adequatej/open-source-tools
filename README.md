@@ -1,4 +1,4 @@
-# OCF x WPI Open Source Tools
+# Open Source Tools
 
 A curated collection of open source tools and resources developed through the collaboration between [Open Culture Foundation (OCF)](https://ocf.tw/en/) and [Worcester Polytechnic Institute (WPI)](https://www.wpi.edu/).
 
@@ -29,10 +29,6 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 - [Tool Submission Process](#tool-submission-process)
 - [Tools List](#tools-list)
 - [Scripts README](.github/README-scripts.md)
-
-Stay informed about new tools and updates by subscribing to our mailing list:
-- 📫 [Subscribe to Updates](https://example.com/subscribe) <!-- for if we want to add a mailing list for 
-subscriptions later -->
 
 ## Tool Submission Process
 
