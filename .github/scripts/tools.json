@@ -40,5 +40,47 @@
         ],
         "additional_notes": "",
         "date_submitted": 1743885157
+    },
+    {
+        "id": "da3de111-e4a6-4c64-983b-55872c5ec076",
+        "date_updated": 1743887189,
+        "submitted_by": "testuser",
+        "tool_name": "CoolTool",
+        "tool_url": "https://cooltool3.com",
+        "category": "AI/ML",
+        "deployment": [
+            "Web Application",
+            "Docker Container"
+        ],
+        "description": "A cool AI tool",
+        "target_users": "Researchers and educators",
+        "testing_status": "Tested on Ubuntu, Docker",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation"
+        ],
+        "additional_notes": "",
+        "date_submitted": 1743887189
+    },
+    {
+        "id": "a39c88b6-6002-40eb-a018-d9c391390fa3",
+        "date_updated": 1743887198,
+        "submitted_by": "testuser",
+        "tool_name": "CoolTool",
+        "tool_url": "https://cooltool4.com",
+        "category": "AI/ML",
+        "deployment": [
+            "Web Application",
+            "Docker Container"
+        ],
+        "description": "A cool AI tool",
+        "target_users": "Researchers and educators",
+        "testing_status": "Tested on Ubuntu, Docker",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation"
+        ],
+        "additional_notes": "",
+        "date_submitted": 1743887198
     }
 ]
