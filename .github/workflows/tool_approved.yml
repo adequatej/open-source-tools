@@ -4,6 +4,7 @@ name: Process Tools
 on:
   issues:
     types: ["labeled"]
+  workflow_dispatch:
 
 concurrency: add_tool
 
