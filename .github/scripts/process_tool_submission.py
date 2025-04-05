@@ -15,44 +15,63 @@ def add_https_to_url(url):
 
 
 def parse_tool_body(body, is_edit, username):
-    lines = [line.strip("# ").strip() for line in re.split(r'[\n\r]+', body) if line.strip()]
+    sections = {}
+    current_section = None
+    checklist = []
+    additional_notes = []
+
+    for line in body.splitlines():
+        line = line.strip()
+        if line.startswith("### "):  # New section
+            current_section = line[4:].strip().lower()
+            sections[current_section] = []
+        elif current_section:
+            if line.startswith("- ["):
+                checklist.append(line)
+            else:
+                sections[current_section].append(line)
+
     data = {
         "id": str(uuid.uuid4()),
         "date_updated": int(datetime.now().timestamp()),
         "submitted_by": username
     }
 
-    try:
-        data["tool_name"] = lines[1]
-        data["tool_url"] = add_https_to_url(lines[3])
-        data["category"] = lines[5]
-        data["deployment"] = [d.strip() for d in lines[7].split(",")]
-        data["description"] = lines[9]
-        data["target_users"] = lines[11]
-        data["testing_status"] = lines[13]
+    def get_value(key):
+        return "\n".join(sections.get(key.lower(), [])).strip()
 
-        checklist_start = 15
-        checklist = []
-        while lines[checklist_start].startswith("- ["):
-            if "[x]" in lines[checklist_start].lower():
-                checklist.append(lines[checklist_start][6:].strip())
-            checklist_start += 1
-        data["evaluation_checklist"] = checklist
+    data["tool_name"] = get_value("Tool Name")
+    data["tool_url"] = add_https_to_url(get_value("Tool URL"))
+    data["category"] = get_value("Category")
+    data["deployment"] = [d.strip() for d in get_value("Deployment Type").split(",")]
+    data["description"] = get_value("Description")
+    data["target_users"] = get_value("Target Users")
+    data["testing_status"] = get_value("Testing Status")
 
-        data["additional_notes"] = "\n".join(lines[checklist_start:]) if checklist_start < len(lines) else ""
+    data["evaluation_checklist"] = [
+        re.sub(r"^- \[.\] ?", "", item).strip()
+        for item in checklist if "[x]" in item.lower()
+    ]
 
-        email_line = lines[checklist_start - 1].lower() if checklist_start - 1 < len(lines) else "no response"
-        if "no response" not in email_line:
-            util.setOutput("commit_email", email_line)
+    # Additional notes is usually the last section
+    if "additional notes" in sections:
+        data["additional_notes"] = get_value("Additional Notes")
+    else:
+        data["additional_notes"] = ""
+
+    # Guess email
+    last_lines = body.strip().splitlines()[-5:]
+    for line in last_lines:
+        if "@" in line and "." in line:
+            util.setOutput("commit_email", line.strip())
             util.setOutput("commit_username", username)
-        else:
-            util.setOutput("commit_email", "action@github.com")
-            util.setOutput("commit_username", "GitHub Action")
-
-    except IndexError as e:
-        util.fail(f"Error parsing submission: {e}")
+            break
+    else:
+        util.setOutput("commit_email", "action@github.com")
+        util.setOutput("commit_username", "GitHub Action")
 
     return data
+
 
 
 def get_commit_text(tool):
