@@ -1,0 +1,13 @@
+{
+  "issue": {
+    "body": "### Tool Name\n\nCoolTool\n\n### Tool URL\n\nhttps://cooltool.com\n\n### Category\n\nAI/ML\n\n### Deployment Type\n\nWeb Application, Docker Container\n\n### Description\n\nA cool AI tool\n\n### Target Users\n\nResearchers and educators\n\n### Testing Status\n\nTested on Ubuntu, Docker\n\n- [x] I have tested this tool personally\n- [x] I have reviewed the tool's documentation",
+    "user": {
+      "login": "testuser"
+    },
+    "labels": [
+      {
+        "name": "new-tool"
+      }
+    ]
+  }
+}
