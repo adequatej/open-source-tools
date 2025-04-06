@@ -103,5 +103,29 @@
         ],
         "additional_notes": "",
         "date_submitted": 1743932352
+    },
+    {
+        "id": "c48c7ee2-0494-430c-81b8-5bd4365d8539",
+        "date_updated": 1743936022,
+        "submitted_by": "shawnp221",
+        "tool_name": "Privacy Badger",
+        "tool_url": "https://www.tahr.org.tw/news/3214",
+        "category": "Privacy",
+        "deployment": [
+            "Desktop Application"
+        ],
+        "description": "...",
+        "target_users": "Users",
+        "testing_status": "Yes",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "additional_notes": "_No response_",
+        "date_submitted": 1743936022
     }
 ]

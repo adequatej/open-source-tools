@@ -67,6 +67,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | AI/ML | [CoolTool](https://cooltool3.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
 | AI/ML | [CoolTool](https://cooltool4.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
 | AI/ML | [CoolTool](https://cooltool5.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
+| Privacy | [Privacy Badger](https://www.tahr.org.tw/news/3214) | ... | Active | Desktop Application | Beginner | [Details](docs/tools/privacy/privacy-badger.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
