@@ -11,6 +11,10 @@ jobs:
     if: github.event.label.name == 'approved'
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Ensure the workflow can push changes
+      pull-requests: write  # Allow interacting with pull requests if required
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
