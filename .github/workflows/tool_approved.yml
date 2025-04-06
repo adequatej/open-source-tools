@@ -2,23 +2,23 @@ name: Process Tools
 
 on:
   issues:
-    types: ["labeled"]
+    types: [labeled]
   workflow_dispatch:
 
 concurrency: add_tool
 
 jobs:
   update-tools-json:
-    runs-on: ubuntu-latest
     if: github.event.label.name == 'approved'
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Debugging the event data
       - name: Debug Event Data
         run: |
+          echo "Event Path: $GITHUB_EVENT_PATH"
           cat $GITHUB_EVENT_PATH
 
       - name: Set up Python
@@ -30,7 +30,9 @@ jobs:
         id: python_script
         env:
           GITHUB_EVENT_PATH: ${{ github.event_path }}
-        run: python .github/scripts/process_tools_submission.py $GITHUB_EVENT_PATH
+        run: |
+          echo "Running script..."
+          python .github/scripts/process_tools_submission.py $GITHUB_EVENT_PATH
 
       - name: Commit Updated tools.json
         if: success()
@@ -38,7 +40,7 @@ jobs:
           git config --local user.email ${{ steps.python_script.outputs.commit_email }}
           git config --local user.name ${{ steps.python_script.outputs.commit_username }}
           git add .github/scripts/tools.json
-          git diff-index --quiet HEAD || (git commit -a -m "${{ steps.python_script.outputs.commit_message }}" --allow-empty)
+          git diff-index --quiet HEAD || git commit -m "${{ steps.python_script.outputs.commit_message }}" --allow-empty
 
       - name: Push Changes
         if: success()
@@ -47,14 +49,21 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: addingScripts
 
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh -y
+
       - name: Auto Close Issue
-        run: gh issue close --comment "Your tool submission was accepted and added to the tools list. Auto-closing issue." ${{ github.event.issue.number }}
         if: success()
+        run: |
+          gh issue close ${{ github.event.issue.number }} --comment "✅ Tool submission approved and added."
+
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Problem With Action
-        run: gh issue comment ${{ github.event.issue.number }} --body "There was an error with our GitHub action. Error - ${{ steps.python_script.outputs.error_message }}"
         if: failure()
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "❌ GitHub Action failed. Error: ${{ steps.python_script.outputs.error_message }}"
+
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

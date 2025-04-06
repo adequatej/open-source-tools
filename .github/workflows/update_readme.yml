@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/scripts/tools.json"
       - "README.md"
+    workflow_dispatch:  # Manual trigger option
 
 jobs:
   update-readme:
