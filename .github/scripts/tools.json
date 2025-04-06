@@ -127,5 +127,29 @@
         ],
         "additional_notes": "_No response_",
         "date_submitted": 1743936022
+    },
+    {
+        "id": "feed92c6-89d2-4b09-beee-157c3681ed2d",
+        "date_updated": 1743936203,
+        "submitted_by": "shawnp221",
+        "tool_name": "Signal",
+        "tool_url": "https://signal.org/",
+        "category": "Communication",
+        "deployment": [
+            "Desktop Application"
+        ],
+        "description": "Signal Test",
+        "target_users": "Everyone",
+        "testing_status": "Very secure",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "additional_notes": "_No response_",
+        "date_submitted": 1743936203
     }
 ]
