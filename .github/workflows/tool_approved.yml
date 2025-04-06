@@ -30,7 +30,7 @@ jobs:
         env:
           GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: |
-          python .github/scripts/process_tools_submission.py $GITHUB_EVENT_PATH
+          python .github/scripts/process_tool_submission.py $GITHUB_EVENT_PATH
 
       - name: execute update_readmes.py
         id: python_script_readme
