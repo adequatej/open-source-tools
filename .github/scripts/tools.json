@@ -105,14 +105,14 @@
         "date_submitted": 1743932352
     },
     {
-        "id": "46192af9-e2a0-4c7f-a044-43f94982c601",
-        "date_updated": 1743944951,
+        "id": "39da9edc-a99d-4733-ab1f-959cdcf441f0",
+        "date_updated": 1743945077,
         "submitted_by": "shawnp221",
         "tool_name": "Privacy Badger",
         "tool_url": "https://www.tahr.org.tw/news/3214",
         "category": "Privacy",
         "deployment": [
-            "Docker Container"
+            "Self-hosted Service"
         ],
         "description": "Test",
         "target_users": "Test",
