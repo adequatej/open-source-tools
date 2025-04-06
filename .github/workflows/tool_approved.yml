@@ -9,6 +9,7 @@ concurrency: add_tool
 permissions:
     contents: write  # Ensure the workflow can push changes
     pull-requests: write  # Allow interacting with pull requests if required
+    issues: write
 
 jobs:
   update-tools-json:
