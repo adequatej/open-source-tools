@@ -62,13 +62,6 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
-| AI/ML | [CoolTool](https://cooltool.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
-| AI/ML | [CoolTool](https://cooltool2.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
-| AI/ML | [CoolTool](https://cooltool3.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
-| AI/ML | [CoolTool](https://cooltool4.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
-| AI/ML | [CoolTool](https://cooltool5.com) | A cool AI tool | Active | Web Application, Docker Container | Beginner | [Details](docs/tools/ai/ml/cooltool.md) |
-| Privacy | [Privacy Badger](https://www.tahr.org.tw/news/3214) | Test | Active | Command Line Tool | Beginner | [Details](docs/tools/privacy/privacy-badger.md) |
-| Communication | [Signal Test](https://signal.org/) | ... | Active | Mobile App | Beginner | [Details](docs/tools/communication/signal-test.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
