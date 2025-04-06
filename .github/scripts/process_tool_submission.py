@@ -83,11 +83,15 @@ def main():
     with open(event_file_path) as f:
         event_data = json.load(f)
 
-    is_new = "new-tool" in [label["name"] for label in event_data["issue"]["labels"]]
-    is_edit = "edit-tool" in [label["name"] for label in event_data["issue"]["labels"]]
+    labels = [label["name"].lower() for label in event_data["issue"]["labels"]]
 
-    if not is_new and not is_edit:
-        util.fail("Only new-tool and edit-tool issues can be approved.")
+    is_new = "new-tool" in labels
+    is_edit = "edit-tool" in labels
+    is_approved = "approved" in labels
+
+    # Must have 'approved' AND either 'new-tool' or 'edit-tool'
+    if not is_approved or not (is_new or is_edit):
+        util.fail("Only approved new-tool or edit-tool issues can be processed.")
 
     issue_body = event_data["issue"]["body"]
     issue_user = event_data["issue"]["user"]["login"]
