@@ -42,5 +42,24 @@
         ],
         "additional_notes": "test",
         "date_submitted": 1743991842
+    },
+    {
+        "id": "9e12abaa-6266-4e9d-967a-249a99153c64",
+        "date_updated": 1743993000,
+        "submitted_by": "adequatej",
+        "tool_name": "test2",
+        "tool_url": "https://test2",
+        "category": "AI/ML",
+        "deployment": [
+            "Self-hosted Service"
+        ],
+        "description": "test2",
+        "target_users": "test2",
+        "testing_status": "test2",
+        "evaluation_checklist": [
+            "I have reviewed the tool's documentation"
+        ],
+        "additional_notes": "test2",
+        "date_submitted": 1743993000
     }
 ]
