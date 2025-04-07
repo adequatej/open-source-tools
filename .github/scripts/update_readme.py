@@ -1,6 +1,7 @@
 # Script for updating the README file with the approved tools
 import json
 import sys
+import os
 
 def update_readme():
     # Load the approved tools from the tools.json file
@@ -55,7 +56,15 @@ def update_readme():
         status = "Active"  # Assuming the tool is active upon approval
         deployment = ", ".join(tool.get("deployment", []))
         technical_level = "Beginner"  # Default level, can be modified based on tool's complexity
-        documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.lower().replace(' ', '-')}.md"
+        documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.replace(' ', '-')}.md"
+
+        if not os.path.exists(doc_file):
+            with open(doc_file, "w") as df:
+                df.write(f"# {tool_name}\n\n")
+                df.write(f"**Category**: {category}\n\n")
+                df.write(f"**Description**: {description}\n\n")
+                df.write("Documentation coming soon.\n")
+
 
         tools_section.append(f"| {category} | [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) |\n")
 
