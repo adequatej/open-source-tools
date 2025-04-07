@@ -17,7 +17,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Get full history for git diff
+          fetch-depth: 0
+          ref: main
+
+      - name: Configure Git
+        run: |
+          git config --global pull.rebase true
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Pull Latest Changes
+        run: git pull origin main
 
       - name: Debug Changes
         run: |
@@ -35,17 +45,9 @@ jobs:
           cd .github/scripts
           python update_readme.py
 
-      - name: Get Commit Info
-        id: commit_info
-        run: |
-          echo "commit_email=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_OUTPUT
-          echo "commit_username=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
-
       - name: Commit changes to README
         if: success()
         run: |
-          git config --local user.email "${{ steps.commit_info.outputs.commit_email }}"
-          git config --local user.name "${{ steps.commit_info.outputs.commit_username }}"
           git add README.md
           git diff-index --quiet HEAD || (git commit -a -m "Update README with approved tools" --allow-empty)
 
@@ -55,7 +57,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-          force: true  # Ensure the push happens
+          force: true
 
       - name: Problem With Action
         if: failure()

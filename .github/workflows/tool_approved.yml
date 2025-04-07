@@ -19,6 +19,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Configure Git
+        run: |
+          git config --global pull.rebase true
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Pull Latest Changes
+        run: git pull origin main
 
       - name: Debug Event Data
         run: |
@@ -40,8 +52,6 @@ jobs:
       - name: Commit Updated tools.json
         if: success()
         run: |
-          git config --local user.email ${{ steps.python_script.outputs.commit_email }}
-          git config --local user.name ${{ steps.python_script.outputs.commit_username }}
           git add .github/scripts/tools.json
           git diff-index --quiet HEAD || (git commit -a -m "${{ steps.python_script.outputs.commit_message }}" --allow-empty)
 
@@ -51,7 +61,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-          force: true  # Ensure the push happens
+          force: true
 
       - name: Auto Close Issue
         run: gh issue close --comment "Your contribution was accepted. Auto-closing issue" ${{ github.event.issue.number }}
