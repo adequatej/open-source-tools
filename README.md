@@ -63,6 +63,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
 | Communication | [Signal](https://signal.org/) | Example | Active | Mobile App | Beginner | [Details](docs/tools/communication/signal.md) |
+| Other | [Test](https://test) | test | Active | Web Application | Beginner | [Details](docs/tools/other/test.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
