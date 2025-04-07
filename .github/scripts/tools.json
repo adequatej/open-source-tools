@@ -1,0 +1,26 @@
+[
+    {
+        "id": "543fc1e1-1e9e-4ed7-813b-39cfe85c1e79",
+        "date_updated": 1743946627,
+        "submitted_by": "shawnp221",
+        "tool_name": "Signal",
+        "tool_url": "https://signal.org/",
+        "category": "Communication",
+        "deployment": [
+            "Mobile App"
+        ],
+        "description": "Example",
+        "target_users": "Example",
+        "testing_status": "Example",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "additional_notes": "_No response_",
+        "date_submitted": 1743946627
+    }
+]

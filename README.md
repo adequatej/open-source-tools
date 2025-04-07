@@ -62,7 +62,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
-| 🔍 Privacy | Privacy Badger | Browser extension for blocking trackers | Active | Browser Extension | Beginner | [Details](docs/tools/privacy/privacy-badger.md) |
+| Communication | [Signal](https://signal.org/) | Example | Active | Mobile App | Beginner | [Details](docs/tools/communication/signal.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
