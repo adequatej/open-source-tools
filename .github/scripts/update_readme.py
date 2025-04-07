@@ -55,7 +55,7 @@ def update_readme():
         description = tool.get("description", "No description available.")
         status = "Active"  # Assuming the tool is active upon approval
         deployment = ", ".join(tool.get("deployment", []))
-        technical_level = tool.get(technical-level, "Unknown Technical Level") # Default level, can be modified based on tool's complexity
+        technical_level = tool.get("technical-level", "Unknown Technical Level") # Default level, can be modified based on tool's complexity
         documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.replace(' ', '-')}.md"
 
         # Construct documentation path
