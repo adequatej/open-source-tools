@@ -1,6 +1,10 @@
 # Understanding Repository Automation
 
-This document explains how the automation in this repository works, particularly around tool submissions and README updates.
+This document explains how the automated processes work in this repository, including issue templates, GitHub Actions, and the tool approval workflow.
+
+## Overview
+
+The repository uses a combination of GitHub Issue Templates and GitHub Actions to automate the tool submission and approval process. 
 
 ## GitHub Issue Templates
 
