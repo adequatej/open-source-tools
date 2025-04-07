@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - ".github/scripts/tools.json"
+      - "tools.json"
   workflow_dispatch:  # Manual trigger option
 
 jobs:
@@ -14,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug Path Changes
+        run: |
+          echo "Changed files:"
+          git diff --name-only HEAD~1 HEAD
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
