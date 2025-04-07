@@ -7,45 +7,6 @@ from datetime import datetime
 import re
 import util  # assumes you have a `util.py` with `setOutput()` and `fail()` like in your internship script
 
-# Valid categories and deployment types
-VALID_CATEGORIES = {
-    "Privacy", "Security", "Communication", "Accessibility",
-    "Utility", "Web Tool", "Mobile App", "AI/ML", "Data Analysis", "Other"
-}
-
-VALID_DEPLOYMENT_TYPES = {
-    "Browser Extension", "Desktop Application", "Mobile App",
-    "Web Application", "Command Line Tool", "Self-hosted Service",
-    "Docker Container", "Other"
-}
-
-def validate_category(category):
-    if category not in VALID_CATEGORIES:
-        util.fail(f"Invalid category: {category}. Must be one of: {', '.join(VALID_CATEGORIES)}")
-
-def validate_deployment_types(deployment_types):
-    for dep_type in deployment_types:
-        if dep_type not in VALID_DEPLOYMENT_TYPES:
-            util.fail(f"Invalid deployment type: {dep_type}. Must be one of: {', '.join(VALID_DEPLOYMENT_TYPES)}")
-
-def validate_required_fields(data):
-    required_fields = {
-        "tool_name": "Tool Name",
-        "tool_url": "Tool URL",
-        "category": "Category",
-        "deployment": "Deployment Type",
-        "description": "Description",
-        "target_users": "Target Users",
-        "testing_status": "Testing Status"
-    }
-    
-    missing_fields = []
-    for field, display_name in required_fields.items():
-        if not data.get(field):
-            missing_fields.append(display_name)
-    
-    if missing_fields:
-        util.fail(f"Missing required fields: {', '.join(missing_fields)}")
 
 def add_https_to_url(url):
     if not url.startswith(("http://", "https://")):
@@ -86,11 +47,6 @@ def parse_tool_body(body, is_edit, username):
     data["description"] = get_value("Description")
     data["target_users"] = get_value("Target Users")
     data["testing_status"] = get_value("Testing Status")
-
-    # Validate the data
-    validate_required_fields(data)
-    validate_category(data["category"])
-    validate_deployment_types(data["deployment"])
 
     data["evaluation_checklist"] = [
         re.sub(r"^- \[.\] ?", "", item).strip()

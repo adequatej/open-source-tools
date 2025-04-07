@@ -2,24 +2,13 @@
 name: Update README with Approved Tools
 
 on:
-  # Trigger when tools.json is updated
   push:
     branches:
-      - main
+      - addingScripts
     paths:
       - ".github/scripts/tools.json"
-  
-  # Trigger when a tool is approved
-  repository_dispatch:
-    types: [tool_approved]
-  
-  # Manual trigger option
-  workflow_dispatch:
-    inputs:
-      reason:
-        description: 'Reason for manual trigger'
-        required: false
-        default: 'Manual update'
+      - "README.md"
+    workflow_dispatch:  # Manual trigger option
 
 jobs:
   update-readme:
@@ -27,60 +16,23 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: main
-
-      - name: Configure Git
-        run: |
-          git config --global pull.rebase true
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-
-      - name: Pull Latest Changes
-        run: git pull origin main
-
-      - name: Debug Repository State
-        run: |
-          echo "Current directory: $(pwd)"
-          echo "Repository contents:"
-          ls -la
-          echo "tools.json contents:"
-          cat .github/scripts/tools.json || echo "tools.json not found"
-          echo "Last commit changes:"
-          git diff --name-only HEAD~1 HEAD || echo "No previous commit"
-          echo "Event payload:"
-          echo "${{ toJson(github.event) }}"
-          echo "Changed files in this push:"
-          git diff --name-only ${{ github.event.before }} ${{ github.event.after }} || echo "No changes"
+        uses: actions/checkout@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.x'
 
       - name: Run the script to update README
-        id: update_readme
         run: |
           python .github/scripts/update_readme.py
 
       - name: Commit changes to README
-        if: success()
         run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
           git add README.md
-          git diff-index --quiet HEAD || (git commit -a -m "Update README with approved tools" --allow-empty)
-
-      - name: Push Changes
-        if: success()
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          force: true
-
-      - name: Problem With Action
-        if: failure()
-        run: |
-          echo "Error updating README. Please check the logs for details."
-          exit 1
+          git commit -m "Update README with approved tools"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
