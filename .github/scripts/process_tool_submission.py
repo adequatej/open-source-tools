@@ -44,6 +44,7 @@ def parse_tool_body(body, is_edit, username):
     data["tool_url"] = add_https_to_url(get_value("Tool URL"))
     data["category"] = get_value("Category")
     data["deployment"] = [d.strip() for d in get_value("Deployment Type").split(",")]
+    data["technical-level"] = get_value("Technical Level")
     data["description"] = get_value("Description")
     data["target_users"] = get_value("Target Users")
     data["testing_status"] = get_value("Testing Status")
