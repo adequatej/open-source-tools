@@ -4,10 +4,10 @@ This document explains how the automated processes work in this repository, incl
 
 ## Overview
 
-The repository uses a combination of GitHub Issue Templates and GitHub Actions to automate the tool submission and approval process. The automation is split into two main workflows:
+The repository uses a combination of GitHub Issue Templates and GitHub Actions to automate the tool submission and approval process. The automation is incorporated into one main workflow:
 
-1. **Tool Approval Workflow**: Handles the submission and approval of new tools
-2. **README Update Workflow**: Keeps the README synchronized with the tools list
+1. **Tool Approval and README Update Workflow**: Handles the submission and approval of new tools and updates the README file to synchronize with the tools list
+
 
 ## GitHub Issue Templates
 
