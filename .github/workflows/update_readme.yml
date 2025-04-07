@@ -6,6 +6,7 @@ on:
     branches:
       - main
     paths:
+      - ".github/scripts/tools.json"
       - "tools.json"
   workflow_dispatch:  # Manual trigger option
 
@@ -35,7 +36,9 @@ jobs:
           echo "Repository contents:"
           ls -la
           echo "tools.json contents:"
-          cat tools.json || echo "tools.json not found"
+          cat .github/scripts/tools.json || echo "tools.json not found"
+          echo "Last commit changes:"
+          git diff --name-only HEAD~1 HEAD || echo "No previous commit"
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -45,8 +48,7 @@ jobs:
       - name: Run the script to update README
         id: update_readme
         run: |
-          cd .github/scripts
-          python update_readme.py
+          python .github/scripts/update_readme.py
 
       - name: Commit changes to README
         if: success()

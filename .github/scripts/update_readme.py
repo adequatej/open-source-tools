@@ -4,9 +4,11 @@ import sys
 import os
 
 def update_readme():
-    # Get the absolute path to tools.json
+    # Get the absolute paths
     script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.dirname(os.path.dirname(script_dir))
     tools_json_path = os.path.join(script_dir, "tools.json")
+    readme_path = os.path.join(repo_root, "README.md")
     
     # Load the approved tools from the tools.json file
     try:
@@ -18,10 +20,10 @@ def update_readme():
     
     # Load the README.md file to update it
     try:
-        with open("README.md", "r") as f:
+        with open(readme_path, "r") as f:
             readme_content = f.readlines()
     except FileNotFoundError:
-        print("Error: README.md file not found.")
+        print(f"Error: README.md file not found at {readme_path}.")
         sys.exit(1)
 
     # Find the position where to insert the tools section in README.md
@@ -70,7 +72,7 @@ def update_readme():
     )
 
     # Write the updated content back to README.md
-    with open("README.md", "w") as f:
+    with open(readme_path, "w") as f:
         f.writelines(updated_readme_content)
 
     print("README.md updated successfully with the evaluated tools.")
