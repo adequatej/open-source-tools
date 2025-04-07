@@ -2,13 +2,24 @@
 name: Update README with Approved Tools
 
 on:
+  # Trigger when tools.json is updated
   push:
     branches:
       - main
     paths:
       - ".github/scripts/tools.json"
-      - "tools.json"
-  workflow_dispatch:  # Manual trigger option
+  
+  # Trigger when a tool is approved
+  repository_dispatch:
+    types: [tool_approved]
+  
+  # Manual trigger option
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual trigger'
+        required: false
+        default: 'Manual update'
 
 jobs:
   update-readme:
@@ -39,6 +50,10 @@ jobs:
           cat .github/scripts/tools.json || echo "tools.json not found"
           echo "Last commit changes:"
           git diff --name-only HEAD~1 HEAD || echo "No previous commit"
+          echo "Event payload:"
+          echo "${{ toJson(github.event) }}"
+          echo "Changed files in this push:"
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }} || echo "No changes"
 
       - name: Set up Python
         uses: actions/setup-python@v3
