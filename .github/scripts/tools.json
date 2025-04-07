@@ -1,7 +1,7 @@
 [
     {
-        "id": "543fc1e1-1e9e-4ed7-813b-39cfe85c1e79",
-        "date_updated": 1743946627,
+        "id": "f72b4764-cb5e-4f81-a5f8-31b6d9444fec",
+        "date_updated": 1744009725,
         "submitted_by": "shawnp221",
         "tool_name": "Signal",
         "tool_url": "https://signal.org/",
@@ -9,9 +9,9 @@
         "deployment": [
             "Mobile App"
         ],
-        "description": "Example",
-        "target_users": "Example",
-        "testing_status": "Example",
+        "description": "Description",
+        "target_users": "Target Users",
+        "testing_status": "Testing Status",
         "evaluation_checklist": [
             "I have tested this tool personally",
             "I have reviewed the tool's documentation",
