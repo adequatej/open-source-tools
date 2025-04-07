@@ -4,7 +4,10 @@ This document explains how the automated processes work in this repository, incl
 
 ## Overview
 
-The repository uses a combination of GitHub Issue Templates and GitHub Actions to automate the tool submission and approval process. This ensures consistent documentation and efficient handling of new tool submissions.
+The repository uses a combination of GitHub Issue Templates and GitHub Actions to automate the tool submission and approval process. The automation is split into two main workflows:
+
+1. **Tool Approval Workflow**: Handles the submission and approval of new tools
+2. **README Update Workflow**: Keeps the README synchronized with the tools list
 
 ## GitHub Issue Templates
 
@@ -28,17 +31,17 @@ Our repository uses standardized issue templates located in `.github/ISSUE_TEMPL
 
 ### 3. Approval Automation
 When a maintainer adds the `approved` label:
-- GitHub Action is triggered
+- Tool Approval workflow is triggered
 - Tool information is extracted from the issue
-- Documentation is generated
-- Tool is added to the listings
+- Tool is added to `tools.json`
 - Issue is automatically closed
+- README Update workflow is automatically triggered
 
 ## GitHub Actions
 
 ### Tool Approval Action (`tool_approved.yml`)
 
-This action handles the automation when a tool is approved:
+This action handles the initial tool approval process:
 
 **Trigger:**
 - Runs when a label is added to an issue
@@ -56,28 +59,23 @@ This action handles the automation when a tool is approved:
    - Check for duplicate tools
    - Update `tools.json` with new tool data
 
-3. **Documentation Update**
-   - Run `update_readme.py` to update README
-   - Format tools table
-   - Update tool listings
-
-4. **Repository Updates**
+3. **Repository Updates**
    - Commit changes with contributor attribution
    - Push updates to main branch
    - Close the issue with success message
 
-5. **Error Handling**
+4. **Error Handling**
    - If any step fails, post error to issue
    - Maintainers can review logs in Actions tab
    - Process can be manually retriggered
 
 ### README Update Action (`update_readme.yml`)
 
-This action keeps the README up to date with the latest tool information:
+This action keeps the README synchronized with the tools list:
 
 **Trigger:**
-- Runs when `tools.json` is updated
-- Can be manually triggered
+- Runs automatically when `tools.json` is updated
+- Can be manually triggered if needed
 
 **Process:**
 1. **Repository Setup**
@@ -116,35 +114,42 @@ This action keeps the README up to date with the latest tool information:
 ## Error Handling
 
 If the automation encounters any issues:
-1. The error message is posted as a comment on the issue
-2. The process stops at the failed step
-3. Maintainers can review logs in the Actions tab
-4. Process can be manually restarted after fixes
 
-## Contributing to the Scripts
+1. **Tool Approval Errors**
+   - Invalid form data
+   - Duplicate tool detection
+   - JSON parsing errors
+   - File access issues
 
-If you want to improve these automation scripts:
-1. Check the existing code in `.github/workflows/` and `.github/scripts/`
-2. Test changes in a development branch
-3. Submit a PR with detailed explanation of changes
-4. Include testing results and error handling considerations
+2. **README Update Errors**
+   - Missing tool data
+   - Formatting issues
+   - File access problems
+   - Merge conflicts
+
+3. **General Workflow Errors**
+   - GitHub API issues
+   - Permission problems
+   - Network connectivity
+   - Resource limitations
 
 ## Troubleshooting
 
 Common issues and solutions:
 
-1. **Action Fails to Trigger**
+1. **Tool Approval Issues**
    - Check if the issue has the correct labels
    - Verify the workflow file is in the correct location
    - Check GitHub Actions permissions
+   - Review form data format
 
-2. **README Not Updating**
+2. **README Update Issues**
    - Verify `tools.json` format
    - Check for merge conflicts
    - Ensure Python scripts have correct permissions
    - Check for file access issues
 
-3. **Documentation Not Generated**
+3. **Documentation Issues**
    - Check issue form data format
    - Verify template files exist
    - Review error logs in Actions tab
