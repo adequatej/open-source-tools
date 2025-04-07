@@ -1,7 +1,7 @@
 [
     {
-        "id": "f72b4764-cb5e-4f81-a5f8-31b6d9444fec",
-        "date_updated": 1744009725,
+        "id": "c55ef60e-8595-42e7-a03c-4f4c8489022d",
+        "date_updated": 1744009931,
         "submitted_by": "shawnp221",
         "tool_name": "Signal",
         "tool_url": "https://signal.org/",
@@ -21,7 +21,8 @@
             "I have documented installation steps"
         ],
         "additional_notes": "_No response_",
-        "date_submitted": 1743946627
+        "date_submitted": 1743946627,
+        "technical-level": "Medium"
     },
     {
         "id": "1adcfae0-7586-48e6-96a1-6943e5f03c96",

@@ -62,7 +62,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
-| Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Unknown Technical Level | [Details](docs/tools/communication/Signal.md) |
+| Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
 | Other | [Test](https://test) | test | Active | Web Application | Unknown Technical Level | [Details](docs/tools/other/Test.md) |
 | AI/ML | [test2](https://test2) | test2 | Active | Self-hosted Service | Unknown Technical Level | [Details](docs/tools/ai/ml/test2.md) |
 | Privacy | [test3](https://test3) | test3 | Active | Command Line Tool | Unknown Technical Level | [Details](docs/tools/privacy/test3.md) |
