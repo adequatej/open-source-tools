@@ -154,7 +154,7 @@ These five categories contribute to the overall tool assessment score. Each cate
 #### **1. Operational Functionality (Weight: 10%)**
 | Sub-Metric                       | Data Type | Example Value |
 |-----------------------------------------|----------|--------------|
-| Offline Functionality     | Integer (1-5) | 3 |
+| Functionality     | Integer (1-5) | 3 |
 | Localization and Language Support         | Integer (1-5) | 5 |
 | Mobile Accessibility      | Integer (1-5) | 2 |
 
