@@ -58,6 +58,13 @@ def update_readme():
         technical_level = "Beginner"  # Default level, can be modified based on tool's complexity
         documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.replace(' ', '-')}.md"
 
+        # Construct documentation path
+        doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
+        doc_file = f"{doc_dir}/{tool_name.replace(' ', '-')}.md"
+
+        # Ensure the directory exists
+        os.makedirs(doc_dir, exist_ok=True)
+
         if not os.path.exists(doc_file):
             with open(doc_file, "w") as df:
                 df.write(f"# {tool_name}\n\n")
