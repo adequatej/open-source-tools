@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - ".github/scripts/tools.json"
+      - "tools.json"
   workflow_dispatch:  # Manual trigger option
 
 jobs:
@@ -29,10 +29,13 @@ jobs:
       - name: Pull Latest Changes
         run: git pull origin main
 
-      - name: Debug Changes
+      - name: Debug Repository State
         run: |
-          echo "Changed files:"
-          git diff --name-only HEAD~1 HEAD || echo "No previous commit"
+          echo "Current directory: $(pwd)"
+          echo "Repository contents:"
+          ls -la
+          echo "tools.json contents:"
+          cat tools.json || echo "tools.json not found"
 
       - name: Set up Python
         uses: actions/setup-python@v3
