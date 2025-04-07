@@ -16,6 +16,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Get full history for git diff
+
+      - name: Debug Changes
+        run: |
+          echo "Changed files:"
+          git diff --name-only HEAD~1 HEAD || echo "No previous commit"
 
       - name: Set up Python
         uses: actions/setup-python@v3
@@ -25,7 +32,8 @@ jobs:
       - name: Run the script to update README
         id: update_readme
         run: |
-          python .github/scripts/update_readme.py
+          cd .github/scripts
+          python update_readme.py
 
       - name: Get Commit Info
         id: commit_info
@@ -34,11 +42,23 @@ jobs:
           echo "commit_username=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
 
       - name: Commit changes to README
+        if: success()
         run: |
           git config --local user.email "${{ steps.commit_info.outputs.commit_email }}"
           git config --local user.name "${{ steps.commit_info.outputs.commit_username }}"
           git add README.md
-          git commit -m "Update README with approved tools"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git diff-index --quiet HEAD || (git commit -a -m "Update README with approved tools" --allow-empty)
+
+      - name: Push Changes
+        if: success()
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true  # Ensure the push happens
+
+      - name: Problem With Action
+        if: failure()
+        run: |
+          echo "Error updating README. Please check the logs for details."
+          exit 1
