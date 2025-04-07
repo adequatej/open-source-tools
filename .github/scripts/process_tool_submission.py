@@ -5,7 +5,7 @@ import sys
 import uuid
 from datetime import datetime
 import re
-import util  # assumes you have a `util.py` with `setOutput()` and `fail()` like in your internship script
+import util
 
 
 def add_https_to_url(url):

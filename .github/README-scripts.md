@@ -1,13 +1,6 @@
 # Understanding Repository Automation
 
-This document explains how the automated processes work in this repository, including issue templates, GitHub Actions, and the tool approval workflow.
-
-## Overview
-
-The repository uses a combination of GitHub Issue Templates and GitHub Actions to automate the tool submission and approval process. The automation is split into two main workflows:
-
-1. **Tool Approval Workflow**: Handles the submission and approval of new tools
-2. **README Update Workflow**: Keeps the README synchronized with the tools list
+This document explains how the automation in this repository works, particularly around tool submissions and README updates.
 
 ## GitHub Issue Templates
 
@@ -17,7 +10,7 @@ Our repository uses standardized issue templates located in `.github/ISSUE_TEMPL
 |----------|----------|---------|----------------|
 | New Tool | `new_tool.yml` | Submit a new tool for evaluation | `new-tool`, `needs-review` |
 
-## Tool Submission Process
+## Tool Approval Process
 
 ### 1. Initial Submission
 - User fills out the new tool template
@@ -28,142 +21,83 @@ Our repository uses standardized issue templates located in `.github/ISSUE_TEMPL
 - Maintainers review the submission
 - Community can provide feedback
 - Tool is evaluated according to criteria in CONTRIBUTING.md
+- If approved, the `approved` label is added
 
-### 3. Approval Automation
-When a maintainer adds the `approved` label:
-- Tool Approval workflow is triggered
-- Tool information is extracted from the issue
-- Tool is added to `tools.json`
-- Issue is automatically closed
-- README Update workflow is automatically triggered
+### 3. Automation
+   - When the `approved` label is added, the automation process begins
+   - A single GitHub Action workflow handles the entire process
 
-## GitHub Actions
+## GitHub Action Workflow
 
-### Tool Approval Action (`tool_approved.yml`)
+The `tool_approved.yml` workflow handles the entire automation process in one go:
 
-This action handles the initial tool approval process:
+### Process Steps
 
-**Trigger:**
-- Runs when a label is added to an issue
-- Only processes issues with the `approved` label
-
-**Process Steps:**
 1. **Repository Setup**
-   - Checkout repository
-   - Set up Python environment
-   - Debug event data for troubleshooting
+   - Checks out the repository
+   - Sets up Python environment
+   - Configures git user
 
-2. **Data Processing**
-   - Extract issue form data using `process_tool_submission.py`
-   - Validate tool information
-   - Check for duplicate tools
-   - Update `tools.json` with new tool data
+2. **Tool Processing**
+   - Runs `process_tool_submission.py`
+   - Validates tool data
+   - Updates `tools.json`
 
-3. **Repository Updates**
-   - Commit changes with contributor attribution
-   - Push updates to main branch
-   - Close the issue with success message
+3. **README Update**
+   - Runs `update_readme.py`
+   - Updates the tools table in README.md
+   - Maintains proper formatting
 
-4. **Error Handling**
-   - If any step fails, post error to issue
-   - Maintainers can review logs in Actions tab
-   - Process can be manually retriggered
+4. **Repository Update**
+   - Commits both `tools.json` and `README.md` changes
+   - Pushes changes to the main branch
+   - Closes the issue automatically
 
-### README Update Action (`update_readme.yml`)
+### Scripts
 
-This action keeps the README synchronized with the tools list:
+Two main Python scripts handle the automation:
 
-**Trigger:**
-- Runs automatically when `tools.json` is updated
-- Can be manually triggered if needed
+1. **`process_tool_submission.py`**
+   - Processes the issue form data
+   - Validates required fields
+   - Updates `tools.json`
+   - Handles both new tools and edits
 
-**Process:**
-1. **Repository Setup**
-   - Checkout repository
-   - Set up Python environment
-
-2. **README Update**
-   - Run `update_readme.py`
-   - Update tools table
-   - Maintain consistent formatting
-
-3. **Commit Changes**
-   - Get contributor info from last commit
-   - Commit changes with proper attribution
-   - Push updates to main branch
-
-## Scripts
-
-### `process_tool_submission.py`
-- Extracts data from issue form
-- Validates tool information
-- Handles both new tools and updates
-- Checks for duplicate tools
-- Updates `tools.json`
-- Sets up contributor attribution
-- Generates commit messages
-
-### `update_readme.py`
-- Reads tool data from `tools.json`
-- Updates the README tools table
-- Maintains consistent formatting
-- Handles tool categorization
-- Preserves existing tool information
-- Updates documentation links
+2. **`update_readme.py`**
+   - Reads the updated `tools.json`
+   - Updates the tools table in README.md
+   - Maintains proper formatting and structure
 
 ## Error Handling
 
-If the automation encounters any issues:
+If any part of the process fails:
+1. The workflow stops
+2. No changes are pushed
+3. A comment is added to the issue with error details
+4. The issue remains open for maintainer review
 
-1. **Tool Approval Errors**
-   - Invalid form data
-   - Duplicate tool detection
-   - JSON parsing errors
-   - File access issues
+## Contributing to Scripts
 
-2. **README Update Errors**
-   - Missing tool data
-   - Formatting issues
-   - File access problems
-   - Merge conflicts
+To improve these automation scripts:
+1. Fork the repository
+2. Make your changes
+3. Test thoroughly with sample issues
+4. Submit a PR with your improvements
 
-3. **General Workflow Errors**
-   - GitHub API issues
-   - Permission problems
-   - Network connectivity
-   - Resource limitations
+### Testing Locally
 
-## Troubleshooting
+You can test the scripts locally:
+```bash
+# Test tool processing
+python .github/scripts/process_tool_submission.py test_event.json
 
-Common issues and solutions:
-
-1. **Tool Approval Issues**
-   - Check if the issue has the correct labels
-   - Verify the workflow file is in the correct location
-   - Check GitHub Actions permissions
-   - Review form data format
-
-2. **README Update Issues**
-   - Verify `tools.json` format
-   - Check for merge conflicts
-   - Ensure Python scripts have correct permissions
-   - Check for file access issues
-
-3. **Documentation Issues**
-   - Check issue form data format
-   - Verify template files exist
-   - Review error logs in Actions tab
-   - Check for missing required fields
-
-4. **Contributor Attribution Issues**
-   - Verify issue author information
-   - Check commit history
-   - Review GitHub token permissions
+# Test README update
+python .github/scripts/update_readme.py
+```
 
 ## Need Help?
 
-If you encounter any issues with the automation:
-1. Check the Actions tab for error logs
-2. Review the issue comments for error messages
-3. Contact the maintainers
-4. Create an issue with the `bug` label
+If you encounter issues:
+1. Check the workflow run logs
+2. Look for error messages in the issue comments
+3. Contact the maintainers for assistance
