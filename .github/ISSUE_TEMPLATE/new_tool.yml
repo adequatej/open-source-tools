@@ -64,6 +64,16 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: technical-level
+    attributes:
+      label: Technical Level
+      description: What is the level of technical skills required for this tool?
+      placeholder: e.g., Beginner
+    validations:
+      required: true
+    
+
   - type: textarea
     id: description
     attributes:
