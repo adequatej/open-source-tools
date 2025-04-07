@@ -14,26 +14,30 @@ Our repository uses standardized issue templates located in `.github/ISSUE_TEMPL
 |----------|----------|---------|----------------|
 | New Tool | `new_tool.yml` | Submit a new tool for evaluation | `new-tool`, `needs-review` |
 
+**To Edit Tool, simply change label from 'new-tool' to 'edit-tool'
+
 ## Tool Approval Process
 
 ### 1. Initial Submission
 - User fills out the new tool template
 - Issue is automatically labeled with `new-tool` and `needs-review`
 - Maintainers are notified of the new submission
+- If tool already exists in the toolkit/list, change label 'new-tool' to 'edit-tool' while keeping 'needs-review' label as well
 
 ### 2. Review Process
 - Maintainers review the submission
 - Community can provide feedback
 - Tool is evaluated according to criteria in CONTRIBUTING.md
-- If approved, the `approved` label is added
+- If approved, the `approved` label is added and 'needs-review' label is removed
 
 ### 3. Automation
    - When the `approved` label is added, the automation process begins
    - A single GitHub Action workflow handles the entire process
+   - The GitHub Action bot closes issue and adds tool to list and updates the README file
 
 ## GitHub Action Workflow
 
-The `tool_approved.yml` workflow handles the entire automation process in one go:
+The `tool_approved_with_readme_updates.yml` workflow handles the entire automation process in one go:
 
 ### Process Steps
 
@@ -55,7 +59,7 @@ The `tool_approved.yml` workflow handles the entire automation process in one go
 4. **Repository Update**
    - Commits both `tools.json` and `README.md` changes
    - Pushes changes to the main branch
-   - Closes the issue automatically
+   - GitHub Action bot closes the issue automatically (if tool approved)
 
 ### Scripts
 
