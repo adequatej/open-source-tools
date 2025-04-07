@@ -4,11 +4,10 @@ name: Update README with Approved Tools
 on:
   push:
     branches:
-      - addingScripts
+      - main
     paths:
       - ".github/scripts/tools.json"
-      - "README.md"
-    workflow_dispatch:  # Manual trigger option
+  workflow_dispatch:  # Manual trigger option
 
 jobs:
   update-readme:
@@ -16,21 +15,28 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: '3.9'
 
       - name: Run the script to update README
+        id: update_readme
         run: |
           python .github/scripts/update_readme.py
 
+      - name: Get Commit Info
+        id: commit_info
+        run: |
+          echo "commit_email=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_OUTPUT
+          echo "commit_username=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
+
       - name: Commit changes to README
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --local user.email "${{ steps.commit_info.outputs.commit_email }}"
+          git config --local user.name "${{ steps.commit_info.outputs.commit_username }}"
           git add README.md
           git commit -m "Update README with approved tools"
           git push
