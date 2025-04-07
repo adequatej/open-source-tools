@@ -7,7 +7,6 @@ on:
       - main
     paths:
       - ".github/scripts/tools.json"
-      - "tools.json"
   workflow_dispatch:  # Manual trigger option
 
 jobs:
@@ -15,11 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug Path Changes
-        run: |
-          echo "Changed files:"
-          git diff --name-only HEAD~1 HEAD
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -40,22 +34,11 @@ jobs:
           echo "commit_username=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
 
       - name: Commit changes to README
-        if: success()
         run: |
           git config --local user.email "${{ steps.commit_info.outputs.commit_email }}"
           git config --local user.name "${{ steps.commit_info.outputs.commit_username }}"
           git add README.md
-          git diff-index --quiet HEAD || (git commit -a -m "Update README with approved tools" --allow-empty)
-
-      - name: Push Changes
-        if: success()
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-
-      - name: Problem With Action
-        if: failure()
-        run: |
-          echo "Error updating README. Please check the logs for details."
-          exit 1
+          git commit -m "Update README with approved tools"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
