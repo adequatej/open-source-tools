@@ -48,6 +48,7 @@ jobs:
           git config --local user.name ${{ steps.python_script.outputs.commit_username }}
           git add .github/scripts/tools.json
           git add README.md
+          git add docs/tools 
           git diff-index --quiet HEAD || (git commit -a -m "${{ steps.python_script.outputs.commit_message }}" --allow-empty)
 
       - name: Push Changes
