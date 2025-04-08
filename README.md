@@ -63,15 +63,6 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
 | Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
-| Other | [Test](https://test) | test | Active | Web Application | Unknown Technical Level | [Details](docs/tools/other/Test.md) |
-| AI/ML | [test2](https://test2) | test2 | Active | Self-hosted Service | Unknown Technical Level | [Details](docs/tools/ai/ml/test2.md) |
-| Privacy | [test3](https://test3) | test3 | Active | Command Line Tool | Unknown Technical Level | [Details](docs/tools/privacy/test3.md) |
-| Privacy | [test4](https://test4) | test4 | Active | Command Line Tool | Unknown Technical Level | [Details](docs/tools/privacy/test4.md) |
-| Privacy | [test6](https://test6) | test6 | Active | Docker Container | Unknown Technical Level | [Details](docs/tools/privacy/test6.md) |
-| Mobile App | [test7](https://test7) | test7 | Active | Docker Container | Unknown Technical Level | [Details](docs/tools/mobile-app/test7.md) |
-| Security | [test10](https://test10) | test10 | Active | Mobile App | Unknown Technical Level | [Details](docs/tools/security/test10.md) |
-| Utility | [test11](https://test11) | test11 | Active | Desktop Application | Unknown Technical Level | [Details](docs/tools/utility/test11.md) |
-| Mobile App | [test12](https://test12) | test12 | Active | Mobile App | Unknown Technical Level | [Details](docs/tools/mobile-app/test12.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
