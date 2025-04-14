@@ -56,7 +56,7 @@ def update_readme():
         # Create category-specific markdown file
         category_filename = category.lower().replace(' ', '-') + '.md'
         category_filepath = f"docs/comparisonOfTools/{category_filename}"
-        os.makedirs("docs/comparisonOfTools", exist_ok=True)
+        os.makedirs(category_filepath, exist_ok=True)
         
         category_links.append(f"[{category}]({category_filepath})")
 
