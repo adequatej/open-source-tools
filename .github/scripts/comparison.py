@@ -73,7 +73,7 @@ def update_readme():
             tech_level = tool.get("technical-level", "N/A")
 
             # Construct documentation path
-            doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
+            doc_dir = f"docs/comparisonOfTools/{category.lower().replace(' ', '-')}"
             doc_file = f"{doc_dir}/{tool_name.replace(' ', '-')}.md"
             doc_link = f"[Details]({doc_file})"
 
@@ -95,7 +95,7 @@ def update_readme():
 
     # Prepare links in the README to the new category pages
     links_section = ["### Compare Tools\n"]
-    links_section.append("For detailed information, visit the respective category pages below:\n")
+    links_section.append("For a comparison of tools by categories, visit the respective category pages below:\n")
     for link in category_links:
         links_section.append(f"- {link}\n")
 
