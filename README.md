@@ -66,6 +66,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Other | [Tor](https://www.torproject.org/) | Good anonymity | Active | Desktop Application | Medium | [Details](docs/tools/other/Tor.md) |
 | Privacy | [Test](https://www.google.com) | ... | Active | Self-hosted Service | High | [Details](docs/tools/privacy/Test.md) |
 | Security | [Test 2](https://draw.io/) | ... | Active | Docker Container | High | [Details](docs/tools/security/Test-2.md) |
+| Communication | [TestComm](https://www.youtube.com/) | .... | Active | Self-hosted Service | Beginner | [Details](docs/tools/communication/TestComm.md) |
 <!-- END TOOLS -->
 
 ### Compare Tools
