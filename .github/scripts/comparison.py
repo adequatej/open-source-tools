@@ -21,20 +21,19 @@ def update_readme():
         sys.exit(1)
 
     # Find the '### Compare Tools' section
-    compare_section_start = None
+    compare_idx = None
     for idx, line in enumerate(readme_content):
-        if "### Compare Tools" in line:
-            compare_section_start = idx
+        if line.strip().startswith("### Compare Tools"):
+            compare_idx = idx
             break
 
-    if compare_section_start is None:
+    if compare_idx is None:
         print("Error: '### Compare Tools' section not found in README.md.")
         sys.exit(1)
 
-    # Find the section markers
-    begin_idx = None
-    end_idx = None
-    for idx in range(compare_section_start, len(readme_content)):
+    # Find <!-- BEGIN TOOLS --> and <!-- END TOOLS --> after 'Compare Tools'
+    begin_idx = end_idx = None
+    for idx in range(compare_idx, len(readme_content)):
         line = readme_content[idx]
         if "<!-- BEGIN TOOLS -->" in line:
             begin_idx = idx
@@ -51,12 +50,20 @@ def update_readme():
     for tool in tools:
         grouped_by_category[tool.get("category", "Uncategorized")].append(tool)
 
-    # Generate markdown content
-    markdown_lines = []
+    # Create category markdown files
+    category_links = []
     for category, tools_in_cat in grouped_by_category.items():
-        markdown_lines.append(f"\n### Category: {category}\n")
-        markdown_lines.append("| Tool Name | Description | Status | Deployment | Tech Level | Docs |")
-        markdown_lines.append("|-----------|-------------|--------|------------|------------|------|")
+        # Create category-specific markdown file
+        category_filename = category.lower().replace(' ', '-') + '.md'
+        category_filepath = f"docs/tools/{category_filename}"
+        category_links.append(f"[{category}]({category_filepath})")
+
+        # Generate markdown for the category
+        category_markdown = []
+        category_markdown.append(f"# {category} Tools\n")
+        category_markdown.append("| Tool Name | Description | Status | Deployment | Tech Level | Docs |")
+        category_markdown.append("|-----------|-------------|--------|------------|------------|------|")
+
         for tool in tools_in_cat:
             tool_name = tool.get("tool_name", "Unknown")
             tool_url = tool.get("tool_url", "#")
@@ -78,22 +85,31 @@ def update_readme():
                     df.write(f"**Description**: {description}\n\n")
                     df.write("Documentation coming soon.\n")
 
-            markdown_lines.append(
+            category_markdown.append(
                 f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {tech_level} | {doc_link} |"
             )
 
+        # Write the category markdown to file
+        with open(category_filepath, "w") as f:
+            f.writelines("\n".join(category_markdown))
+
+    # Prepare links in the README to the new category pages
+    links_section = ["### Compare Tools\n"]
+    links_section.append("For detailed information, visit the respective category pages below:\n")
+    for link in category_links:
+        links_section.append(f"- {link}\n")
+
     # Replace content in README between the markers
-    new_readme_content = (
+    new_readme = (
         readme_content[:begin_idx + 1] +
-        [line + "\n" for line in markdown_lines] +
+        links_section +
         readme_content[end_idx:]
     )
 
-    # Write back to README.md
     with open("README.md", "w") as f:
-        f.writelines(new_readme_content)
+        f.writelines(new_readme)
 
-    print("README.md updated successfully with categorized tool table.")
+    print("✅ README.md and category pages successfully updated.")
 
 if __name__ == "__main__":
     update_readme()
