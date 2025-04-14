@@ -73,5 +73,30 @@
         ],
         "additional_notes": "_No response_",
         "date_submitted": 1744652379
+    },
+    {
+        "id": "2ff5b964-18c4-48a0-a9af-b32abd8c4dad",
+        "date_updated": 1744653911,
+        "submitted_by": "shawnp221",
+        "tool_name": "Test 2",
+        "tool_url": "https://draw.io/",
+        "category": "Security",
+        "deployment": [
+            "Docker Container"
+        ],
+        "technical-level": "High",
+        "description": "...",
+        "target_users": "...",
+        "testing_status": "...",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "additional_notes": "_No response_",
+        "date_submitted": 1744653911
     }
 ]

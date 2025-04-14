@@ -65,6 +65,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
 | Other | [Tor](https://www.torproject.org/) | Good anonymity | Active | Desktop Application | Medium | [Details](docs/tools/other/Tor.md) |
 | Privacy | [Test](https://www.google.com) | ... | Active | Self-hosted Service | High | [Details](docs/tools/privacy/Test.md) |
+| Security | [Test 2](https://draw.io/) | ... | Active | Docker Container | High | [Details](docs/tools/security/Test-2.md) |
 <!-- END TOOLS -->
 
 ### Compare Tools
@@ -75,6 +76,7 @@ For a comparison of tools by categories, visit the respective category pages bel
 - [Communication](docs/comparisonOfTools/communication.md)
 - [Other](docs/comparisonOfTools/other.md)
 - [Privacy](docs/comparisonOfTools/privacy.md)
+- [Security](docs/comparisonOfTools/security.md)
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
