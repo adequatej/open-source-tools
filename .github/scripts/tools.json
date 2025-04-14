@@ -23,5 +23,30 @@
         "additional_notes": "_No response_",
         "date_submitted": 1743946627,
         "technical-level": "Medium"
+    },
+    {
+        "id": "fa65872c-b516-438c-b7c7-e82e4d963b2a",
+        "date_updated": 1744649842,
+        "submitted_by": "shawnp221",
+        "tool_name": "Tor",
+        "tool_url": "https://www.torproject.org/",
+        "category": "Other",
+        "deployment": [
+            "Desktop Application"
+        ],
+        "technical-level": "Medium",
+        "description": "Good anonymity",
+        "target_users": "Everyone",
+        "testing_status": "Tested well",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "additional_notes": "_No response_",
+        "date_submitted": 1744649842
     }
 ]

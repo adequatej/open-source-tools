@@ -63,6 +63,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
 | Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
+| Other | [Tor](https://www.torproject.org/) | Good anonymity | Active | Desktop Application | Medium | [Details](docs/tools/other/Tor.md) |
 <!-- END TOOLS -->
 
 ### Compare Tools
@@ -74,6 +75,12 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Tool Name | Description | Status | Deployment | Tech Level | Docs |
 |-----------|-------------|--------|------------|------------|------|
 | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
+
+### Category: Other
+
+| Tool Name | Description | Status | Deployment | Tech Level | Docs |
+|-----------|-------------|--------|------------|------------|------|
+| [Tor](https://www.torproject.org/) | Good anonymity | Active | Desktop Application | Medium | [Details](docs/tools/other/Tor.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
