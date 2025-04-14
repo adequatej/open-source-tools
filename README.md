@@ -65,6 +65,8 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 | Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
 <!-- END TOOLS -->
 
+### Compare Tools
+
 ## Tool Evaluation Process
 
 Each tool in our repository undergoes a thorough evaluation process:
