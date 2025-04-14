@@ -72,9 +72,9 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 ### Compare Tools
 For a comparison of tools by categories, visit the respective category pages below:
-- [Communication](docs/tools/communication.md)
-- [Other](docs/tools/other.md)
-- [Privacy](docs/tools/privacy.md)
+- [Communication](docs/comparisonOfTools/communication.md)
+- [Other](docs/comparisonOfTools/other.md)
+- [Privacy](docs/comparisonOfTools/privacy.md)
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
