@@ -68,6 +68,12 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 ### Compare Tools
 
 <!-- BEGIN TOOLS -->
+
+### Category: Communication
+
+| Tool Name | Description | Status | Deployment | Tech Level | Docs |
+|-----------|-------------|--------|------------|------------|------|
+| [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
