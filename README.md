@@ -70,7 +70,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 
 <!-- BEGIN TOOLS -->
 ### Compare Tools
-For detailed information, visit the respective category pages below:
+For a comparison of tools by categories, visit the respective category pages below:
 - [Communication](docs/tools/communication.md)
 - [Other](docs/tools/other.md)
 <!-- END TOOLS -->
