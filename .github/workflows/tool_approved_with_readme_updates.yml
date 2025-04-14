@@ -41,6 +41,10 @@ jobs:
         id: python_script_readme
         run: python .github/scripts/update_readme.py
 
+      - name: execute comparison.py
+        id: python_script_comparison
+        run: python .github/scripts/comparison.py
+
       - name: Commit Updated tools.json
         if: success()
         run: |
@@ -50,10 +54,6 @@ jobs:
           git add README.md
           git add docs/tools 
           git diff-index --quiet HEAD || (git commit -a -m "${{ steps.python_script.outputs.commit_message }}" --allow-empty)
-
-      - name: execute comparison.py
-        id: python_script_comparison
-        run: python .github/scripts/comparison.py
         
       - name: Push Changes
         if: success()
