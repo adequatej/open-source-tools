@@ -91,6 +91,7 @@ def update_readme():
 
         # Write the category markdown to file
         print(category_filepath)
+        os.makedirs(os.path.dirname(category_filepath), exist_ok=True)  # Ensure the directory exists
         with open(category_filepath, "w") as f:
             f.writelines(category_markdown)
 
