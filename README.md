@@ -69,18 +69,10 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 ### Compare Tools
 
 <!-- BEGIN TOOLS -->
-
-### Category: Communication
-
-| Tool Name | Description | Status | Deployment | Tech Level | Docs |
-|-----------|-------------|--------|------------|------------|------|
-| [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
-
-### Category: Other
-
-| Tool Name | Description | Status | Deployment | Tech Level | Docs |
-|-----------|-------------|--------|------------|------------|------|
-| [Tor](https://www.torproject.org/) | Good anonymity | Active | Desktop Application | Medium | [Details](docs/tools/other/Tor.md) |
+### Compare Tools
+For detailed information, visit the respective category pages below:
+- [Communication](docs/tools/communication.md)
+- [Other](docs/tools/other.md)
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process
