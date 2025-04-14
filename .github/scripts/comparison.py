@@ -79,9 +79,6 @@ def update_readme():
 
             os.makedirs(doc_dir, exist_ok=True)
             if not os.path.exists(doc_file):
-                with open(doc_file, "w").close()
-
-            if not os.path.exists(doc_file):
                 open(doc_file, "w").close()  # Create the file and close it immediately without writing content
                 print(f"File created: {doc_file}")  # Print a message confirming the file creation
             else:
