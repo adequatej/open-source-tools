@@ -79,11 +79,13 @@ def update_readme():
 
             os.makedirs(doc_dir, exist_ok=True)
             if not os.path.exists(doc_file):
-                with open(doc_file, "w") as df:
-                    df.write(f"# {tool_name}\n\n")
-                    df.write(f"**Category**: {category}\n\n")
-                    df.write(f"**Description**: {description}\n\n")
-                    df.write("Documentation coming soon.\n")
+                with open(doc_file, "w").close()
+
+            if not os.path.exists(doc_file):
+                open(doc_file, "w").close()  # Create the file and close it immediately without writing content
+                print(f"File created: {doc_file}")  # Print a message confirming the file creation
+            else:
+                print(f"File already exists: {doc_file}")  # If the file already exists, print this message
 
             category_markdown.append(
                 f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {tech_level} | {doc_link} |\n"
@@ -91,7 +93,6 @@ def update_readme():
 
         # Write the category markdown to file
         print(category_filepath)
-        os.makedirs(os.path.dirname(category_filepath), exist_ok=True)  # Ensure the directory exists
         with open(category_filepath, "w") as f:
             f.writelines(category_markdown)
 
