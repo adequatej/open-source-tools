@@ -48,5 +48,30 @@
         ],
         "additional_notes": "_No response_",
         "date_submitted": 1744649842
+    },
+    {
+        "id": "055fff1b-c922-46fb-831e-2144a48756cb",
+        "date_updated": 1744652379,
+        "submitted_by": "shawnp221",
+        "tool_name": "Test",
+        "tool_url": "https://www.google.com",
+        "category": "Privacy",
+        "deployment": [
+            "Self-hosted Service"
+        ],
+        "technical-level": "High",
+        "description": "...",
+        "target_users": "...",
+        "testing_status": "...",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "additional_notes": "_No response_",
+        "date_submitted": 1744652379
     }
 ]
