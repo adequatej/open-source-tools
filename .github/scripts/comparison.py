@@ -61,8 +61,8 @@ def update_readme():
         # Generate markdown for the category
         category_markdown = []
         category_markdown.append(f"# {category} Tools\n")
-        category_markdown.append("| Tool Name | Description | Status | Deployment | Tech Level | Docs |")
-        category_markdown.append("|-----------|-------------|--------|------------|------------|------|")
+        category_markdown.append("| Tool Name | Description | Status | Deployment | Tech Level | Docs |\n")
+        category_markdown.append("|-----------|-------------|--------|------------|------------|------|\n")
 
         for tool in tools_in_cat:
             tool_name = tool.get("tool_name", "Unknown")
@@ -86,12 +86,12 @@ def update_readme():
                     df.write("Documentation coming soon.\n")
 
             category_markdown.append(
-                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {tech_level} | {doc_link} |"
+                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {tech_level} | {doc_link} |\n"
             )
 
         # Write the category markdown to file
         with open(category_filepath, "w") as f:
-            f.writelines("\n".join(category_markdown))
+            f.writelines(category_markdown)
 
     # Prepare links in the README to the new category pages
     links_section = ["### Compare Tools\n"]
