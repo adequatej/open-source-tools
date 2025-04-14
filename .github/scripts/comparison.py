@@ -55,7 +55,7 @@ def update_readme():
     for category, tools_in_cat in grouped_by_category.items():
         # Create category-specific markdown file
         category_filename = category.lower().replace(' ', '-') + '.md'
-        category_filepath = f"docs/comparisonOfTools/{category_filename}"
+        category_filepath = f"docs/tools/{category_filename}"
         category_links.append(f"[{category}]({category_filepath})")
 
         # Generate markdown for the category
@@ -73,16 +73,13 @@ def update_readme():
             tech_level = tool.get("technical-level", "N/A")
 
             # Construct documentation path
-            doc_dir = f"docs/comparisonOfTools/{category.lower().replace(' ', '-')}"
+            doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
             doc_file = f"{doc_dir}/{tool_name.replace(' ', '-')}.md"
             doc_link = f"[Details]({doc_file})"
 
             os.makedirs(doc_dir, exist_ok=True)
             if not os.path.exists(doc_file):
-                open(doc_file, "w").close()  # Create the file and close it immediately without writing content
-                print(f"File created: {doc_file}")  # Print a message confirming the file creation
-            else:
-                print(f"File already exists: {doc_file}")  # If the file already exists, print this message
+                open(doc_file, "w").close()
 
             category_markdown.append(
                 f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {tech_level} | {doc_link} |\n"
