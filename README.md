@@ -67,6 +67,9 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 
 ### Compare Tools
 
+<!-- BEGIN TOOLS -->
+<!-- END TOOLS -->
+
 ## Tool Evaluation Process
 
 Each tool in our repository undergoes a thorough evaluation process:
