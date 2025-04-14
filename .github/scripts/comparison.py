@@ -20,10 +20,22 @@ def update_readme():
         print("Error: README.md file not found.")
         sys.exit(1)
 
+    # Find the '### Compare Tools' section
+    compare_section_start = None
+    for idx, line in enumerate(readme_content):
+        if "### Compare Tools" in line:
+            compare_section_start = idx
+            break
+
+    if compare_section_start is None:
+        print("Error: '### Compare Tools' section not found in README.md.")
+        sys.exit(1)
+
     # Find the section markers
     begin_idx = None
     end_idx = None
-    for idx, line in enumerate(readme_content):
+    for idx in range(compare_section_start, len(readme_content)):
+        line = readme_content[idx]
         if "<!-- BEGIN TOOLS -->" in line:
             begin_idx = idx
         elif "<!-- END TOOLS -->" in line:
