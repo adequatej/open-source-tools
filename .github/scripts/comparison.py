@@ -54,7 +54,7 @@ def update_readme():
     category_links = []
     for category, tools_in_cat in grouped_by_category.items():
         # Create category-specific markdown file
-        category_filename = category.lower().replace(' ', '-') + '.md'
+        category_filename = 'comparisonOf' + category.replace(' ', '-') + 'Tools.md'
         category_filepath = f"docs/tools/{category_filename}"
         category_links.append(f"[{category}]({category_filepath})")
 
