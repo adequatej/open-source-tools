@@ -53,7 +53,6 @@ def parse_tool_body(body, is_edit, username):
     data["security-privacy-features"] = get_value("Security / Privacy Features")
     data["maintenance-sustainability"] = get_value("Maintenance / Sustainability")
     data["data-collection-level"] = get_value("Data Collection Level")
-    data["active-development"] = get_value("Active Development")
     data["community-support"] = get_value("Community Support")
     data["status"] = get_value("Status")
     data["deployment"] = [d.strip() for d in get_value("Deployment Type").split(",")]
