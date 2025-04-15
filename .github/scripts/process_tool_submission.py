@@ -43,11 +43,23 @@ def parse_tool_body(body, is_edit, username):
     data["tool_name"] = get_value("Tool Name")
     data["tool_url"] = add_https_to_url(get_value("Tool URL"))
     data["category"] = get_value("Category")
-    data["deployment"] = [d.strip() for d in get_value("Deployment Type").split(",")]
-    data["technical-level"] = get_value("Technical Level")
     data["description"] = get_value("Description")
-    data["target_users"] = get_value("Target Users")
-    data["testing_status"] = get_value("Testing Status")
+    data["core-features"] = get_value("Core Features")
+    data["os-compatibility"] = get_value("OS Compatibility")
+    data["offline-functionality"] = get_value("Offline Functionality")
+    data["technical-level"] = get_value("Technical Level")
+    data["languages-supported"] = get_value("Languages Supported")
+    data["security-privacy-features"] = get_value("Security / Privacy Features")
+    data["maintenance-sustainability"] = get_value("Maintenance / Sustainability")
+    data["data-collection-level"] = get_value("Data Collection Level")
+    data["active-development"] = get_value("Active Development")
+    data["community-support"] = get_value("Community Support")
+    data["status"] = get_value("Status")
+    data["status"] = get_value("Status")
+    data["deployment"] = [d.strip() for d in get_value("Deployment Type").split(",")]
+    data["license"] = get_value("License")
+    data["cost"] = get_value("Cost")
+    data["overall-rating"] = get_value("Overall Rating")
 
     data["evaluation_checklist"] = [
         re.sub(r"^- \[.\] ?", "", item).strip()
@@ -55,10 +67,10 @@ def parse_tool_body(body, is_edit, username):
     ]
 
     # Additional notes is usually the last section
-    if "additional notes" in sections:
-        data["additional_notes"] = get_value("Additional Notes")
+    if "testing-documentation" in sections:
+        data["testing-documentation"] = get_value("Documentation")
     else:
-        data["additional_notes"] = ""
+        data["testing-documentation"] = ""
 
     # Guess email
     last_lines = body.strip().splitlines()[-5:]
