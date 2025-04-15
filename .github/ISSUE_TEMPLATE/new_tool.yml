@@ -94,7 +94,7 @@ body:
       options:
         - "Yes"
         - "No"
-        - N/A
+        - Partially
     validations:
       required: true
         
@@ -146,17 +146,6 @@ body:
         - "No Data"
         - Minimal
         - Extensive
-    validations:
-      required: true
-
-  - type: dropdown
-    id: active-development
-    attributes:
-      label: Active Development
-      description: Is the tool actively being developed?
-      options:
-        - "Yes"
-        - "No"
     validations:
       required: true
 
