@@ -66,11 +66,7 @@ def parse_tool_body(body, is_edit, username):
         for item in checklist if "[x]" in item.lower()
     ]
 
-    # Additional notes is usually the last section
-    if "testing-documentation" in sections:
-        data["testing-documentation"] = get_value("Documentation")
-    else:
-        data["testing-documentation"] = ""
+    data["testing-documentation"] = get_value("Documentation")
 
     # Guess email
     last_lines = body.strip().splitlines()[-5:]
