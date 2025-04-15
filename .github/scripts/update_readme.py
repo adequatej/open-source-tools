@@ -44,8 +44,8 @@ def update_readme():
 
     # Build the tools table section
     tools_section = [
-        "| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation |\n",
-        "|----------|-----------|-------------|---------|------------|-----------------|---------------|\n"
+        "| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating |\n",
+        "|----------|-----------|-------------|---------|------------|-----------------|---------------|-------|\n"
     ]
     
     for tool in tools:
