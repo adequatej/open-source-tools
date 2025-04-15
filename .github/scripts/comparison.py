@@ -77,7 +77,7 @@ def update_readme():
         # Generate markdown for the category
         category_markdown = []
         category_markdown.append(f"# {category} Tools\n")
-        category_markdown.append("| 🛠️ Tool Name | 📝 Tool Description| 📊 Status | 🚀 Deployment | 🤝 Community Support | 🧠 Tech Level | ✨ Key Core Features of the Tool | 💻 OS | 📴 Offline | 📱 Mobile | 🌐 Languages | 🔐Security/Privacy Features | 🔧 Maintenance/Sustainability | 📥 Data Collection | 🧾 License | 💰 Cost | 📚 Docs | ⭐ Rating |\n")
+        category_markdown.append("| 🛠️ Tool Name | 📝 Tool Description| 📊 Status | 🚀 Deployment | 🤝 Community Support | 🧠 Tech Level | ✨ Key Core Features of the Tool | 💻 OS | 📴 Offline | 📱 Mobile | 🌐 Languages | 🔐 Security/Privacy Features | 🔧 Maintenance/Sustainability | 📥 Data Collection | 🧾 License | 💰 Cost | 📚 Docs | ⭐ Rating |\n")
         category_markdown.append("|-----|--------------------------|-----|---------------|-----------------------|--------|-------------------------|--------|--------|--------|-------------|-------------------------------------------|----------------------------------|----------|-------------|---------|----------|-----------|\n")
 
         
