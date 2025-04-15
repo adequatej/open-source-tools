@@ -62,11 +62,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 | Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
-| Communication | [Signal](https://signal.org/) | Description | Active | Mobile App | Medium | [Details](docs/tools/communication/Signal.md) |
-| Other | [Tor](https://www.torproject.org/) | Good anonymity | Active | Desktop Application | Medium | [Details](docs/tools/other/Tor.md) |
-| Privacy | [Test](https://www.google.com) | ... | Active | Self-hosted Service | High | [Details](docs/tools/privacy/Test.md) |
-| Security | [Test 2](https://draw.io/) | ... | Active | Docker Container | High | [Details](docs/tools/security/Test-2.md) |
-| Communication | [TestComm](https://www.youtube.com/) | .... | Active | Self-hosted Service | Beginner | [Details](docs/tools/communication/TestComm.md) |
+| Privacy | [fd](https://signal.org/) | aef | Active | Docker Container |  | [Details](docs/tools/privacy/fd.md) |
 <!-- END TOOLS -->
 
 ### Compare Tools
@@ -74,10 +70,7 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 ### Compare Tools
 For a comparison of tools by categories, visit the respective category pages below:
-- [Communication](docs/tools/comparisonOfCommunicationTools.md)
-- [Other](docs/tools/comparisonOfOtherTools.md)
 - [Privacy](docs/tools/comparisonOfPrivacyTools.md)
-- [Security](docs/tools/comparisonOfSecurityTools.md)
 <!-- END TOOLS -->
 
 ## Tool Evaluation Process

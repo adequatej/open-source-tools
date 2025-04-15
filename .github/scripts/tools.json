@@ -1,2 +1,38 @@
 [
+    {
+        "id": "801e027c-bd51-42e1-a7ba-1d5cb4ddecd1",
+        "date_updated": 1744739683,
+        "submitted_by": "shawnp221",
+        "tool_name": "fd",
+        "tool_url": "https://signal.org/",
+        "category": "Privacy",
+        "description": "aef",
+        "core-features": "vs",
+        "os-compatibility": "dvs",
+        "offline-functionality": "Yes",
+        "technical-level": "",
+        "languages-supported": "dvd",
+        "security-privacy-features": "sdv",
+        "maintenance-sustainability": "sdv",
+        "data-collection-level": "No Data",
+        "active-development": "Yes",
+        "community-support": "Yes",
+        "status": "Active",
+        "deployment": [
+            "Docker Container"
+        ],
+        "license": "vsd",
+        "cost": "dvs",
+        "overall-rating": "2.3",
+        "evaluation_checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "testing-documentation": "",
+        "date_submitted": 1744739683
+    }
 ]
