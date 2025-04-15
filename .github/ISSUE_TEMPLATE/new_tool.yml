@@ -80,8 +80,8 @@ body:
       label: Offline Functionality
       description: Can this tool be used without an internet connection?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - Partially
     validations:
       required: true
@@ -92,8 +92,8 @@ body:
       label: Mobile-Friendly
       description: Does the tool work well on mobile devices?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - N/A
     validations:
       required: true
@@ -143,7 +143,7 @@ body:
       label: Data Collection Level
       description: How much user data does the tool collect?
       options:
-        - None
+        - "No Data"
         - Minimal
         - Extensive
     validations:
@@ -155,8 +155,8 @@ body:
       label: Active Development
       description: Is the tool actively being developed?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
 
@@ -166,8 +166,8 @@ body:
       label: Community Support
       description: Does this tool have an active community or forum?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
         - Partially
     validations:
       required: true
