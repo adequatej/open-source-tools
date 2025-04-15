@@ -62,7 +62,6 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 <!-- BEGIN TOOLS -->
 | Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|-------|
-| [fd](https://signal.org/) | Privacy | aef | Active | Docker Container | Beginner | [Details](docs/tools/privacy/fd.md) | 2.3 |
 | [Tor Browser](https://www.torproject.org/) | Privacy | Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online. | Active | Desktop Application | Intermediate | [Details](docs/tools/privacy/Tor-Browser.md) | 4.51 |
 <!-- END TOOLS -->
 
