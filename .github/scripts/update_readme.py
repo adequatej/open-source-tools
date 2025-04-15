@@ -44,7 +44,7 @@ def update_readme():
 
     # Build the tools table section
     tools_section = [
-        "| Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |\n",
+        "| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation |\n",
         "|----------|-----------|-------------|---------|------------|-----------------|---------------|\n"
     ]
     
@@ -73,7 +73,7 @@ def update_readme():
                 df.write("Documentation coming soon.\n")
 
 
-        tools_section.append(f"| {category} | [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) |\n")
+        tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) |\n")
 
     # Insert the updated tools section into the README
     updated_readme_content = (
