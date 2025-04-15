@@ -61,8 +61,8 @@ def update_readme():
         # Generate markdown for the category
         category_markdown = []
         category_markdown.append(f"# {category} Tools\n")
-        category_markdown.append("| Tool Name | Desc | Status | Deployment | Community Support | Tech Level | Core Features | OS Compatibility | Offline Functionality | Mobile-Friendly | Languages Supported | Security/Privacy Features | Maintenance/Sustainability | Data Collection Level | License | Cost | Docs | Overall Rating |\n")
-        category_markdown.append("|-----------|------|--------|------------|-------------------|------------|---------------|------------------|-----------------------|-----------------|---------------------|---------------------------|----------------------------|-----------------------|---------|------|------|----------------|\n")
+        category_markdown.append("| 🛠️ Tool Name | 📝 Desc | 📊 Status | 🚀 Deployment | 🤝 Community Support | 🧠 Tech Level | ✨ Features | 💻 OS | 📴 Offline | 📱 Mobile | 🌐 Languages | 🔐 Security/Privacy Features | 🔧 Maintenance/Sustainability | 📥 Data Collection | 🧾 License | 💰 Cost | 📚 Docs | ⭐ Rating |\n")
+        category_markdown.append("|--------------|------|--------|------------|-------------------|------------|---------------|------------------|-----------------------|-----------------|---------------------|---------------------------|----------------------------|-----------------------|---------|------|------|----------------|\n")
 
         for tool in tools_in_cat:
             tool_name = tool.get("tool_name", "Unknown")
