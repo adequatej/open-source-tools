@@ -85,8 +85,7 @@ def update_readme():
             overall_rating = tool.get("overall-rating", "N/A")
 
             # Construct documentation path
-            doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
-            doc_file = f"{doc_dir}/{tool_name.replace(' ', '-')}.md"
+            doc_file = f"{tool_name.replace(' ', '-')}.md"
             doc_link = f"[Details]({doc_file})"
 
             os.makedirs(doc_dir, exist_ok=True)
