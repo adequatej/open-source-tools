@@ -47,6 +47,7 @@ def parse_tool_body(body, is_edit, username):
     data["core-features"] = get_value("Core Features")
     data["os-compatibility"] = get_value("OS Compatibility")
     data["offline-functionality"] = get_value("Offline Functionality")
+    data["mobile-friendly"] = get_value("Mobile Friendly")
     data["technical-level"] = get_value("Technical Level")
     data["languages-supported"] = get_value("Languages Supported")
     data["security-privacy-features"] = get_value("Security / Privacy Features")
@@ -55,13 +56,12 @@ def parse_tool_body(body, is_edit, username):
     data["active-development"] = get_value("Active Development")
     data["community-support"] = get_value("Community Support")
     data["status"] = get_value("Status")
-    data["status"] = get_value("Status")
     data["deployment"] = [d.strip() for d in get_value("Deployment Type").split(",")]
     data["license"] = get_value("License")
     data["cost"] = get_value("Cost")
     data["overall-rating"] = get_value("Overall Rating")
 
-    data["evaluation_checklist"] = [
+    data["evaluation-checklist"] = [
         re.sub(r"^- \[.\] ?", "", item).strip()
         for item in checklist if "[x]" in item.lower()
     ]
