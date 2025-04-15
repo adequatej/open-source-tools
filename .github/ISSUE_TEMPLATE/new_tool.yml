@@ -17,7 +17,7 @@ body:
       placeholder: e.g., Privacy Badger
     validations:
       required: true
-
+  
   - type: input
     id: tool-url
     attributes:
@@ -26,7 +26,7 @@ body:
       placeholder: e.g., https://github.com/EFForg/privacybadger
     validations:
       required: true
-
+  
   - type: dropdown
     id: category
     attributes:
@@ -46,6 +46,145 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Briefly describe what the tool is designed to do.
+      placeholder: This tool is a...
+    validations:
+      required: true
+        
+  - type: textarea
+    id: core-features
+    attributes:
+      label: Core Features
+      description: Highlight main features or functions
+      placeholder: e.g., Encrypted messaging, multi-platform support, etc. List all that are compatible followed by comma.
+    validations:
+      required: true
+
+  - type: input
+    id: os-compatibility
+    attributes:
+      label: OS Compatibility
+      description: What operating systems is this tool compatible with? List all that are compatible followed by comma.
+      placeholder: e.g., Windows, Linux, Android, iOS
+    validations:
+      required: true
+
+      
+  - type: dropdown
+    id: offline-functionality
+    attributes:
+      label: Offline Functionality
+      description: Can this tool be used without an internet connection?
+      options:
+        - Yes
+        - No
+        - Partially
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mobile-friendly
+    attributes:
+      label: Mobile-Friendly
+      description: Does the tool work well on mobile devices?
+      options:
+        - Yes
+        - No
+        - N/A
+    validations:
+      required: true
+        
+  - type: dropdown
+    id: technical-level
+    attributes:
+      label: Tech Skill Required
+      description: What is the level of technical skill required?
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true 
+      
+  - type: input
+    id: languages-supported
+    attributes:
+      label: Languages Supported
+      description: Number of languages or specify language list if short.
+      placeholder: e.g., English, Spanish, French or 35
+    validations:
+      required: true     
+      
+  - type: textarea
+    id: security-privacy-features
+    attributes:
+      label: Security / Privacy Features
+      description: Highlight any security or privacy measures implemented.
+      placeholder: e.g., End-to-end encryption, minimal tracking, open source audits, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: maintenance-sustainability
+    attributes:
+      label: Maintenance / Sustainability
+      description: What’s the current maintenance status or sustainability outlook?
+      placeholder: e.g., Actively maintained by core team, community supported, etc.
+    validations:
+      required: true    
+
+  - type: dropdown
+    id: data-collection-level
+    attributes:
+      label: Data Collection Level
+      description: How much user data does the tool collect?
+      options:
+        - None
+        - Minimal
+        - Extensive
+    validations:
+      required: true
+
+  - type: dropdown
+    id: active-development
+    attributes:
+      label: Active Development
+      description: Is the tool actively being developed?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+
+  - type: dropdown
+    id: community-support
+    attributes:
+      label: Community Support
+      description: Does this tool have an active community or forum?
+      options:
+        - Yes
+        - No
+        - Partially
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: What is the current status of the tool?
+      options:
+        - Active
+        - Inactive
+        - Experimental
+    validations:
+      required: true
+
+      
   - type: dropdown
     id: deployment
     attributes:
@@ -63,51 +202,35 @@ body:
         - Other
     validations:
       required: true
+  
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: Use SPDX ID if possible (e.g., MIT, GPL-3.0, Apache-2.0)
+      placeholder: e.g., MIT
+    validations:
+      required: true
+
+      
+  - type: input
+    id: cost
+    attributes:
+      label: Cost
+      description: What is the pricing model?
+      placeholder: e.g., Fully Free, Free Core, Subscription Model
+    validations:
+      required: true
 
   - type: input
-    id: technical-level
+    id: overall-rating
     attributes:
-      label: Technical Level
-      description: What is the level of technical skills required for this tool?
-      placeholder: e.g., Beginner
+      label: Overall Rating
+      description: Based on internal evaluation or scoring logic.
+      placeholder: e.g., 4.5
     validations:
       required: true
-    
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: Briefly describe what the tool does and its main features
-      placeholder: This tool helps users to...
-    validations:
-      required: true
-
-  - type: textarea
-    id: target-users
-    attributes:
-      label: Target Users
-      description: Who is this tool designed for? Consider both technical and non-technical users.
-      placeholder: |
-        - Technical Users: ...
-        - Non-technical Users: ...
-        - Use Cases: ...
-    validations:
-      required: true
-
-  - type: textarea
-    id: testing-status
-    attributes:
-      label: Testing Status
-      description: Have you tested this tool? What were your findings?
-      placeholder: |
-        - Installation tested: Yes/No
-        - Platforms tested: ...
-        - User testing completed: Yes/No
-        - Security review: ...
-    validations:
-      required: true
-
+  
   - type: checkboxes
     id: evaluation-checklist
     attributes:
@@ -122,10 +245,9 @@ body:
         - label: I have documented installation steps
     validations:
       required: true
-
+  
   - type: textarea
-    id: additional-notes
+    id: testing-documentation
     attributes:
-      label: Additional Notes
-      description: Any other relevant information about this tool
-      placeholder: Additional context, concerns, or notes...
+      label: Documentation
+      description: Input Documentation here
