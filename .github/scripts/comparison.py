@@ -81,7 +81,7 @@ def update_readme():
         category_html.append(
             "<thead><tr>"
             "<th>🛠️ Tool Name</th>"
-            "<th>📝 Desc</th>"
+            "<th>           📝 Desc</th>"
             "<th>📊 Status</th>"
             "<th>🚀 Deployment</th>"
             "<th>🤝 Community Support</th>"
