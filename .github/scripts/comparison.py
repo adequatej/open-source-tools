@@ -74,13 +74,34 @@ def update_readme():
         category_filepath = f"docs/tools/{category_filename}"
         category_links.append(f"[{category}]({category_filepath})")
 
-        # Generate markdown for the category
-        category_markdown = []
-        category_markdown.append(f"# {category} Tools\n")
-        category_markdown.append("| 🛠️ Tool Name |"    +   "📝 Desc "    +   "| 📊 Status | 🚀 Deployment | 🤝 Community Support | 🧠 Tech Level | ✨ Features | 💻 OS | 📴 Offline | 📱 Mobile | 🌐 Languages | 🔐 Security/Privacy Features | 🔧 Maintenance/Sustainability | 📥 Data Collection | 🧾 License | 💰 Cost | 📚 Docs | ⭐ Rating |\n")
-        category_markdown.append("|-----|--------------------------|-----|---------------|-----------------------|--------|-------------------------|--------|--------|--------|-------------|-------------------------------------------|----------------------------------|----------|-------------|---------|----------|-----------|\n")
+        # Generate HTML for the category
+        category_html = []
+        category_html.append(f"<h1>{category} Tools</h1>\n")
+        category_html.append('<table border="1">\n')
+        category_html.append(
+            "<thead><tr>"
+            "<th>🛠️ Tool Name</th>"
+            "<th>📝 Desc</th>"
+            "<th>📊 Status</th>"
+            "<th>🚀 Deployment</th>"
+            "<th>🤝 Community Support</th>"
+            "<th>🧠 Tech Level</th>"
+            "<th>✨ Features</th>"
+            "<th>💻 OS</th>"
+            "<th>📴 Offline</th>"
+            "<th>📱 Mobile</th>"
+            "<th>🌐 Languages</th>"
+            "<th>🔐 Security/Privacy Features</th>"
+            "<th>🔧 Maintenance/Sustainability</th>"
+            "<th>📥 Data Collection</th>"
+            "<th>🧾 License</th>"
+            "<th>💰 Cost</th>"
+            "<th>📚 Docs</th>"
+            "<th>⭐ Rating</th>"
+            "</tr></thead>\n"
+        )
+        category_html.append("<tbody>\n")
 
-        
         for tool in tools_in_cat:
             tool_name = tool.get("tool_name", "Unknown")
             tool_url = tool.get("tool_url", "#")
@@ -111,14 +132,36 @@ def update_readme():
             if not os.path.exists(doc_file):
                 open(doc_file, "w").close()
 
-            category_markdown.append(
-                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | [Details]({doc_file}) | {overall_rating} |\n"
+            category_html.append(
+                f"<tr>"
+                f"<td><a href='{tool_url}'>{tool_name}</a></td>"
+                f"<td>{description}</td>"
+                f"<td>{status}</td>"
+                f"<td>{deployment}</td>"
+                f"<td>{community_support}</td>"
+                f"<td>{tech_level}</td>"
+                f"<td>{core_features}</td>"
+                f"<td>{os_compatability}</td>"
+                f"<td>{offline_functionality}</td>"
+                f"<td>{mobile_friendly}</td>"
+                f"<td>{languages_supported}</td>"
+                f"<td>{security_and_privacy}</td>"
+                f"<td>{maintenance_and_sustainability}</td>"
+                f"<td>{data_collection_level}</td>"
+                f"<td>{license}</td>"
+                f"<td>{cost}</td>"
+                f"<td><a href='{doc_file}'>Details</a></td>"
+                f"<td>{overall_rating}</td>"
+                f"</tr>\n"
             )
 
-        # Write the category markdown to file
+        category_html.append("</tbody>\n")
+        category_html.append("</table>\n")
+
+        # Write the category HTML to file
         print(category_filepath)
         with open(category_filepath, "w") as f:
-            f.writelines(category_markdown)
+            f.writelines(category_html)
 
     # Prepare links in the README to the new category pages
     links_section = ["### Compare Tools\n"]
