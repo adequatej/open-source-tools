@@ -1,50 +1,5 @@
 [
     {
-        "id": "b4b82212-6c8a-4061-af9a-435a2302de02",
-        "date_updated": 1744746070,
-        "submitted_by": "shawnp221",
-        "tool_name": "fd",
-        "tool_url": "https://signal.org/",
-        "category": "Privacy",
-        "description": "aef",
-        "core-features": "vs",
-        "os-compatibility": "dvs",
-        "offline-functionality": "Yes",
-        "technical-level": "Beginner",
-        "languages-supported": "dvd",
-        "security-privacy-features": "sdv",
-        "maintenance-sustainability": "sdv",
-        "data-collection-level": "No Data",
-        "active-development": "Yes",
-        "community-support": "Yes",
-        "status": "Active",
-        "deployment": [
-            "Docker Container"
-        ],
-        "license": "vsd",
-        "cost": "dvs",
-        "overall-rating": "2.3",
-        "evaluation_checklist": [
-            "I have tested this tool personally",
-            "I have reviewed the tool's documentation",
-            "I have checked the tool's license",
-            "I have tested with non-technical users",
-            "I have assessed security implications",
-            "I have documented installation steps"
-        ],
-        "testing-documentation": "fvds",
-        "date_submitted": 1744739683,
-        "mobile-friendly": "Yes",
-        "evaluation-checklist": [
-            "I have tested this tool personally",
-            "I have reviewed the tool's documentation",
-            "I have checked the tool's license",
-            "I have tested with non-technical users",
-            "I have assessed security implications",
-            "I have documented installation steps"
-        ]
-    },
-    {
         "id": "bfbeac31-7ce1-4eaa-b08b-68e1af4d7160",
         "date_updated": 1744750215,
         "submitted_by": "shawnp221",
