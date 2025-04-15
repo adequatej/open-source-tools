@@ -1,7 +1,7 @@
 [
     {
-        "id": "decce0e7-82e9-457a-9b9e-2ea74ba919e3",
-        "date_updated": 1744741505,
+        "id": "1d4918e2-0ff3-47d9-9ede-d0ec35535314",
+        "date_updated": 1744741907,
         "submitted_by": "shawnp221",
         "tool_name": "fd",
         "tool_url": "https://signal.org/",
@@ -10,7 +10,7 @@
         "core-features": "vs",
         "os-compatibility": "dvs",
         "offline-functionality": "Yes",
-        "technical-level": "",
+        "technical-level": "Beginner",
         "languages-supported": "dvd",
         "security-privacy-features": "sdv",
         "maintenance-sustainability": "sdv",
@@ -34,7 +34,7 @@
         ],
         "testing-documentation": "",
         "date_submitted": 1744739683,
-        "mobile-friendly": "",
+        "mobile-friendly": "Yes",
         "evaluation-checklist": [
             "I have tested this tool personally",
             "I have reviewed the tool's documentation",
