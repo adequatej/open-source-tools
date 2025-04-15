@@ -61,16 +61,28 @@ def update_readme():
         # Generate markdown for the category
         category_markdown = []
         category_markdown.append(f"# {category} Tools\n")
-        category_markdown.append("| Tool Name | Description | Status | Deployment | Tech Level | Docs |\n")
-        category_markdown.append("|-----------|-------------|--------|------------|------------|------|\n")
+        category_markdown.append("| Tool Name | Desc | Status | Deployment | Community Support | Tech Level | Core Features | OS Compatibility | Offline Functionality | Mobile-Friendly | Languages Supported | Security/Privacy Features | Maintenance/Sustainability | Data Collection Level | License | Cost | Docs | Overall Rating |\n")
+        category_markdown.append("|-----------|------|--------|------------|-------------------|------------|---------------|------------------|-----------------------|-----------------|---------------------|---------------------------|----------------------------|-----------------------|---------|------|------|----------------|\n")
 
         for tool in tools_in_cat:
             tool_name = tool.get("tool_name", "Unknown")
             tool_url = tool.get("tool_url", "#")
             description = tool.get("description", "No description available.")
-            status = "Active"
+            status = tool.get("status", "N/A")
             deployment = ", ".join(tool.get("deployment", []))
+            community_support = tool.get("community-support", "N/A")
             tech_level = tool.get("technical-level", "N/A")
+            core_features = tool.get("core-features", "N/A")
+            os_compatability = tool.get("os-compatibility", "N/A")
+            offline_functionality = tool.get("offline-functionality", "N/A")
+            mobile_friendly = tool.get("mobile-friendly", "N/A")
+            languages_supported = tool.get("languages-supported", "N/A")
+            security_and_privacy = tool.get("security-privacy-features", "N/A")
+            maintenance_and_sustainability = tool.get("maintenance-sustainability", "N/A")
+            data_collection_level = tool.get("data-collection-level", "N/A")
+            license = tool.get("license", "N/A")
+            cost = tool.get("cost", "N/A")
+            overall_rating = tool.get("overall-rating", "N/A")
 
             # Construct documentation path
             doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
@@ -82,7 +94,7 @@ def update_readme():
                 open(doc_file, "w").close()
 
             category_markdown.append(
-                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {tech_level} | {doc_link} |\n"
+                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | {status} | {overall_rating} |\n"
             )
 
         # Write the category markdown to file
