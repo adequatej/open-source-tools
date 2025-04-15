@@ -60,9 +60,9 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 ### Evaluated Tools
 
 <!-- BEGIN TOOLS -->
-| Category | Tool Name | Description | Status | Deployment | Technical Level | Documentation |
+| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|
-| Privacy | [fd](https://signal.org/) | aef | Active | Docker Container |  | [Details](docs/tools/privacy/fd.md) |
+| [fd](https://signal.org/) | Privacy | aef | Active | Docker Container |  | [Details](docs/tools/privacy/fd.md) | 2.3 |
 <!-- END TOOLS -->
 
 ### Compare Tools

@@ -1,7 +1,7 @@
 [
     {
-        "id": "801e027c-bd51-42e1-a7ba-1d5cb4ddecd1",
-        "date_updated": 1744739683,
+        "id": "decce0e7-82e9-457a-9b9e-2ea74ba919e3",
+        "date_updated": 1744741505,
         "submitted_by": "shawnp221",
         "tool_name": "fd",
         "tool_url": "https://signal.org/",
@@ -33,6 +33,15 @@
             "I have documented installation steps"
         ],
         "testing-documentation": "",
-        "date_submitted": 1744739683
+        "date_submitted": 1744739683,
+        "mobile-friendly": "",
+        "evaluation-checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ]
     }
 ]
