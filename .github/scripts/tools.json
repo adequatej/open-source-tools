@@ -43,5 +43,41 @@
             "I have assessed security implications",
             "I have documented installation steps"
         ]
+    },
+    {
+        "id": "72f46bb5-140c-4b3a-8c1b-a8ffea6e1376",
+        "date_updated": 1744747334,
+        "submitted_by": "shawnp221",
+        "tool_name": "Tor Browser",
+        "tool_url": "https://www.torproject.org/",
+        "category": "Privacy",
+        "description": "Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online.",
+        "core-features": "Onion Routing, Anonymity, No Tracking by Websites, HTTPS Everywhere, No Browsing History, Cross-Platform Compatibility, Security-Focused, Automatic Updates, Anti-Censorship, Hidden Services, Exit Node Privacy, No Unique Identifiers",
+        "os-compatibility": "Windows, Linux, macOS, Android",
+        "offline-functionality": "No",
+        "mobile-friendly": "Partially",
+        "technical-level": "Intermediate",
+        "languages-supported": "32 (include Chinese [Simplified & Traditional], Thai, Vietnamese, Korean, Japanese)",
+        "security-privacy-features": "Multi-layer Encryption, MITM Protection, NoScript, IP/DNS Leak Prevention, Traffic Obfuscation, Circuit Switching, Device Fingerprinting Resistance, Tracker and Cookie Isolation, Secure Defaults, Software Sandboxing",
+        "maintenance-sustainability": "Monthly updates and a public status page. Funded by ~$7 million, with 28.5% from individual donors. Sponsored by organizations like Open Technology Fund and Fastly.",
+        "data-collection-level": "Minimal",
+        "community-support": "Yes",
+        "status": "Active",
+        "deployment": [
+            "Desktop Application"
+        ],
+        "license": "Mozilla Public License",
+        "cost": "Fully Free",
+        "overall-rating": "4.51",
+        "evaluation-checklist": [
+            "I have tested this tool personally",
+            "I have reviewed the tool's documentation",
+            "I have checked the tool's license",
+            "I have tested with non-technical users",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "testing-documentation": "[Testing Process for Tools.pdf](https://github.com/user-attachments/files/19764969/Testing.Process.for.Tools.pdf)",
+        "date_submitted": 1744747334
     }
 ]
