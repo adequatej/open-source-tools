@@ -53,9 +53,10 @@ def update_readme():
         tool_url = tool.get("tool_url", "#")
         category = tool.get("category", "Unknown Category")
         description = tool.get("description", "No description available.")
-        status = "Active"  # Assuming the tool is active upon approval
+        status = tool.get("status", "N/A")  # Assuming the tool is active upon approval
         deployment = ", ".join(tool.get("deployment", []))
         technical_level = tool.get("technical-level", "Unknown Technical Level") # Default level, can be modified based on tool's complexity
+        overall_rating = tool.get("overall-rating", "N/A")
         documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.replace(' ', '-')}.md"
 
         # Construct documentation path
@@ -68,12 +69,10 @@ def update_readme():
         if not os.path.exists(doc_file):
             with open(doc_file, "w") as df:
                 df.write(f"# {tool_name}\n\n")
-                df.write(f"**Category**: {category}\n\n")
-                df.write(f"**Description**: {description}\n\n")
-                df.write("Documentation coming soon.\n")
+                df.write(tool.get("testing-documentation", "Documentation coming soon.") + "\n")
 
 
-        tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) |\n")
+        tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) | {overall_rating} |\n")
 
     # Insert the updated tools section into the README
     updated_readme_content = (
