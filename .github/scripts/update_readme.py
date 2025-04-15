@@ -70,6 +70,10 @@ def update_readme():
             with open(doc_file, "w") as df:
                 df.write(f"# {tool_name}\n\n")
                 df.write(tool.get("testing-documentation", "Documentation coming soon.") + "\n")
+        else:
+            with open(doc_file, "w") as df:
+                df.write(f"# {tool_name}\n\n")
+                df.write(tool.get("testing-documentation", "Documentation coming soon.") + "\n")
 
 
         tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) | {overall_rating} |\n")
