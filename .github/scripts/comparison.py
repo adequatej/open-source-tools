@@ -94,7 +94,7 @@ def update_readme():
                 open(doc_file, "w").close()
 
             category_markdown.append(
-                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | [Details]({doc_file} | {overall_rating} |\n"
+                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | [Details]({doc_file}) | {overall_rating} |\n"
             )
 
         # Write the category markdown to file
