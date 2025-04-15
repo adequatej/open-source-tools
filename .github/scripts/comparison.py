@@ -3,6 +3,22 @@ import sys
 import os
 from collections import defaultdict
 
+def format_star_rating(rating):
+    try:
+        rating_float = float(rating)
+        full_stars = int(rating_float)
+        half_star = rating_float - full_stars >= 0.25 and rating_float - full_stars < 0.99
+        stars = "⭐" * full_stars
+        if half_star:
+            stars += "⯪"  # Optional: fallback to "½" or "☆"
+        total_stars = full_stars + (1 if half_star else 0)
+        empty_stars = 5 - total_stars
+        stars += "☆" * empty_stars
+        return f"{stars} ({rating_float:.2f})"
+    except ValueError:
+        return "N/A"
+        
+
 def update_readme():
     # Load tools from file
     try:
@@ -82,7 +98,8 @@ def update_readme():
             data_collection_level = tool.get("data-collection-level", "N/A")
             license = tool.get("license", "N/A")
             cost = tool.get("cost", "N/A")
-            overall_rating = tool.get("overall-rating", "N/A")
+            overall_rating_raw = tool.get("overall-rating", "N/A")
+            overall_rating = format_star_rating(overall_rating_raw)
 
             # Construct documentation path
             doc_dir = f"{category.lower().replace(' ', '-')}"
