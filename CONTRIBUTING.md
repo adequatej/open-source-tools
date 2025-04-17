@@ -2,6 +2,16 @@
 
 Thank you for your interest in contributing to our open source tools collection! This document provides guidelines and instructions for contributing.
 
+## Quick Start Guide
+
+1. [Choose your contribution type](#types-of-contributions)
+2. [Review the submission process](#submission-process)
+3. [Follow our documentation guidelines](#documentation-requirements)
+4. [Understand our review process](#review-process)
+5. [Styling Guidelines](#style-guidelines)
+6. [Additional Resources](#additional-resources)
+7. [Need Help](#need-help)
+
 ## Types of Contributions
 
 ### 1. Tool Submissions
@@ -24,128 +34,98 @@ Thank you for your interest in contributing to our open source tools collection!
 - Suggest improvements to the repository structure
 - Recommend new categories or tags
 
-## Tool Submission Requirements
-
-### Required Information
-- Tool name and description
-- Source code repository link
-- Documentation/website link (if available)
-- Installation instructions
-- Usage examples
-- License information
-- Maintenance status
-- Categories and tags
-
-### Quality Standards
-1. **Documentation**
-   - Clear and comprehensive README
-   - Installation instructions
-   - Usage examples
-   - API documentation (if applicable)
-
-2. **Code Quality**
-   - Well-structured and readable code
-   - Appropriate comments and documentation
-   - Tests (if applicable)
-   - No security vulnerabilities
-
-3. **Maintenance**
-   - Active maintenance or clear maintenance status
-   - Issue tracking enabled
-   - Clear contribution guidelines
-
 ## Submission Process
 
-1. **Initial Submission**
-   - Create a new issue using the "New Tool Submission" template
-   - Provide basic tool information (name, URL, category)
-   - Describe deployment method and requirements
-   - Explain target users and use cases
+### 1. Initial Submission
+- Create a new issue using the "New Tool Submission" template
+- Provide basic tool information (name, URL, category)
+- Describe deployment method and requirements
+- Explain target users and use cases
 
-2. **Initial Review**
-   - OCF/WPI team reviews the submission
-   - Assess if tool meets basic criteria:
-     - Open source
-     - Active maintenance
-     - Clear documentation
-     - Appropriate license
-   - Determine if tool warrants full evaluation
-   cases
+### 2. Initial Review
+- OCF/WPI team reviews the submission
+- Assess if tool meets basic criteria:
+  - Open source
+  - Active maintenance
+  - Clear documentation
+  - Appropriate license
+- Determine if tool warrants full evaluation
 
-3. **Evaluation Phase**
-   - Install and test the tool
-   - Document installation process
-   - Test with both technical and non-technical users
-   - Assess security implications
-   - Evaluate accessibility and usability
-   - Compare with similar tools
-   - Document any issues or limitations
+### 3. Evaluation Phase
+- Install and test the tool
+- Document installation process
+- Test with both technical and non-technical users
+- Assess security implications
+- Evaluate accessibility and usability
+- Compare with similar tools
+- Document any issues or limitations
 
-4. **Documentation Creation**
-   - Create a new branch: `tools/your-tool-name`
-   - Add tool documentation in `docs/tools/$category$/tool-name.md`
-   - Include:
-     - Installation guide
-     - Usage instructions
-     - Test results
-     - Security assessment
-     - User feedback
-     - Screenshots/examples
+### 4. Documentation Creation
+- Create a new branch: `tools/your-tool-name`
+- Add tool documentation in `docs/tools/$category$/tool-name.md`
+- Include:
+  - Installation guide
+  - Usage instructions
+  - Test results
+  - Security assessment
+  - User feedback
+  - Screenshots/examples
 
-5. **Final Review & Integration**
-   - Submit pull request with documentation
-   - Team reviews documentation completeness
-   - Community feedback period
-   - Make requested revisions
-   - Tool is added to the list upon approval
+### 5. Final Review & Integration
+- Submit pull request with documentation
+- Team reviews documentation completeness
+- Community feedback period
+- Make requested revisions
+- Tool is added to the list upon approval
 
+## Documentation Requirements
 
-Note: This is an iterative process focused on thorough evaluation and documentation. The goal is to provide 
-comprehensive, reliable information about each tool's usability, security, and effectiveness for both 
-technical and non-technical users.
+Each tool in our repository must include detailed documentation covering:
 
+### 1. Overview
+- Tool purpose and features
+- Use cases and benefits
+- Target audience
+
+### 2. Technical Details
+- System requirements
+- Dependencies
+- Installation guides
+- Configuration options
+
+### 3. User Guides
+- Step-by-step setup
+- Basic usage
+- Advanced features
+- Troubleshooting
+
+### 4. Evaluation Results
+- Performance metrics
+- Security assessment
+- Usability findings
+- Recommended alternatives
 
 ## Review Process
 
-*not a complete/comprehensive process yet, but will be refined as we test*
+### 1. Initial Check
+- All required information provided
+- Meets basic quality standards
+- Appropriate categorization
 
-1. **Initial Check**
-   - All required information provided
-   - Meets basic quality standards
-   - Appropriate categorization
+### 2. Technical Review
+- Code quality assessment
+- Security check
+- Documentation review
 
-2. **Technical Review**
-   - Code quality assessment
-   - Security check
-   - Documentation review
+### 3. Community Feedback
+- Community members can comment
+- Suggestions for improvements
+- Use case validation
 
-3. **Community Feedback**
-   - Community members can comment
-   - Suggestions for improvements
-   - Use case validation
-
-4. **Final Approval**
-   - OCF/WPI team approval
-   - Automatic integration
-   - README update
-
-## New tool approval
-For a more in-depth perspective on how our automation and approval process works, look [here](.github/README-scripts.md).
-
-### When issue is labeled "approved":
-1. GitHub Action triggers
-2. Script reads issue form data
-3. Extracts tool information
-4. Updates tool listing
-5. Generates documentation
-6. Commits changes
-7. Closes issue
-
-General:
-You'll need a GitHub Action workflow that:
-Triggers when a label is added to an issue
-Checks if the label is "approved"
-If approved, processes the issue form data.
+### 4. Final Approval
+- OCF/WPI team approval
+- Automatic integration
+- README update
 
 ## Style Guidelines
 
@@ -161,13 +141,12 @@ If approved, processes the issue form data.
 - Include all required links
 - Update timestamps when needed
 
-## Need Help?
-- Check existing issues
-- Join our community chat (*coming soon*) 
-- Contact maintainers
-- Review existing submissions
+## Additional Resources
 
-## Questions?
+- [Tool Assessment Criteria](docs/technical/assessment-criteria.md) - Detailed information about how tools are evaluated
+- [Automation Process](.github/README-scripts.md) - How the automated submission process works
+
+## Need Help?
 
 If you have questions about contributing, please:
 1. Check existing issues

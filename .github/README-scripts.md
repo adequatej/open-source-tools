@@ -1,6 +1,19 @@
 # Understanding Repository Automation
 
-This document explains how the automated processes work in this repository, including issue templates, GitHub Actions, and the tool approval workflow.
+## Table of Contents
+1. [Overview](#overview)
+2. [GitHub Issue Templates](#github-issue-templates)
+3. [Tool Approval Process](#tool-approval-process)
+   - [Initial Submission](#1-initial-submission)
+   - [Review Process](#2-review-process)
+   - [Automation](#3-automation)
+4. [GitHub Action Workflow](#github-action-workflow)
+   - [Process Steps](#process-steps)
+   - [Scripts](#scripts)
+5. [Error Handling](#error-handling)
+6. [Contributing to Scripts](#contributing-to-scripts)
+   - [Testing Locally](#testing-locally)
+7. [Need Help?](#need-help)
 
 ## Overview
 
@@ -31,9 +44,14 @@ Our repository uses standardized issue templates located in `.github/ISSUE_TEMPL
 - If approved, the `approved` label is added and 'needs-review' label is removed
 
 ### 3. Automation
-   - When the `approved` label is added, the automation process begins
-   - A single GitHub Action workflow handles the entire process
-   - The GitHub Action bot closes issue and adds tool to list and updates the README file
+When the `approved` label is added, the automation process begins:
+1. GitHub Action triggers
+2. Script reads issue form data
+3. Extracts tool information
+4. Updates tool listing
+5. Generates documentation
+6. Commits changes
+7. Closes issue
 
 ## GitHub Action Workflow
 
@@ -59,7 +77,7 @@ The `tool_approved_with_readme_updates.yml` workflow handles the entire automati
 4. **Repository Update**
    - Commits both `tools.json` and `README.md` changes
    - Pushes changes to the main branch
-   - GitHub Action bot closes the issue automatically (if tool approved)
+   - GitHub Action bot closes the issue automatically
 
 ### Scripts
 
