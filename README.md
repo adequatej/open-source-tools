@@ -87,6 +87,7 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 |----------|-----------|-------------|---------|------------|-----------------|---------------|----------------|-------------|
 | [Tor Browser](https://www.torproject.org/) | Privacy | Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online. | Active | Desktop Application | Intermediate | [Details](docs/tools/categories/privacy/Tor-Browser.md) | 4.51 | 2024-03-15 |
 | [Signal](https://signal.org/) | Messaging | Signal is a cross-platform encrypted messaging service that allows users to send secure text, voice, video messages and files. | Active | Mobile App, Desktop Application | Beginner | [Details](docs/tools/categories/messaging/Signal.md) | 4.8 | 2024-03-21 |
+| [Test](#) | Messaging | Test | Active | Docker Container | Advanced | [Details](docs/tools/categories/messaging/Test.md) | Test | Test |
 <!-- END TOOLS -->
 
 ### Compare Tools
