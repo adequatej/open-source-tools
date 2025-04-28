@@ -29,9 +29,8 @@ A curated collection of open source tools and resources developed through the co
 ## Quick Start
 
 ### For Users
-- [Browse Our Tools](#tools-list) - Find tools that match your needs
-- [Compare Tools](#compare-tools) - See how different tools stack up
-- [Tool Categories](#tool-categories) - Find tools by category
+- [Browse Our Tools](#list-of-tools) - Find tools that match your needs
+- [Compare Tools](#view-comparisons) - See how different tools stack up
 
 ### For Contributors
 - [How to Submit a Tool](#tool-submission-process)
