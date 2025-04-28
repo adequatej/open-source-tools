@@ -82,5 +82,32 @@
         "interest-in-testing": "",
         "additional-notes": "_No response_",
         "date_submitted": 1745835750
+    },
+    {
+        "id": "c8e1f6c3-9111-4180-b97f-64a0fee7c908",
+        "date_updated": 1745852010,
+        "submitted_by": "adequatej",
+        "tool-name": "dkwaodwa",
+        "tool-url": "https://dkwaodwa",
+        "category": "Password Management",
+        "description": "dkwaodwadkwaodwa",
+        "version-tested": "dkwaodwa",
+        "testing-environment": "dkwaodwa",
+        "testing-documentation": "dkwaodwa",
+        "evaluation-checklist": [
+            "I have completed the testing template",
+            "I have documented all test results",
+            "I have included performance metrics",
+            "I have assessed security implications",
+            "I have documented installation steps"
+        ],
+        "status": "Active",
+        "deployment-type": [
+            "Mobile App"
+        ],
+        "technical-level": "Intermediate",
+        "overall-rating": "4",
+        "additional-notes": "_No response_",
+        "date_submitted": 1745852010
     }
 ]

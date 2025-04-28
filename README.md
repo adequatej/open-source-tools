@@ -96,6 +96,7 @@ For a comparison of tools by categories, visit the respective category pages bel
 - [Messaging](docs/tools/comparisonOfMessagingTools.md)
 - [VPN Services](docs/tools/comparisonOfVPN-ServicesTools.md)
 - [File Transfer](docs/tools/comparisonOfFile-TransferTools.md)
+- [Password Management](docs/tools/comparisonOfPassword-ManagementTools.md)
 <!-- END TOOLS -->
 
 ## Tool Submission Process
