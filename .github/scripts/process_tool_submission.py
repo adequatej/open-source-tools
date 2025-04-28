@@ -56,6 +56,11 @@ def parse_tool_body(body, is_edit, username):
             re.sub(r"^- \[.\] ?", "", item).strip()
             for item in checklist if "[x]" in item.lower()
         ]
+        # Add fields for evaluated tools list
+        data["status"] = "Active"  # All approved tools are active
+        data["deployment"] = get_value("Deployment Type").split(", ")  # Convert comma-separated list to array
+        data["technical_level"] = get_value("Technical Level")
+        data["overall_rating"] = get_value("Overall Rating")
     else:
         data["why_valuable"] = get_value("Why is this tool valuable?")
         data["similar_tools"] = get_value("Similar Tools")
