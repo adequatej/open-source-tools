@@ -1,0 +1,120 @@
+name: Tool Submission
+description: Submit a tool with complete test results
+title: "[Tool Submission]: Tool Name"
+labels: ["tool-submission", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a tool with test results! This template is for submitting tools that you have thoroughly tested. If you haven't tested the tool yet, please use the "Tool Suggestion" template instead.
+
+        Please ensure you have:
+        1. Completed the [Testing Template](docs/technical/assessment/TOOL_TEMPLATE.md)
+        2. Documented all test results
+        3. Included performance metrics
+        4. Assessed security implications
+        5. Documented installation steps
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      description: What is the name of the tool?
+      placeholder: e.g., Privacy Badger
+    validations:
+      required: true
+
+  - type: input
+    id: tool-url
+    attributes:
+      label: Tool URL
+      description: Link to the tool's website or repository
+      placeholder: e.g., https://github.com/EFForg/privacybadger
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What category best fits this tool?
+      options:
+        - File Transfer
+        - Messaging
+        - Browser
+        - Password Management
+        - PasteBins
+        - Office Suites
+        - Notebooks
+        - Multi-factor Authentication
+        - VPN Services
+        - Search Engines
+        - Content Blockers
+        - AI Chat
+        - Data & Metadata Redaction
+        - Email Clients
+        - Encryption
+        - Language Tools
+        - Desktop/PC
+        - Document Collaboration
+        - OS
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Brief Description
+      description: A short description of what the tool does
+      placeholder: This tool is a...
+    validations:
+      required: true
+
+  - type: input
+    id: version-tested
+    attributes:
+      label: Version Tested
+      description: Which version of the tool did you test?
+      placeholder: e.g., 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing-environment
+    attributes:
+      label: Testing Environment
+      description: Describe the environment used for testing (OS, hardware, network, etc.)
+      placeholder: e.g., Windows 11, 16GB RAM, 100Mbps broadband
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation-link
+    attributes:
+      label: Testing Documentation
+      description: Link to your completed testing template (Google Doc, Markdown file, etc.)
+      placeholder: Link to your completed testing documentation...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: evaluation-checklist
+    attributes:
+      label: Submission Checklist
+      description: Please check all that apply
+      options:
+        - label: I have completed the testing template
+        - label: I have documented all test results
+        - label: I have included performance metrics
+        - label: I have assessed security implications
+        - label: I have documented installation steps
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any additional information or context about your testing
+      placeholder: Additional notes about your testing process or findings... 

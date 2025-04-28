@@ -60,28 +60,39 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 - 🌟 Featured Tool
 - ⭐ Highly Rated
 - 🆕 Recently Added
-- 🔧 Utility
-- 📊 Data Analysis
-- 🤖 AI/ML
-- 🔒 Security
-- 🌐 Web Tool
-- 📱 Mobile App
-- 🔍 Privacy
-- 🤝 Collaboration
+- 💾 File Transfer
+- 💬 Messaging
+- 🌐 Browser
+- 🔑 Password Management
+- 📋 PasteBins
+- 📊 Office Suites
+- 📓 Notebooks
+- 🔐 Multi-factor Authentication
+- 🛡️ VPN Services
+- 🔍 Search Engines
+- 🚫 Content Blockers
+- 🤖 AI Chat
+- ⚙️ Data & Metadata Redaction
+- ✉️ Email Clients
+- 🔒 Encryption
+- 🈸 Language Tools
+- 💻 Desktop/PC
+- 🤝 Document Collaboration
+- 🖥️ OS
 
 ### Evaluated Tools
 
 <!-- BEGIN TOOLS -->
 | Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|-------|
-| [Tor Browser](https://www.torproject.org/) | Privacy | Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online. | Active | Desktop Application | Intermediate | [Details](docs/tools/privacy/Tor-Browser.md) | 4.51 |
+| [Tor Browser](https://www.torproject.org/) | Browser | Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online. | Active | Desktop Application | Intermediate | [Details](docs/tools/browser/Tor-Browser.md) | 4.51 |
 <!-- END TOOLS -->
 
 ### Compare Tools
 
 <!-- BEGIN TOOLS -->
 For a comparison of tools by categories, visit the respective category pages below:
-- [Privacy](docs/tools/comparisonOfPrivacyTools.md)
+- [Browser](docs/tools/comparisonOfBrowsers.md)
 <!-- END TOOLS -->
 
 ## Tool Submission Process

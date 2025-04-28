@@ -35,7 +35,12 @@ All testing outcomes follow a standardized, machine-readable structure that enab
 | Deployment | String | Architecture type | "Standalone software" |
 | License | ID | SPDX license identifier | "GPL-3.0" |
 | Cost | String | Pricing model | "Fully Free/Free Core/Subscription" |
-| Overall Rating | Double | Weighted score | 4.50 |
+| Operational Functionality Rating | Double | Weighted score | 0.50 |
+| Usability Rating | Double | Weighted score | 1.08 |
+| Security and Privacy Strength Rating | Double | Weighted score | 1.44 |
+| Maintenance and Sustainability Rating | Double | Weighted score | 0.70 |
+| Effectiveness and Reliability Rating | Double | Weighted score | 1.00 |
+| Overall Rating | Double | Overall Weighted score | 4.50 |
 | Date Tested | String | Assessment date | "2024-03-15" |
 | Full Documentation | TextArea | Complete assessment | "Detailed evaluation notes..." |
 
@@ -99,7 +104,12 @@ All testing outcomes follow a standardized, machine-readable structure that enab
   "deployment": "Standalone software",
   "license": "GPL-3.0",
   "cost": "Fully Free",
-  "overallRating": 4.50,
+  "operationalFunctionalityRating": 0.85,
+  "usabilityRating": 0.92,
+  "securityAndPrivacyStrengthRating": 1.44,
+  "maintenanceAndSustainabilityRating": 0.70,
+  "effectivenessAndReliabilityRating": 0.95,
+  "overallRating": 4.86,
   "dateTested": "2024-03-15",
   "documentation": "Complete assessment notes..."
 } 

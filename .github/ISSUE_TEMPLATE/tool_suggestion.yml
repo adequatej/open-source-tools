@@ -1,0 +1,120 @@
+name: Tool Suggestion
+description: Suggest a new tool for evaluation
+title: "[Tool Suggestion]: Tool Name"
+labels: ["tool-suggestion", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a tool! This template is for suggesting tools that you think would be valuable to include in our collection. If you have already tested the tool, please use the "Tool Submission" template instead.
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+      description: What is the name of the tool?
+      placeholder: e.g., Privacy Badger
+    validations:
+      required: true
+
+  - type: input
+    id: tool-url
+    attributes:
+      label: Tool URL
+      description: Link to the tool's website or repository
+      placeholder: e.g., https://github.com/EFForg/privacybadger
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What category best fits this tool?
+      options:
+        - File Transfer
+        - Messaging
+        - Browser
+        - Password Management
+        - PasteBins
+        - Office Suites
+        - Notebooks
+        - Multi-factor Authentication
+        - VPN Services
+        - Search Engines
+        - Content Blockers
+        - AI Chat
+        - Data & Metadata Redaction
+        - Email Clients
+        - Encryption
+        - Language Tools
+        - Desktop/PC
+        - Document Collaboration
+        - OS
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Briefly describe what the tool is designed to do
+      placeholder: This tool is a...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-valuable
+    attributes:
+      label: Why is this tool valuable?
+      description: Explain why this tool would be valuable for civil society organizations
+      placeholder: This tool would be valuable because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: similar-tools
+    attributes:
+      label: Similar Tools
+      description: What other tools serve similar purposes? How does this tool compare?
+      placeholder: List similar tools and how this one differs...
+    validations:
+      required: true
+
+  - type: textarea
+    id: known-limitations
+    attributes:
+      label: Known Limitations
+      description: Based on existing documentation, what are the known limitations or issues?
+      placeholder: List any known limitations or issues...N/A if none
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation
+      description: Link to any documentation, reviews, or articles about this tool
+      placeholder: Links to documentation, reviews, or articles...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: interest-level
+    attributes:
+      label: Interest in Testing
+      description: Would you be interested in testing this tool?
+      options:
+        - "Yes, I can help test"
+        - "No, but I think it's worth evaluating"
+        - "Maybe, depending on requirements"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other information that might be helpful
+      placeholder: Additional context, use cases, or information... 

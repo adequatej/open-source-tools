@@ -1,6 +1,9 @@
-# Tool Documentation Template
+# Testing Template
+Does the tool "prove" to be high-impact?
 
-## Basic Information
+## Testing & Evaluation Sheet
+
+### Tool Overview
 - **Name**: [Tool Name]
 - **Category**: [Category, e.g., Secure Communication, Anonymity, Encryption]
 - **Purpose**: [What the tool is designed to do]
@@ -10,187 +13,170 @@
   - [ ] Operational - Actively running/maintained
   - [ ] In Testing - Currently being evaluated or piloted
   - [ ] Inactive/Deprecated - No longer maintained or functional
-  - [ ] In Use by CSOs - Verified adoption by one or more CSOs
 - **Deployment Architecture**:
-  - [ ] A standalone software - Runs entirely locally
-  - [ ] A locally hosted service with separate server and client component
-  - [ ] A service with a local client that's hosted by a third party
+  - [ ] A standalone software - Runs entirely locally (e.g., runs on computer and doesn't depend on external server)
+  - [ ] A locally hosted service with separate server and client component - Run both backend/frontend yourself (e.g., backend could be on a local network, or self-hosted on cloud)
+  - [ ] A service with a local client that's hosted by a third party - You install a client on your device, but it connects to and depends on a remote server (e.g., Signal: install app (client), but Signal's servers handle message relaying, etc.)
   - [ ] A service that is hosted by a third party but can also be self-hosted
-- **Version Information**:
-  - **Version Tested**: [Version number]
-  - **Latest Version**: [Latest version number]
-  - **Release Date**: [Release date]
+- **Version**: [Version Tested]
 
-## Installation & Setup
-
-### OS Compatibility
-- [ ] Windows
-- [ ] macOS
-- [ ] Linux
-- [ ] Android
-- [ ] iOS
-- [ ] Other: [Specify]
-
-### Installation Requirements
+### Installation & Setup
+- **OS Compatibility**: What is the OS compatibility of the tool?
 - **Installation Manual**: Yes/No
-- **Installation Steps**: [Step-by-step instructions]
-- **Common Installation Issues & Fixes**: [List common errors and solutions]
+- **Installation Steps**: What is the installation process?
+- **Common Installation Issues & Fixes**: List common errors users might face and how to troubleshoot them
 - **User Documentation**: Yes/No
-- **Required Technical Knowledge**: None/Beginner/Intermediate/Professional
+- **Required Technical Knowledge**: None, beginner, intermediate, professional
+- **Special Configurations**: Mention if command-line setup or special configurations are needed
 
-## Testing & Evaluation
+### Testing & Evaluation
 
-### 1. Operational Functionality (Weight: 10%)
+#### Operational Functionality
+- **Functionality**
+  - Test Steps: Verify the tool's core features by using all major functions, tracking any failures or bugs.
+  - [ ] The tool is mostly non-functional with many broken features and bugs
+  - [ ] Several broken features or bugs
+  - [ ] Minor bugs or issues
+  - [ ] Mostly functional with few bugs or no bugs
+  - [ ] Fully functional with no bugs
 
-#### Functionality
-- [ ] The tool is mostly non-functional with many broken features and bugs
-- [ ] Several broken features or bugs
-- [ ] Minor bugs or issues
-- [ ] Mostly functional with few bugs or no bugs
-- [ ] Fully functional with no bugs
+- **Internet Dependence**:
+  - Simulate no internet connection (e.g., disable Wifi)
+  - Test the tool on 2G/3G networks
 
-#### Internet Dependence
-- [ ] Works offline
-- [ ] Requires internet connection
-- [ ] Tested on 2G/3G networks
-- [ ] Performance on slow connections
+- **Localization & Language Support**
+  - How many languages are available?
+  - Which East Asian languages are available?
+  - Do they have an active community contributing to localization?
 
-#### Localization & Language Support
-- **Languages Available**: [Number and list]
-- **East Asian Languages**: [List]
-- **Community Localization**: Yes/No
+- **Mobile Accessibility**
+  - Verify if a mobile app exists and is functional
+  - Test key functions (e.g., navigating, uploading data) on mobile browsers
 
-#### Mobile Accessibility
-- [ ] Mobile app available
-- [ ] Mobile browser support
-- [ ] Key functions tested on mobile
+#### Usability for Non-Technical Users
+- **Ease of Installation & Deployment**
+  - How many steps are required to install the tool?
+  - Are there one-click installations, or does it require command-line knowledge?
+  - Are setup guides, manuals and FAQ's regularly updated?
+  - Approximately how much times does a typical installation take (e.g., under 10 minutes, 30+ minutes)
 
-### 2. Usability for Non-Technical Users (Weight: 25%)
+- **User Onboarding Experience**
+  - Are there any tool-tips or in-app guidance when first using the software?
 
-#### Ease of Installation & Deployment
-- **Installation Steps**: [Number]
-- **Installation Type**: One-click/Command-line
-- **Documentation Status**: Regularly updated/Outdated
-- **Installation Time**: [Estimated time]
+- **Technical Experience Level Required**
+  - Can users with no programming background install and start using the tool?
+  - Is the interface visual and menu-driven or does it rely heavily on terminal commands?
 
-#### User Onboarding Experience
-- [ ] Tool-tips available
-- [ ] In-app guidance
-- [ ] Tutorial videos
-- [ ] Quick start guide
+#### Security & Privacy Strength
+- **Encryption Standards**
+  - Verify encryption strength through external tools or expert review
+  - Does the tool use E2E encryption? What algorithm is used? (E.g., "AES-256 encryption used; E2E verified in test")
 
-#### Technical Experience Required
-- [ ] No programming background needed
-- [ ] Visual interface
-- [ ] Menu-driven
-- [ ] Terminal commands required
+- **Known Strength resilience**
+  - Is the tool usable in regions with heavy censorship or surveillance?
+  - Does it include built-in circumvention tools?
+  - Any known weaknesses or risks?
 
-### 3. Security & Privacy Strength (Weight: 30%)
+- **Comparison with Known Standards**
+  - How does the tool measure up against established security/privacy standards?
 
-#### Encryption Standards
-- **Encryption Type**: [Specify]
-- **E2E Encryption**: Yes/No
-- **Algorithm Used**: [Specify]
+- **Data Minimization**
+  - What user data is collected?
 
-#### Known Strength Resilience
-- [ ] Usable in censored regions
-- [ ] Built-in circumvention tools
-- [ ] Known weaknesses: [List]
+- **Privacy Policy Transparency**
+  - What does the privacy policy state about data handling?
 
-#### Data Minimization
-- **Data Collected**: [List]
-- **Privacy Policy**: [Link]
-- **Data Handling**: [Summary]
+#### Maintenance/Sustainability
+- **Community support**
+  - Is it easy to get help, ask questions, or find solutions from other users or developers?
 
-### 4. Maintenance & Sustainability (Weight: 15%)
+- **Development active status**
+  - How frequently is it updated?
+  - How responsive is the development team?
 
-#### Community Support
-- [ ] Active community
-- [ ] Documentation available
-- [ ] Support channels: [List]
+- **Funding and Sponsorship**
+  - Who are the main funders? (e.g., NGOs, governments, private donors)
+  - Who are the main sponsors?
+  - Does the software seem financially sustainable?
 
-#### Development Status
-- **Update Frequency**: [Specify]
-- **Team Responsiveness**: [Rating]
-- **Last Update**: [Date]
+#### Performance / Effectiveness & Reliability
+- **Testing Environment Setup**:
+  - Device: [Device model and specs (CPU, RAM, etc.)]
+  - OS: [Operating System version]
+  - Network: [Network type and speed (e.g., broadband, 3G/4G, etc.)]
 
-#### Funding & Sponsorship
-- **Main Funders**: [List]
-- **Sponsors**: [List]
-- **Financial Sustainability**: [Assessment]
+- **User Experience Observations**
+  - How smooth does the tool feel?
+  - What is the tool's responsiveness during normal use?
 
-### 5. Performance Efficiency (Weight: 20%)
+- **Speed & Responsiveness**:
+  - Does it load & work efficiently?
+  - Conduct speed tests to measure loading times and responsiveness (e.g., using ping, traceroute, lighthouse)
+  - Are there any noticeable delays or lag during use?
 
-#### Testing Environment
-- **Device**: [Specs]
-- **OS**: [Version]
-- **Network**: [Type and speed]
+- **Resource Usage**:
+  - How much CPU & memory does it consume?
+  - Measure CPU and memory usage using specific tools like Task Manager (Windows), htop (Linux), or Activity Monitor (macOS)?
 
-#### Performance Metrics
-- **Speed & Responsiveness**: [Rating]
-- **Resource Usage**: [CPU/Memory]
-- **Network Performance**: [Latency/Bandwidth]
+- **Network Performance**:
+  - How much Latency & Bandwidth Usage?
+  - Test network efficiency by monitoring bandwidth consumption with tools like Wireshark.
 
-#### Reliability
-- **Error Rate**: [Percentage]
-- **Uptime**: [Percentage]
-- **Third-party Audits**: [List]
+- **Reliability**
+  - Are there independent peer reviews or third-party audits available?
+  - Detail if low error rates and specify uptime percentage
+  - Run core tests multiple times and log how many attempts fail
 
-## Deployment Considerations
+### Deployment Considerations
+- **Open Source & Transparency**:
+  - Is the code open for independent verification?
 
-### Technical Requirements
-- **Open Source**: Yes/No
-- **Deployment Options**: Cloud/Local
-- **Dependencies**: [List]
-- **Documentation**: [Status]
+- **Cloud vs. Local Deployment**:
+  - Does the tool require cloud infrastructure like AWS or Azure, or can it be locally run on a private server?
 
-### Maintenance
-- **Ease of Maintenance**: [Rating]
-- **Code Modification**: [Difficulty level]
-- **Contribution Process**: [Description]
+- **Dependencies**:
+  - Does it require Docker, Python, databases, etc.?
+  - Are dependencies clearly documented?
 
-## Testing Scenarios
+- **Post-Deployment Maintenance**
+  - After deployment, is the tool easy to maintain?
+  - If a deployer decides to fork the project, is the code easy to modify?
+- **Merge/Sustainability**: 
+  - How open is the original project to contributions?
+  - Is there a streamlined process for submitting changes back to the main repository?
 
-### Scenario 1
-- **Description**: [Scenario details]
-- **Results**: [Findings]
-- **Notes**: [Additional information]
+### Testing Scenarios
+#### Scenario 1
+- Notes & Documentation
 
-### Scenario 2
-- **Description**: [Scenario details]
-- **Results**: [Findings]
-- **Notes**: [Additional information]
+#### Scenario 2
+- Notes & Documentation
 
-## Insights & Recommendations
+### Insights & Recommendations
+- **Key Findings**
+  - What are the key findings?
 
-### Key Findings
-- **Strengths**: [List]
-- **Weaknesses**: [List]
-- **Suggested Improvements**: [List]
-- **Alternative Tools**: [List]
+- **Strengths**:
+  - What are the benefits of the tool?
 
-## Legal & Cost Information
+- **Weaknesses**:
+  - What are the major drawbacks of the tool?
 
-### License
-- **Type**: [License type]
-- **Terms**: [Summary]
+- **Suggested Improvements**
+  - What are some suggestions for improving the tool?
 
-### Cost Implications
-- **Total Cost of Ownership**: [Details]
-- **Free Features**: [List]
-- **Premium Features**: [List]
-- **Hidden Costs**: [List]
+- **Alternative Tools**:
+  - Are there better tools available? If so, which tools are they?
 
-## CSO Relevance
+- **License**:
+  - Which License?
 
-### Usefulness to Civil Society
-- **Benefits**: [List]
-- **Regional Availability**: [Details]
-- **Accessibility**: [Status]
-- **Blocking Status**: [If applicable]
+- **Cost/Resource Implications**:
+  - **Total Cost of Ownership**:
+    - Is the tool free to use?
+      - Are there premium tiers or paid features?
+    - Are there hidden costs for maintenance, third-party integrations, or updates?
+    - [License cost, time, resources to install, maintain and troubleshoot]
 
-## Final Assessment
-- **Overall Score**: [Calculated score]
-- **Recommendation**: [Recommend/Not Recommend]
-- **Target Users**: [Description]
-- **Use Cases**: [List]
+### Why is this useful to civil societies in authoritarian environments?
+Explain why this tool would be useful to civil society organizations. Include if it is unavailable in certain regions due to firewalls or other blocking systems.

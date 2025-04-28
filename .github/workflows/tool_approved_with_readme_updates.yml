@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   update-tools-json:
-    if: github.event.label.name == 'approved'
+    if: github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'tool-submission')
     runs-on: ubuntu-latest
 
     steps:
