@@ -80,6 +80,15 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: date-tested
+    attributes:
+      label: Date Tested
+      description: When was this tool tested? (YYYY-MM-DD)
+      placeholder: e.g., 2024-03-20
+    validations:
+      required: true
+
   - type: textarea
     id: testing-environment
     attributes:

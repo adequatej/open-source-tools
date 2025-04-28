@@ -67,6 +67,7 @@ def parse_tool_body(body, is_edit, username, is_submission):
     if is_submission:
         # Fields for tested tools
         data["version-tested"] = get_value("version-tested")
+        data["date-tested"] = get_value("date-tested")
         data["testing-environment"] = get_value("testing-environment")
         data["testing-documentation"] = get_value("testing-documentation")
         data["evaluation-checklist"] = [

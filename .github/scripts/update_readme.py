@@ -2,6 +2,7 @@
 import json
 import sys
 import os
+from datetime import datetime
 
 def update_readme():
     # Load the approved tools from the tools.json file
@@ -44,8 +45,8 @@ def update_readme():
 
     # Build the tools table section
     tools_section = [
-        "| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating |\n",
-        "|----------|-----------|-------------|---------|------------|-----------------|---------------|-------|\n"
+        "| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating | Last Tested |\n",
+        "|----------|-----------|-------------|---------|------------|-----------------|---------------|----------------|-------------|\n"
     ]
     
     # Only include tools that have been tested and approved
@@ -60,6 +61,7 @@ def update_readme():
         deployment = ", ".join(tool.get("deployment-type", []))  # Join array into comma-separated string
         technical_level = tool.get("technical-level", "Unknown Technical Level")
         overall_rating = tool.get("overall-rating", "N/A")
+        date_tested = tool.get("date-tested", "N/A")
         tool_name_safe = tool_name.replace(" ", "-")
         documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name_safe}.md"
 
@@ -71,31 +73,50 @@ def update_readme():
         os.makedirs(doc_dir, exist_ok=True)
 
         # Create or update documentation file with testing information
-        if not os.path.exists(doc_file):
-            with open(doc_file, "w") as df:
-                df.write(f"# {tool_name}\n\n")
-                df.write(f"## Testing Information\n")
-                df.write(f"- Version Tested: {tool.get('version-tested', 'N/A')}\n")
-                df.write(f"- Testing Environment: {tool.get('testing-environment', 'N/A')}\n")
-                df.write(f"- Testing Documentation: {tool.get('testing-documentation', 'N/A')}\n")
-                df.write(f"- Evaluation Checklist: {', '.join(tool.get('evaluation-checklist', []))}\n")
-                df.write(f"\n## Additional Notes\n{tool.get('additional-notes', 'No additional notes.')}\n")
-        else:
-            with open(doc_file, "w") as df:
-                df.write(f"# {tool_name}\n\n")
-                df.write(f"## Testing Information\n")
-                df.write(f"- Version Tested: {tool.get('version-tested', 'N/A')}\n")
-                df.write(f"- Testing Environment: {tool.get('testing-environment', 'N/A')}\n")
-                df.write(f"- Testing Documentation: {tool.get('testing-documentation', 'N/A')}\n")
-                df.write(f"- Evaluation Checklist: {', '.join(tool.get('evaluation-checklist', []))}\n")
-                df.write(f"\n## Additional Notes\n{tool.get('additional-notes', 'No additional notes.')}\n")
+        with open(doc_file, "w") as df:
+            df.write(f"# {tool_name}\n\n")
+            
+            # Basic Information
+            df.write(f"## Basic Information\n")
+            df.write(f"- **Category**: {tool.get('category', 'N/A')}\n")
+            df.write(f"- **URL**: {tool.get('tool-url', 'N/A')}\n")
+            df.write(f"- **Description**: {tool.get('description', 'N/A')}\n")
+            df.write(f"- **Status**: {tool.get('status', 'Active')}\n\n")
+            
+            # Deployment Information
+            df.write(f"## Deployment Information\n")
+            df.write(f"- **Deployment Types**: {', '.join(tool.get('deployment-type', []))}\n")
+            df.write(f"- **Technical Level Required**: {tool.get('technical-level', 'N/A')}\n\n")
+            
+            # Testing Information
+            df.write(f"## Testing Information\n")
+            df.write(f"- **Version Tested**: {tool.get('version-tested', 'N/A')}\n")
+            df.write(f"- **Date Tested**: {tool.get('date-tested', 'N/A')}\n")
+            df.write(f"- **Testing Environment**: {tool.get('testing-environment', 'N/A')}\n")
+            df.write(f"- **Testing Documentation**: {tool.get('testing-documentation', 'N/A')}\n")
+            df.write(f"- **Overall Rating**: {tool.get('overall-rating', 'N/A')}\n")
+            df.write(f"- **Evaluation Checklist**:\n")
+            for item in tool.get('evaluation-checklist', []):
+                df.write(f"  - {item}\n")
+            df.write("\n")
+            
+            # Additional Information
+            if tool.get('additional-notes'):
+                df.write(f"## Additional Notes\n")
+                df.write(f"{tool.get('additional-notes')}\n\n")
+            
+            # Submission Information
+            df.write(f"## Submission Information\n")
+            df.write(f"- **Submitted By**: {tool.get('submitted_by', 'N/A')}\n")
+            df.write(f"- **Submission Date**: {datetime.fromtimestamp(tool.get('date_submitted', 0)).strftime('%Y-%m-%d')}\n")
+            df.write(f"- **Last Updated**: {datetime.fromtimestamp(tool.get('date_updated', 0)).strftime('%Y-%m-%d')}\n")
 
         # Ensure all fields are properly formatted for the table
         description = description.replace("|", "\\|")  # Escape pipe characters
         deployment = deployment.replace("|", "\\|")
         technical_level = technical_level.replace("|", "\\|")
 
-        tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) | {overall_rating} |\n")
+        tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) | {overall_rating} | {date_tested} |\n")
 
     # Insert the updated tools section into the README
     updated_readme_content = (
