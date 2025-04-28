@@ -85,6 +85,8 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 <!-- BEGIN TOOLS -->
 | Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating |
 |----------|-----------|-------------|---------|------------|-----------------|---------------|-------|
+| [dkwaodwa](https://dkwaodwa) | Password Management | dkwaodwadkwaodwa | Active | Mobile App | Intermediate | [Details](docs/tools/password-management/dkwaodwa.md) | 4 |
+| [TESTOLI](#) | PasteBins | TESTOLI | Active | Command Line Tool | Advanced | [Details](docs/tools/pastebins/TESTOLI.md) | 4 |
 <!-- END TOOLS -->
 
 ### Compare Tools
@@ -97,6 +99,7 @@ For a comparison of tools by categories, visit the respective category pages bel
 - [VPN Services](docs/tools/comparisonOfVPN-ServicesTools.md)
 - [File Transfer](docs/tools/comparisonOfFile-TransferTools.md)
 - [Password Management](docs/tools/comparisonOfPassword-ManagementTools.md)
+- [PasteBins](docs/tools/comparisonOfPasteBinsTools.md)
 <!-- END TOOLS -->
 
 ## Tool Submission Process
