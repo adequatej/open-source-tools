@@ -83,22 +83,20 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 ### Evaluated Tools
 
 <!-- BEGIN TOOLS -->
-| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating |
-|----------|-----------|-------------|---------|------------|-----------------|---------------|-------|
-| [dkwaodwa](https://dkwaodwa) | Password Management | dkwaodwadkwaodwa | Active | Mobile App | Intermediate | [Details](docs/tools/password-management/dkwaodwa.md) | 4 |
-| [TESTOLI](#) | PasteBins | TESTOLI | Active | Command Line Tool | Advanced | [Details](docs/tools/pastebins/TESTOLI.md) | 4 |
+| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating | Last Tested |
+|----------|-----------|-------------|---------|------------|-----------------|---------------|----------------|-------------|
+| [Tor Browser](https://www.torproject.org/) | Privacy | Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online. | Active | Desktop Application | Intermediate | [Details](docs/tools/categories/privacy/Tor-Browser.md) | 4.51 | 2024-03-15 |
+| [Signal](https://signal.org/) | Messaging | Signal is a cross-platform encrypted messaging service that allows users to send secure text, voice, video messages and files. | Active | Mobile App, Desktop Application | Beginner | [Details](docs/tools/categories/messaging/Signal.md) | 4.8 | 2024-03-21 |
 <!-- END TOOLS -->
 
-<!-- BEGIN TOOLS -->
+### Compare Tools
+
+<!-- BEGIN COMPARISONS -->
 ### Compare Tools
 For a comparison of tools by categories, visit the respective category pages below:
-- [Privacy](docs/tools/comparisonOfPrivacyTools.md)
-- [Messaging](docs/tools/comparisonOfMessagingTools.md)
-- [VPN Services](docs/tools/comparisonOfVPN-ServicesTools.md)
-- [File Transfer](docs/tools/comparisonOfFile-TransferTools.md)
-- [Password Management](docs/tools/comparisonOfPassword-ManagementTools.md)
-- [PasteBins](docs/tools/comparisonOfPasteBinsTools.md)
-<!-- END TOOLS -->
+- [Privacy](docs/tools/comparisons/privacy.md)
+- [Messaging](docs/tools/comparisons/messaging.md)
+<!-- END COMPARISONS -->
 
 ## Tool Submission Process
 

@@ -63,11 +63,10 @@ def update_readme():
         overall_rating = tool.get("overall-rating", "N/A")
         date_tested = tool.get("date-tested", "N/A")
         tool_name_safe = tool_name.replace(" ", "-")
-        documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name_safe}.md"
-
         # Construct documentation path
-        doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
+        doc_dir = f"docs/tools/categories/{category.lower().replace(' ', '-')}"
         doc_file = f"{doc_dir}/{tool_name_safe}.md"
+        documentation_url = f"docs/tools/categories/{category.lower().replace(' ', '-')}/{tool_name_safe}.md"
 
         # Ensure the directory exists
         os.makedirs(doc_dir, exist_ok=True)

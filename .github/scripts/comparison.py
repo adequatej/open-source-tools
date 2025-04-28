@@ -47,18 +47,18 @@ def update_readme():
         print("Error: '### Compare Tools' section not found in README.md.")
         sys.exit(1)
 
-    # Find <!-- BEGIN TOOLS --> and <!-- END TOOLS --> after 'Compare Tools'
+    # Find <!-- BEGIN COMPARISONS --> and <!-- END COMPARISONS --> after 'Compare Tools'
     begin_idx = end_idx = None
     for idx in range(compare_idx, len(readme_content)):
         line = readme_content[idx]
-        if "<!-- BEGIN TOOLS -->" in line:
+        if "<!-- BEGIN COMPARISONS -->" in line:
             begin_idx = idx
-        elif "<!-- END TOOLS -->" in line:
+        elif "<!-- END COMPARISONS -->" in line:
             end_idx = idx
             break
 
     if begin_idx is None or end_idx is None:
-        print("Error: Missing <!-- BEGIN TOOLS --> or <!-- END TOOLS --> markers in README.md.")
+        print("Error: Missing <!-- BEGIN COMPARISONS --> or <!-- END COMPARISONS --> markers in README.md.")
         sys.exit(1)
 
     # Group tools by category
@@ -70,8 +70,8 @@ def update_readme():
     category_links = []
     for category, tools_in_cat in grouped_by_category.items():
         # Create category-specific markdown file
-        category_filename = 'comparisonOf' + category.replace(' ', '-') + 'Tools.md'
-        category_filepath = f"docs/tools/{category_filename}"
+        category_filename = category.lower().replace(' ', '-') + '.md'
+        category_filepath = f"docs/tools/comparisons/{category_filename}"
         category_links.append(f"[{category}]({category_filepath})")
 
         # Generate markdown for the category
@@ -82,11 +82,11 @@ def update_readme():
 
         
         for tool in tools_in_cat:
-            tool_name = tool.get("tool_name", "Unknown")
-            tool_url = tool.get("tool_url", "#")
+            tool_name = tool.get("tool-name", "Unknown")
+            tool_url = tool.get("tool-url", "#")
             description = tool.get("description", "No description available.")
             status = tool.get("status", "N/A")
-            deployment = ", ".join(tool.get("deployment", []))
+            deployment = ", ".join(tool.get("deployment-type", []))
             community_support = tool.get("community-support", "N/A")
             tech_level = tool.get("technical-level", "N/A")
             core_features = tool.get("core-features", "N/A")
@@ -103,17 +103,15 @@ def update_readme():
             overall_rating = format_star_rating(overall_rating_raw)
 
             # Construct documentation path
-            doc_dir = f"{category.lower().replace(' ', '-')}"
-            doc_file = f"{doc_dir}/{tool_name.replace(' ', '-')}.md"
-            doc_link = f"[Details]({doc_file})"
-
-            os.makedirs(doc_dir, exist_ok=True)
-            if not os.path.exists(doc_file):
-                open(doc_file, "w").close()
+            tool_name_safe = tool_name.replace(" ", "-").lower()
+            doc_link = f"[Details](../categories/{category.lower().replace(' ', '-')}/{tool_name_safe}.md)"
 
             category_markdown.append(
-                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | [Details]({doc_file}) | {overall_rating} |\n"
+                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | {doc_link} | {overall_rating} |\n"
             )
+
+        # Create comparisons directory if it doesn't exist
+        os.makedirs("docs/tools/comparisons", exist_ok=True)
 
         # Write the category markdown to file
         print(category_filepath)
