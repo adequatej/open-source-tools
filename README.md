@@ -87,8 +87,6 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 |----------|-----------|-------------|---------|------------|-----------------|---------------|-------|
 <!-- END TOOLS -->
 
-### Compare Tools
-
 <!-- BEGIN TOOLS -->
 ### Compare Tools
 For a comparison of tools by categories, visit the respective category pages below:
