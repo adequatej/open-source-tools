@@ -49,22 +49,23 @@ def update_readme():
     ]
     
     # Only include tools that have been tested and approved
-    evaluated_tools = [tool for tool in tools if "version_tested" in tool]
+    evaluated_tools = [tool for tool in tools if "version-tested" in tool]
     
     for tool in evaluated_tools:
-        tool_name = tool.get("tool_name", "Unknown Tool")
-        tool_url = tool.get("tool_url", "#")
+        tool_name = tool.get("tool-name", "Unknown Tool")
+        tool_url = tool.get("tool-url", "#")
         category = tool.get("category", "Unknown Category")
         description = tool.get("description", "No description available.")
         status = tool.get("status", "Active")  # Default to Active for evaluated tools
         deployment = ", ".join(tool.get("deployment-type", []))  # Join array into comma-separated string
         technical_level = tool.get("technical-level", "Unknown Technical Level")
         overall_rating = tool.get("overall-rating", "N/A")
-        documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.replace(' ', '-')}.md"
+        tool_name_safe = tool_name.replace(" ", "-")
+        documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name_safe}.md"
 
         # Construct documentation path
         doc_dir = f"docs/tools/{category.lower().replace(' ', '-')}"
-        doc_file = f"{doc_dir}/{tool_name.replace(' ', '-')}.md"
+        doc_file = f"{doc_dir}/{tool_name_safe}.md"
 
         # Ensure the directory exists
         os.makedirs(doc_dir, exist_ok=True)

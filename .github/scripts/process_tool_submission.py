@@ -48,41 +48,46 @@ def parse_tool_body(body, is_edit, username, is_submission):
     }
 
     def get_value(key):
-        return "\n".join(sections.get(key, [])).strip()
+        # First try to get by ID
+        if key in sections:
+            return "\n".join(sections[key]).strip()
+        # Then try by label if ID not found
+        label_key = key.replace("-", " ").title()
+        return "\n".join(sections.get(label_key, [])).strip()
 
     # Basic tool information
-    data["tool-name"] = get_value("Tool Name")
-    tool_url = get_value("Tool URL")
+    data["tool-name"] = get_value("tool-name")
+    tool_url = get_value("tool-url")
     if tool_url:  # Only set if we actually got a URL
         data["tool-url"] = add_https_to_url(tool_url)
-    data["category"] = get_value("Category")
-    data["description"] = get_value("Description")
+    data["category"] = get_value("category")
+    data["description"] = get_value("description")
 
     # Handle fields based on whether this is a submission or suggestion
     if is_submission:
         # Fields for tested tools
-        data["version-tested"] = get_value("Version Tested")
-        data["testing-environment"] = get_value("Testing Environment")
-        data["testing-documentation"] = get_value("Testing Documentation")
+        data["version-tested"] = get_value("version-tested")
+        data["testing-environment"] = get_value("testing-environment")
+        data["testing-documentation"] = get_value("testing-documentation")
         data["evaluation-checklist"] = [
             re.sub(r"^- \[.\] ?", "", item).strip()
             for item in checklist if "[x]" in item.lower()
         ]
         # Fields for evaluated tools list
         data["status"] = "Active"  # All approved tools are active
-        data["deployment-type"] = [d.strip() for d in get_value("Deployment Type").split(",")]
-        data["technical-level"] = get_value("Technical Level")
-        data["overall-rating"] = get_value("Overall Rating")
+        data["deployment-type"] = [d.strip() for d in get_value("deployment-type").split(",")]
+        data["technical-level"] = get_value("technical-level")
+        data["overall-rating"] = get_value("overall-rating")
     else:
         # Fields for suggested tools
-        data["why-valuable"] = get_value("Why is this tool valuable?")
-        data["similar-tools"] = get_value("Similar Tools")
-        data["known-limitations"] = get_value("Known Limitations")
-        data["existing-documentation"] = get_value("Documentation")
-        data["interest-in-testing"] = get_value("Interest in Testing")
+        data["why-valuable"] = get_value("why-valuable")
+        data["similar-tools"] = get_value("similar-tools")
+        data["known-limitations"] = get_value("known-limitations")
+        data["existing-documentation"] = get_value("documentation")
+        data["interest-in-testing"] = get_value("interest-level")
 
     # Common fields
-    data["additional-notes"] = get_value("Additional Notes")
+    data["additional-notes"] = get_value("additional-notes")
 
     # Guess email
     last_lines = body.strip().splitlines()[-5:]
