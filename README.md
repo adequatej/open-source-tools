@@ -14,15 +14,16 @@ A curated collection of open source tools and resources developed through the co
    - [About OCF](#about-ocf)
    - [About WPI](#about-wpi)
    - [Our Mission](#our-mission)
-3. [Tools List](#tools-list)
-   - [Legend](#legend)
-   - [Evaluated Tools](#evaluated-tools)
-   - [Compare Tools](#compare-tools)
+3. [Evaluated Tools](#evaluated-tools)
+   - [List of Tools](#list-of-tools)
+   - [View Comparisons](#view-comparisons)
 4. [Tool Submission Process](#tool-submission-process)
 5. [For Technical Users](#for-technical-users)
-   - [Tool Assessment](#tool-assessment)
-   - [Documentation Structure](#documentation-structure)
-   - [Example Assessment](#example-assessment)
+   - [Scoring](#scoring)
+   - [Data structure](#data-structure)
+   - [Tool Template](#tool-template)
+   = [Exxample Tool Assessment](#example-assessment)
+
 6. [Contributing](#contributing)
 7. [License](#license)
 
@@ -54,48 +55,20 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 - Providing comprehensive documentation and guides
 - Suggesting alternatives when appropriate
 
-## Tools List
-
-### Legend
-- 🌟 Featured Tool
-- ⭐ Highly Rated
-- 🆕 Recently Added
-- 💾 File Transfer
-- 💬 Messaging
-- 🌐 Browser
-- 🔑 Password Management
-- 📋 PasteBins
-- 📊 Office Suites
-- 📓 Notebooks
-- 🔐 Multi-factor Authentication
-- 🛡️ VPN Services
-- 🔍 Search Engines
-- 🚫 Content Blockers
-- 🤖 AI Chat
-- ⚙️ Data & Metadata Redaction
-- ✉️ Email Clients
-- 🔒 Encryption
-- 🈸 Language Tools
-- 💻 Desktop/PC
-- 🤝 Document Collaboration
-- 🖥️ OS
-
-### Evaluated Tools
-
 <!-- BEGIN TOOLS -->
-| Tool Name | Category | Description | Status | Deployment | Technical Level | Documentation | Overall Rating | Last Tested |
-|----------|-----------|-------------|---------|------------|-----------------|---------------|----------------|-------------|
-| [Tor Browser](https://www.torproject.org/) | Privacy | Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online. | Active | Desktop Application | Intermediate | [Details](docs/tools/categories/privacy/Tor-Browser.md) | 4.51 | 2024-03-15 |
-| [Signal](https://signal.org/) | Messaging | Signal is a cross-platform encrypted messaging service that allows users to send secure text, voice, video messages and files. | Active | Mobile App, Desktop Application | Beginner | [Details](docs/tools/categories/messaging/Signal.md) | 4.8 | 2024-03-21 |
+## Evaluated Tools
+
+### List of Tools:
+View our evaluated tools in a comprehensive list with detailed ratings and information:
+- [Complete List of Evaluated Tools](docs/tools/evaluated-tools.md)
+
 <!-- END TOOLS -->
 
-### Compare Tools
-
 <!-- BEGIN COMPARISONS -->
-### Compare Tools
-For a comparison of tools by categories, visit the respective category pages below:
-- [Privacy](docs/tools/comparisons/privacy.md)
-- [Messaging](docs/tools/comparisons/messaging.md)
+### View Comparisons:
+Our comparison pages help you make informed decisions by comparing tools within the same category. 
+- [Browse All Comparisons](docs/tools/comparisons/README.md) - Access all category-based comparisons
+
 <!-- END COMPARISONS -->
 
 ## Tool Submission Process
@@ -114,11 +87,14 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 
 *The following sections contain technical details about our evaluation process and documentation structure. These are primarily intended for contributors and technical users.*
 
-### Tool Assessment
-[View comprehensive assessment criteria](docs/technical/assessment/criteria.md)
+### Scoring
+[View scoring](docs/technical/assessment/scoring.md)
 
-### Documentation Structure
-[View documentation structure](docs/technical/README.md)
+### Data Structure
+[View data structure](docs/technical/assessment/data-structure.md)
+
+### Tool Template 
+[View Tool Template](docs/technical/assessment/TOOL_TEMPLATE.md)
 
 ### Example Assessment
 [View example tool assessment](docs/technical/assessment/example-assessment.md)

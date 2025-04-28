@@ -17,7 +17,17 @@ def format_star_rating(rating):
         return f"{stars} ({rating_float:.2f})"
     except ValueError:
         return "N/A"
-        
+
+def format_yes_no(value):
+    if isinstance(value, str):
+        value = value.lower()
+        if value in ['yes', 'true']:
+            return "✅"
+        elif value in ['no', 'false']:
+            return "❌"
+        elif value in ['partial', 'partially', 'limited']:
+            return "⚠️"
+    return value
 
 def update_readme():
     # Load tools from file
@@ -28,113 +38,126 @@ def update_readme():
         print("Error: tools.json file not found.")
         sys.exit(1)
 
-    # Load README
-    try:
-        with open("README.md", "r") as f:
-            readme_content = f.readlines()
-    except FileNotFoundError:
-        print("Error: README.md file not found.")
-        sys.exit(1)
-
-    # Find the '### Compare Tools' section
-    compare_idx = None
-    for idx, line in enumerate(readme_content):
-        if line.strip().startswith("### Compare Tools"):
-            compare_idx = idx
-            break
-
-    if compare_idx is None:
-        print("Error: '### Compare Tools' section not found in README.md.")
-        sys.exit(1)
-
-    # Find <!-- BEGIN COMPARISONS --> and <!-- END COMPARISONS --> after 'Compare Tools'
-    begin_idx = end_idx = None
-    for idx in range(compare_idx, len(readme_content)):
-        line = readme_content[idx]
-        if "<!-- BEGIN COMPARISONS -->" in line:
-            begin_idx = idx
-        elif "<!-- END COMPARISONS -->" in line:
-            end_idx = idx
-            break
-
-    if begin_idx is None or end_idx is None:
-        print("Error: Missing <!-- BEGIN COMPARISONS --> or <!-- END COMPARISONS --> markers in README.md.")
-        sys.exit(1)
-
     # Group tools by category
     grouped_by_category = defaultdict(list)
     for tool in tools:
         grouped_by_category[tool.get("category", "Uncategorized")].append(tool)
 
-    # Create category markdown files
-    category_links = []
+    # Create category markdown files and build comparison README content
+    os.makedirs("docs/tools/comparisons", exist_ok=True)
+    
+    # Create the main comparison README
+    comparison_readme = [
+        "# Tool Comparisons by Category\n\n",
+        "Our comparison pages help you make informed decisions by comparing tools within the same category. Each comparison includes:\n\n",
+        "- Feature comparison matrices\n",
+        "- Security and privacy analysis\n",
+        "- Performance benchmarks\n",
+        "- Usability ratings\n",
+        "- Deployment requirements\n",
+        "- Cost comparisons\n",
+        "- Maintenance status\n\n",
+        "## Available Categories\n\n"
+    ]
+
+    # Process each category
     for category, tools_in_cat in grouped_by_category.items():
         # Create category-specific markdown file
         category_filename = category.lower().replace(' ', '-') + '.md'
         category_filepath = f"docs/tools/comparisons/{category_filename}"
-        category_links.append(f"[{category}]({category_filepath})")
+        comparison_readme.append(f"- [{category}]({category_filename})\n")
 
         # Generate markdown for the category
         category_markdown = []
-        category_markdown.append(f"# {category} Tools\n")
-        category_markdown.append("| 🛠️ Tool Name | 📝 Tool Description| 📊 Status | 🚀 Deployment | 🤝 Community Support | 🧠 Tech Level | ✨ Key Core Features of the Tool | 💻 OS | 📴 Offline | 📱 Mobile | 🌐 Languages | 🔐 Security/Privacy Features | 🔧 Maintenance/Sustainability | 📥 Data Collection | 🧾 License | 💰 Cost | 📚 Docs | ⭐ Rating |\n")
-        category_markdown.append("|--------------|---------------------|------------|---------------|-----------------------|---------------|-------------------------|--------|--------|------------|------------|---------------|------------------------------|--------------------------------|--------------------|------------|----------|----------|\n")
-
+        category_markdown.append(f"# {category} Tools Comparison\n")
+        
+        # Add overview section
+        category_markdown.append("## Overview\n")
+        category_markdown.append("Quick comparison of key features and ratings:\n\n")
+        category_markdown.append("| Tool | Overall Rating | Cost | Technical Level | Key Features |\n")
+        category_markdown.append("|------|----------------|------|-----------------|--------------|\n")
         
         for tool in tools_in_cat:
             tool_name = tool.get("tool-name", "Unknown")
             tool_url = tool.get("tool-url", "#")
-            description = tool.get("description", "No description available.")
-            status = tool.get("status", "N/A")
-            deployment = ", ".join(tool.get("deployment-type", []))
-            community_support = tool.get("community-support", "N/A")
-            tech_level = tool.get("technical-level", "N/A")
-            core_features = tool.get("core-features", "N/A")
-            os_compatability = tool.get("os-compatibility", "N/A")
-            offline_functionality = tool.get("offline-functionality", "N/A")
-            mobile_friendly = tool.get("mobile-friendly", "N/A")
-            languages_supported = tool.get("languages-supported", "N/A")
-            security_and_privacy = tool.get("security-privacy-features", "N/A")
-            maintenance_and_sustainability = tool.get("maintenance-sustainability", "N/A")
-            data_collection_level = tool.get("data-collection-level", "N/A")
-            license = tool.get("license", "N/A")
+            overall_rating = format_star_rating(tool.get("overall-rating", "N/A"))
             cost = tool.get("cost", "N/A")
-            overall_rating_raw = tool.get("overall-rating", "N/A")
-            overall_rating = format_star_rating(overall_rating_raw)
-
-            # Construct documentation path
-            tool_name_safe = tool_name.replace(" ", "-").lower()
-            doc_link = f"[Details](../categories/{category.lower().replace(' ', '-')}/{tool_name_safe}.md)"
-
+            tech_level = tool.get("technical-level", "N/A")
+            
+            # Get key features (first 3 most important ones)
+            core_features = tool.get("core-features", "").split(", ")[:3]
+            key_features = ", ".join(core_features) if core_features else "N/A"
+            
             category_markdown.append(
-                f"| [{tool_name}]({tool_url}) | {description} | {status} | {deployment} | {community_support} | {tech_level} | {core_features} | {os_compatability} | {offline_functionality} | {mobile_friendly} | {languages_supported} | {security_and_privacy} | {maintenance_and_sustainability} | {data_collection_level} | {license} | {cost} | {doc_link} | {overall_rating} |\n"
+                f"| [{tool_name}]({tool_url}) | {overall_rating} | {cost} | {tech_level} | {key_features} |\n"
             )
 
-        # Create comparisons directory if it doesn't exist
-        os.makedirs("docs/tools/comparisons", exist_ok=True)
+        # Add platform support section
+        category_markdown.append("\n## Platform Support\n")
+        category_markdown.append("| Tool | Operating Systems | Mobile Support | Offline Use | Languages | Usability Rating |\n")
+        category_markdown.append("|------|------------------|----------------|--------------|-----------|------------------|\n")
+        
+        for tool in tools_in_cat:
+            tool_name = tool.get("tool-name", "Unknown")
+            tool_url = tool.get("tool-url", "#")
+            platforms = tool.get("os-compatibility", "N/A")
+            mobile = format_yes_no(tool.get("mobile-friendly", "N/A"))
+            offline = format_yes_no(tool.get("offline-functionality", "N/A"))
+            languages = tool.get("languages-supported", "N/A")
+            usability_rating = format_star_rating(tool.get("usability-rating", "N/A"))
+            
+            category_markdown.append(
+                f"| [{tool_name}]({tool_url}) | {platforms} | {mobile} | {offline} | {languages} | {usability_rating} |\n"
+            )
+
+        # Add security and privacy section
+        category_markdown.append("\n## Security & Privacy\n")
+        category_markdown.append("| Tool | Security Features | Data Collection | License | Community Support | Security Rating |\n")
+        category_markdown.append("|------|-------------------|-----------------|----------|------------------|----------------|\n")
+        
+        for tool in tools_in_cat:
+            tool_name = tool.get("tool-name", "Unknown")
+            tool_url = tool.get("tool-url", "#")
+            security = tool.get("security-privacy-features", "N/A")
+            data_collection = tool.get("data-collection-level", "N/A")
+            license_info = tool.get("license", "N/A")
+            community = format_yes_no(tool.get("community-support", "N/A"))
+            security_rating = format_star_rating(tool.get("security-privacy-strength-rating", "N/A"))
+            
+            category_markdown.append(
+                f"| [{tool_name}]({tool_url}) | {security} | {data_collection} | {license_info} | {community} | {security_rating} |\n"
+            )
+
+        # Add maintenance and deployment section
+        category_markdown.append("\n## Maintenance & Deployment\n")
+        category_markdown.append("| Tool | Deployment Type | Maintenance Status | Last Tested | Maintenance Rating |\n")
+        category_markdown.append("|------|----------------|-------------------|-------------|-------------------|\n")
+        
+        for tool in tools_in_cat:
+            tool_name = tool.get("tool-name", "Unknown")
+            tool_url = tool.get("tool-url", "#")
+            # Fix deployment type formatting
+            deployment = tool.get("deployment-architecture", "N/A")
+            if isinstance(deployment, list):
+                deployment = ", ".join(deployment)
+            maintenance = tool.get("maintenance-sustainability", "N/A")
+            last_tested = tool.get("date-tested", "N/A")
+            maintenance_rating = format_star_rating(tool.get("maintenance-sustainability-rating", "N/A"))
+            
+            category_markdown.append(
+                f"| [{tool_name}]({tool_url}) | {deployment} | {maintenance} | {last_tested} | {maintenance_rating} |\n"
+            )
 
         # Write the category markdown to file
-        print(category_filepath)
+        print(f"Creating comparison page: {category_filepath}")
         with open(category_filepath, "w") as f:
             f.writelines(category_markdown)
 
-    # Prepare links in the README to the new category pages
-    links_section = ["### Compare Tools\n"]
-    links_section.append("For a comparison of tools by categories, visit the respective category pages below:\n")
-    for link in category_links:
-        links_section.append(f"- {link}\n")
+    # Write the main comparison README
+    with open("docs/tools/comparisons/README.md", "w") as f:
+        f.writelines(comparison_readme)
 
-    # Replace content in README between the markers
-    new_readme = (
-        readme_content[:begin_idx + 1] +
-        links_section +
-        readme_content[end_idx:]
-    )
-
-    with open("README.md", "w") as f:
-        f.writelines(new_readme)
-
-    print("✅ README.md and category pages successfully updated.")
+    print("✅ Comparison pages and README successfully updated.")
 
 if __name__ == "__main__":
     update_readme()

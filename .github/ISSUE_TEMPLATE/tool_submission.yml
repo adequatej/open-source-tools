@@ -15,6 +15,7 @@ body:
         4. Assessed security implications
         5. Documented installation steps
 
+  # Basic Information
   - type: input
     id: tool-name
     attributes:
@@ -71,6 +72,224 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: What is the current status of the tool?
+      options:
+        - "Active"
+        - "Inactive"
+        - "Experimental"
+    validations:
+      required: true
+
+  # Core Features & Compatibility
+  - type: textarea
+    id: core-features
+    attributes:
+      label: Core Features
+      description: List the main features of the tool (comma-separated)
+      placeholder: e.g., End-to-end Encryption, Self-destructing Messages, Voice/Video Calls
+    validations:
+      required: true
+
+  - type: textarea
+    id: os-compatibility
+    attributes:
+      label: OS Compatibility
+      description: List all supported operating systems (comma-separated)
+      placeholder: e.g., Windows, Linux, macOS, Android
+    validations:
+      required: true
+
+  - type: dropdown
+    id: offline-functionality
+    attributes:
+      label: Offline Functionality
+      description: Can the tool be used offline?
+      options:
+        - "Yes"
+        - "No"
+        - "Partially"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mobile-friendly
+    attributes:
+      label: Mobile Support
+      description: Is the tool mobile-friendly?
+      options:
+        - "Yes"
+        - "No"
+        - "Partially"
+    validations:
+      required: true
+
+  - type: textarea
+    id: languages-supported
+    attributes:
+      label: Languages Supported
+      description: List supported languages or number of languages
+      placeholder: e.g., English, Chinese, Japanese, Korean or "32 languages"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: technical-level
+    attributes:
+      label: Technical Level
+      description: What level of technical expertise is required?
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+
+  # Security & Privacy
+  - type: textarea
+    id: security-privacy-features
+    attributes:
+      label: Security and Privacy Features
+      description: List key security and privacy features (comma-separated)
+      placeholder: e.g., End-to-end Encryption, 2FA, Data Encryption at Rest
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-collection-level
+    attributes:
+      label: Data Collection Level
+      description: How much user data does the tool collect?
+      options:
+        - "None"
+        - "Minimal"
+        - "Extensive"
+    validations:
+      required: true
+
+  - type: input
+    id: security-privacy-rating
+    attributes:
+      label: Security and Privacy Rating
+      description: Rate the security and privacy features from 1-5
+      placeholder: e.g., 4.5
+    validations:
+      required: true
+
+  # Deployment & Technical
+  - type: textarea
+    id: deployment-architecture
+    attributes:
+      label: Deployment Architecture
+      description: Describe how the tool is deployed
+      placeholder: e.g., Standalone software, Client-server application, Browser extension
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: What license is the tool under? (Use SPDX ID if possible)
+      placeholder: e.g., MIT, GPL-3.0, Apache-2.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost Structure
+      description: What is the cost structure?
+      options:
+        - "Fully Free"
+        - "Free Core"
+        - "Subscription Model"
+        - "One-time Purchase"
+        - "Other"
+    validations:
+      required: true
+
+  # Maintenance & Support
+  - type: textarea
+    id: maintenance-sustainability
+    attributes:
+      label: Maintenance and Sustainability
+      description: Describe the project's maintenance status and funding
+      placeholder: e.g., Monthly updates, funded by donations, active development team
+    validations:
+      required: true
+
+  - type: dropdown
+    id: community-support
+    attributes:
+      label: Community Support
+      description: Is there active community support?
+      options:
+        - "Yes"
+        - "No"
+        - "Limited"
+    validations:
+      required: true
+
+  - type: input
+    id: maintenance-sustainability-rating
+    attributes:
+      label: Maintenance and Sustainability Rating
+      description: Rate the maintenance and sustainability from 1-5
+      placeholder: e.g., 4.5
+    validations:
+      required: true
+
+  # Performance & Ratings
+  - type: input
+    id: operational-functionality-rating
+    attributes:
+      label: Operational Functionality Rating
+      description: Rate the operational functionality from 1-5
+      placeholder: e.g., 4.5
+    validations:
+      required: true
+
+  - type: input
+    id: usability-rating
+    attributes:
+      label: Usability Rating
+      description: Rate the usability from 1-5
+      placeholder: e.g., 4.5
+    validations:
+      required: true
+
+  - type: input
+    id: effectiveness-reliability-rating
+    attributes:
+      label: Effectiveness and Reliability Rating
+      description: Rate the effectiveness and reliability from 1-5
+      placeholder: e.g., 4.5
+    validations:
+      required: true
+
+  - type: input
+    id: overall-rating
+    attributes:
+      label: Overall Rating
+      description: The overall rating based on weighted scores (calculated automatically)
+      placeholder: e.g., 4.5
+    validations:
+      required: true
+
+  # Documentation & Testing
+  - type: textarea
+    id: full-documentation
+    attributes:
+      label: Full Documentation
+      description: Link to or provide the full documentation for this tool
+      placeholder: Detailed documentation about the tool...
+    validations:
+      required: true
+
   - type: input
     id: version-tested
     attributes:
@@ -98,54 +317,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: deployment-type
-    attributes:
-      label: Deployment Type
-      description: How is this tool deployed/installed?
-      multiple: true
-      options:
-        - Browser Extension
-        - Desktop Application
-        - Mobile App
-        - Web Application
-        - Command Line Tool
-        - Self-hosted Service
-        - Docker Container
-        - Other
-    validations:
-      required: true
-
-  - type: dropdown
-    id: technical-level
-    attributes:
-      label: Technical Level
-      description: What level of technical expertise is required?
-      options:
-        - Beginner
-        - Intermediate
-        - Advanced
-    validations:
-      required: true
-
-  - type: input
-    id: overall-rating
-    attributes:
-      label: Overall Rating
-      description: Based on your testing, rate the tool from 1-5
-      placeholder: e.g., 4.5
-    validations:
-      required: true
-
-  - type: textarea
-    id: testing-documentation
-    attributes:
-      label: Testing Documentation
-      description: Link to your completed testing template (Google Doc, Markdown file, etc.)
-      placeholder: Link to your completed testing documentation...
-    validations:
-      required: true
-
   - type: checkboxes
     id: evaluation-checklist
     attributes:
@@ -157,6 +328,16 @@ body:
         - label: I have included performance metrics
         - label: I have assessed security implications
         - label: I have documented installation steps
+    validations:
+      required: true
+
+  # Additional Information
+  - type: textarea
+    id: limitations-vulnerabilities
+    attributes:
+      label: Limitations and Vulnerabilities
+      description: Describe any known limitations or vulnerabilities
+      placeholder: e.g., No offline support, requires phone number, limited file size
     validations:
       required: true
 

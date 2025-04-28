@@ -27,8 +27,6 @@ def fail(message):
 def parse_tool_body(body, is_edit, username, is_submission):
     sections = {}
     current_section = None
-    checklist = []
-    additional_notes = []
 
     for line in body.splitlines():
         line = line.strip()
@@ -36,10 +34,7 @@ def parse_tool_body(body, is_edit, username, is_submission):
             current_section = line[4:].strip()
             sections[current_section] = []
         elif current_section:
-            if line.startswith("- ["):
-                checklist.append(line)
-            else:
-                sections[current_section].append(line)
+            sections[current_section].append(line)
 
     data = {
         "id": str(uuid.uuid4()),
@@ -55,40 +50,57 @@ def parse_tool_body(body, is_edit, username, is_submission):
         label_key = key.replace("-", " ").title()
         return "\n".join(sections.get(label_key, [])).strip()
 
-    # Basic tool information
+    # Basic Information
     data["tool-name"] = get_value("tool-name")
     tool_url = get_value("tool-url")
     if tool_url:  # Only set if we actually got a URL
         data["tool-url"] = add_https_to_url(tool_url)
     data["category"] = get_value("category")
     data["description"] = get_value("description")
+    data["status"] = get_value("status")
 
-    # Handle fields based on whether this is a submission or suggestion
-    if is_submission:
-        # Fields for tested tools
-        data["version-tested"] = get_value("version-tested")
-        data["date-tested"] = get_value("date-tested")
-        data["testing-environment"] = get_value("testing-environment")
-        data["testing-documentation"] = get_value("testing-documentation")
-        data["evaluation-checklist"] = [
-            re.sub(r"^- \[.\] ?", "", item).strip()
-            for item in checklist if "[x]" in item.lower()
-        ]
-        # Fields for evaluated tools list
-        data["status"] = "Active"  # All approved tools are active
-        data["deployment-type"] = [d.strip() for d in get_value("deployment-type").split(",")]
-        data["technical-level"] = get_value("technical-level")
-        data["overall-rating"] = get_value("overall-rating")
-    else:
-        # Fields for suggested tools
-        data["why-valuable"] = get_value("why-valuable")
-        data["similar-tools"] = get_value("similar-tools")
-        data["known-limitations"] = get_value("known-limitations")
-        data["existing-documentation"] = get_value("documentation")
-        data["interest-in-testing"] = get_value("interest-level")
+    # Core Features & Compatibility
+    data["core-features"] = get_value("core-features")
+    data["os-compatibility"] = get_value("os-compatibility")
+    data["offline-functionality"] = get_value("offline-functionality")
+    data["mobile-friendly"] = get_value("mobile-friendly")
+    data["languages-supported"] = get_value("languages-supported")
+    data["technical-level"] = get_value("technical-level")
 
-    # Common fields
+    # Security & Privacy
+    data["security-privacy-features"] = get_value("security-privacy-features")
+    data["data-collection-level"] = get_value("data-collection-level")
+    data["security-privacy-strength-rating"] = get_value("security-privacy-rating")
+
+    # Deployment & Technical
+    data["deployment-architecture"] = get_value("deployment-architecture")
+    data["license"] = get_value("license")
+    data["cost"] = get_value("cost")
+
+    # Maintenance & Support
+    data["maintenance-sustainability"] = get_value("maintenance-sustainability")
+    data["community-support"] = get_value("community-support")
+    data["maintenance-sustainability-rating"] = get_value("maintenance-sustainability-rating")
+
+    # Performance & Ratings
+    data["operational-functionality-rating"] = get_value("operational-functionality-rating")
+    data["usability-rating"] = get_value("usability-rating")
+    data["effectiveness-reliability-rating"] = get_value("effectiveness-reliability-rating")
+    data["overall-rating"] = get_value("overall-rating")
+
+    # Documentation & Testing
+    data["full-documentation"] = get_value("full-documentation")
+    data["version-tested"] = get_value("version-tested")
+    data["date-tested"] = get_value("date-tested")
+    data["testing-environment"] = get_value("testing-environment")
+
+    # Additional Information
+    data["limitations-vulnerabilities"] = get_value("limitations-vulnerabilities")
     data["additional-notes"] = get_value("additional-notes")
+
+    # Submission metadata
+    if not is_edit:
+        data["date_submitted"] = int(datetime.now().timestamp())
 
     # Guess email
     last_lines = body.strip().splitlines()[-5:]
