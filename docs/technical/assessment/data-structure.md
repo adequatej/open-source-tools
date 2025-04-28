@@ -1,115 +1,108 @@
-# Tool Assessment Data Structure
+# Data Structure Documentation
 
-This document outlines the standardized data structure used for tool assessments. The structure ensures consistency, comparability, and machine-readability across all tool evaluations.
+This document outlines the data structure used for tool submissions and evaluations in our repository.
 
 ## Overview
 
-All testing outcomes follow a standardized, machine-readable structure that enables:
-- Filtering by category
-- Side-by-side comparisons
-- Transparent reasoning
-- Reproducible testing
-- Automated analysis
+Tools are stored in a JSON array where each tool is represented by an object containing various fields that describe its features, capabilities, and evaluation results.
 
-## Data Fields
+## Field Descriptions
 
-### Tool Overview
-| Field | Type | Description | Example |
-|-------|------|-------------|---------|
-| Tool Name | String | Official name of the tool | "Tor Browser" |
-| Tool URL | URL (String) | Project website or repository | "https://www.torproject.org/" |
-| Category | ID | Predefined tool category | "Privacy & Security" |
-| Description | TextArea | Detailed tool description | "Privacy-focused web browser..." |
-| OS Compatibility | TextArea | Supported operating systems | "Windows, macOS, Linux, Android" |
-| Core Features | TextArea | Main functionality | "Anonymous browsing, E2E encryption" |
-| Offline Functionality | String | Offline capability | "Yes/No/Partially" |
-| Mobile-Friendly | String | Mobile support | "Yes/No/Partially" |
-| Tech Skill | String | Required technical expertise | "Beginner/Intermediate/Advanced" |
-| Languages Supported | Int/List | Number or list of languages | 50 or ["en", "zh", "ja"] |
-| Security/Privacy Features | TextArea | Security capabilities | "E2E encryption, No tracking" |
-| Maintenance/Sustainability | TextArea | Development status | "Active development, Regular updates" |
-| Limitations/Vulnerabilities | TextArea | Known issues | "Slower speeds, Some sites block" |
-| Data Collection Level | String | Data collection extent | "None/Minimal/Extensive" |
-| Community Support | String | Community activity | "Yes/No/Partially" |
-| Status | String | Current status | "Active/Inactive/Experimental" |
-| Deployment | String | Architecture type | "Standalone software" |
-| License | ID | SPDX license identifier | "GPL-3.0" |
-| Cost | String | Pricing model | "Fully Free/Free Core/Subscription" |
-| Operational Functionality Rating | Double | Weighted score | 0.50 |
-| Usability Rating | Double | Weighted score | 1.08 |
-| Security and Privacy Strength Rating | Double | Weighted score | 1.44 |
-| Maintenance and Sustainability Rating | Double | Weighted score | 0.70 |
-| Effectiveness and Reliability Rating | Double | Weighted score | 1.00 |
-| Overall Rating | Double | Overall Weighted score | 4.50 |
-| Date Tested | String | Assessment date | "2024-03-15" |
-| Full Documentation | TextArea | Complete assessment | "Detailed evaluation notes..." |
+### Metadata
+- `id` (string): Unique identifier for the tool
+- `date_submitted` (integer): Unix timestamp of initial submission
+- `date_updated` (integer): Unix timestamp of last update
+- `submitted_by` (string): GitHub username of the submitter
 
-## Notes on Data Types
+### Basic Information
+- `tool-name` (string): Name of the tool
+- `tool-url` (string): Official website or repository URL
+- `category` (string): Tool category (e.g., Browser, Password Management)
+- `description` (string): Brief description of the tool's purpose
+- `status` (string): Current status (Active, Inactive, Experimental)
 
-1. **String vs Boolean**
-   - Some fields use String instead of Boolean for flexibility
-   - Allows for nuanced responses (e.g., "Yes/No/Partially")
-   - Better captures tool-specific variations
+### Core Features & Compatibility
+- `core-features` (string): Comma-separated list of main features
+- `os-compatibility` (string): Supported operating systems
+- `offline-functionality` (string): "Yes", "No", or "Partially"
+- `mobile-friendly` (string): "Yes", "No", or "Partially"
+- `languages-supported` (string): Supported languages
+- `technical-level` (string): Required technical expertise (Beginner, Intermediate, Advanced)
 
-2. **TextArea Fields**
-   - Used for detailed descriptions
-   - Supports multiple paragraphs
-   - Allows for structured formatting
+### Security & Privacy
+- `security-privacy-features` (string): Key security and privacy features
+- `data-collection-level` (string): "None", "Minimal", or "Extensive"
+- `security-privacy-strength-rating` (string): Rating from 1-5
 
-3. **ID Fields**
-   - Based on predefined categories
-   - Ensures consistency
-   - Enables filtering and grouping
+### Deployment & Technical
+- `deployment-architecture` (string): How the tool is deployed
+- `license` (string): License type (SPDX identifier preferred)
+- `cost` (string): "Fully Free", "Free Core", "Subscription Model", "One-time Purchase"
 
-## Usage Guidelines
+### Maintenance & Support
+- `maintenance-sustainability` (string): Description of maintenance status and funding
+- `community-support` (string): "Yes", "No", or "Limited"
+- `maintenance-sustainability-rating` (string): Rating from 1-5
 
-1. **Data Entry**
-   - Use consistent formatting
-   - Follow predefined categories
-   - Provide detailed descriptions
-   - Include specific examples
+### Performance & Ratings
+- `operational-functionality-rating` (string): Rating from 1-5
+- `usability-rating` (string): Rating from 1-5
+- `effectiveness-reliability-rating` (string): Rating from 1-5
+- `overall-rating` (string): Weighted average of all ratings
 
-2. **Validation**
-   - Check required fields
-   - Verify data types
-   - Ensure consistency
-   - Validate URLs and IDs
+### Documentation & Testing
+- `full-documentation` (string): URL to complete documentation
+- `version-tested` (string): Version number tested
+- `date-tested` (string): Date of testing (YYYY-MM-DD)
+- `testing-environment` (string): Description of testing environment
 
-3. **Updates**
-   - Track changes
-   - Update timestamps
-   - Maintain version history
-   - Document modifications
+### Additional Information
+- `limitations-vulnerabilities` (string): Known limitations or security concerns
 
-## Example Entry
+## Example JSON
 
 ```json
 {
-  "toolName": "Tor Browser",
-  "toolUrl": "https://www.torproject.org/",
-  "category": "Privacy & Security",
-  "description": "Privacy-focused web browser that routes traffic through the Tor network",
-  "osCompatibility": "Windows, macOS, Linux, Android",
-  "coreFeatures": "Anonymous browsing, E2E encryption, No tracking",
-  "offlineFunctionality": "Partially",
-  "mobileFriendly": "Yes",
-  "techSkill": "Beginner",
-  "languagesSupported": 50,
-  "securityFeatures": "E2E encryption, No tracking, Regular security updates",
-  "maintenance": "Active development, Regular updates, Strong community",
-  "limitations": "Slower browsing speeds, Some sites block access",
-  "dataCollection": "Minimal",
-  "communitySupport": "Yes",
-  "status": "Active",
-  "deployment": "Standalone software",
-  "license": "GPL-3.0",
-  "cost": "Fully Free",
-  "operationalFunctionalityRating": 0.85,
-  "usabilityRating": 0.92,
-  "securityAndPrivacyStrengthRating": 1.44,
-  "maintenanceAndSustainabilityRating": 0.70,
-  "effectivenessAndReliabilityRating": 0.95,
-  "overallRating": 4.86,
-  "dateTested": "2024-03-15",
-  "documentation": "Complete assessment notes..."
-} 
+    "id": "example-id-123",
+    "date_submitted": 1744747334,
+    "date_updated": 1744750500,
+    "submitted_by": "username",
+    "tool-name": "Example Tool",
+    "tool-url": "https://example.com",
+    "category": "Browser",
+    "description": "A privacy-focused web browser",
+    "status": "Active",
+    "core-features": "Feature 1, Feature 2, Feature 3",
+    "os-compatibility": "Windows, Linux, macOS",
+    "offline-functionality": "Yes",
+    "mobile-friendly": "Yes",
+    "languages-supported": "English, Spanish, French",
+    "technical-level": "Beginner",
+    "security-privacy-features": "Feature A, Feature B",
+    "data-collection-level": "Minimal",
+    "security-privacy-strength-rating": "4.5",
+    "deployment-architecture": "Desktop Application",
+    "license": "MIT",
+    "cost": "Fully Free",
+    "maintenance-sustainability": "Regular updates, community-funded",
+    "community-support": "Yes",
+    "maintenance-sustainability-rating": "4.0",
+    "operational-functionality-rating": "4.2",
+    "usability-rating": "4.3",
+    "effectiveness-reliability-rating": "4.4",
+    "overall-rating": "4.3",
+    "full-documentation": "https://docs.example.com",
+    "version-tested": "1.0.0",
+    "date-tested": "2024-03-21",
+    "testing-environment": "Windows 11, macOS 14.2",
+    "limitations-vulnerabilities": "Limited to specific use cases"
+}
+```
+
+## Notes
+
+1. All ratings are on a scale of 1-5, with higher numbers being better
+2. Dates should be in YYYY-MM-DD format
+3. URLs should include the protocol (https://)
+4. The overall rating is calculated as a weighted average of individual ratings
+5. All fields are required unless explicitly marked as optional
