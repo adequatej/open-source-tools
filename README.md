@@ -56,8 +56,8 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 <!-- BEGIN TOOLS -->
 ## Evaluated Tools
 
+### List of Tools:
 View our evaluated tools in a comprehensive list with detailed ratings and information:
-
 - [Complete List of Evaluated Tools](docs/tools/evaluated-tools.md)
 
 <!-- END TOOLS -->
