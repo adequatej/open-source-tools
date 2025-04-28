@@ -176,7 +176,7 @@ body:
       label: Data Collection Level
       description: How much user data does the tool collect?
       options:
-        - "None"
+        - "No Data Collection"
         - "Minimal"
         - "Extensive"
     validations:
@@ -364,7 +364,7 @@ body:
     attributes:
       label: Additional Notes
       description: Any additional information or context about your testing
-      placeholder: Additional notes about your testing process or findings... 
+      placeholder: Additional notes about your testing process or findings...
 
   - type: checkboxes
     id: evaluation-checklist
