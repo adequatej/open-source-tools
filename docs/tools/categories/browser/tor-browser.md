@@ -46,5 +46,5 @@
 - **Limitations and Vulnerabilities**: Exit node vulnerabilities, potential for correlation attacks, slower browsing speeds, some sites block Tor traffic
 ## Submission Information
 - **Submitted By**: shawnp221
-- **Submission Date**: 2025-04-16
-- **Last Updated**: 2025-04-16
+- **Submission Date**: 2025-04-15
+- **Last Updated**: 2025-04-15
