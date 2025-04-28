@@ -14,16 +14,15 @@ A curated collection of open source tools and resources developed through the co
    - [About OCF](#about-ocf)
    - [About WPI](#about-wpi)
    - [Our Mission](#our-mission)
-3. [Evaluated Tools](#evaluated-tools)
-   - [List of Tools](#list-of-tools)
-   - [View Comparisons](#view-comparisons)
+3. [Tools List](#tools-list)
+   - [Legend](#legend)
+   - [Evaluated Tools](#evaluated-tools)
+   - [Compare Tools](#compare-tools)
 4. [Tool Submission Process](#tool-submission-process)
 5. [For Technical Users](#for-technical-users)
-   - [Scoring](#scoring)
-   - [Data structure](#data-structure)
-   - [Tool Template](#tool-template)
-   = [Exxample Tool Assessment](#example-assessment)
-
+   - [Tool Assessment](#tool-assessment)
+   - [Documentation Structure](#documentation-structure)
+   - [Example Assessment](#example-assessment)
 6. [Contributing](#contributing)
 7. [License](#license)
 
@@ -58,15 +57,16 @@ This collaboration between WPI and OCF represents a unique partnership aimed at 
 <!-- BEGIN TOOLS -->
 ## Evaluated Tools
 
-### List of Tools:
 View our evaluated tools in a comprehensive list with detailed ratings and information:
+
 - [Complete List of Evaluated Tools](docs/tools/evaluated-tools.md)
 
 <!-- END TOOLS -->
 
 <!-- BEGIN COMPARISONS -->
-### View Comparisons:
 Our comparison pages help you make informed decisions by comparing tools within the same category. 
+
+View comparisons:
 - [Browse All Comparisons](docs/tools/comparisons/README.md) - Access all category-based comparisons
 
 <!-- END COMPARISONS -->
@@ -87,14 +87,11 @@ For detailed submission guidelines, templates, and evaluation criteria, please s
 
 *The following sections contain technical details about our evaluation process and documentation structure. These are primarily intended for contributors and technical users.*
 
-### Scoring
-[View scoring](docs/technical/assessment/scoring.md)
+### Tool Assessment
+[View comprehensive assessment criteria](docs/technical/assessment/criteria.md)
 
-### Data Structure
-[View data structure](docs/technical/assessment/data-structure.md)
-
-### Tool Template 
-[View Tool Template](docs/technical/assessment/TOOL_TEMPLATE.md)
+### Documentation Structure
+[View documentation structure](docs/technical/README.md)
 
 ### Example Assessment
 [View example tool assessment](docs/technical/assessment/example-assessment.md)
