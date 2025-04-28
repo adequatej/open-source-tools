@@ -24,7 +24,7 @@ def fail(message):
     sys.exit(1)
 
 
-def parse_tool_body(body, is_edit, username):
+def parse_tool_body(body, is_edit, username, is_submission):
     sections = {}
     current_section = None
     checklist = []
@@ -58,9 +58,8 @@ def parse_tool_body(body, is_edit, username):
     data["category"] = get_value("Category")
     data["description"] = get_value("Description")
 
-    # Submission type specific fields
-    submission_type = get_value("Submission Type")
-    if "I have completed testing" in submission_type:
+    # Handle fields based on whether this is a submission or suggestion
+    if is_submission:
         # Fields for tested tools
         data["version-tested"] = get_value("Version Tested")
         data["testing-environment"] = get_value("Testing Environment")
@@ -114,13 +113,17 @@ def main():
     is_suggestion = "tool-suggestion" in labels
     is_approved = "approved" in labels
 
-    # Must have 'approved' AND either 'tool-submission' or 'tool-suggestion'
-    if not is_approved or not (is_submission or is_suggestion):
-        fail("Only approved tool-submission or tool-suggestion issues can be processed.")
+    # Must have 'approved' AND be a tool-submission
+    if not is_approved or not is_submission:
+        fail("Only approved tool-submission issues can be processed.")
+
+    # Tool suggestions are not processed yet
+    if is_suggestion:
+        fail("Tool suggestions cannot be processed yet as the feature is not implemented.")
 
     issue_body = event_data["issue"]["body"]
     issue_user = event_data["issue"]["user"]["login"]
-    tool_data = parse_tool_body(issue_body, is_edit=False, username=issue_user)
+    tool_data = parse_tool_body(issue_body, is_edit=False, username=issue_user, is_submission=True)
 
     # Load tools list
     with open(".github/scripts/tools.json", "r") as f:
@@ -132,13 +135,8 @@ def main():
         existing_tool = next((t for t in tools if t.get("tool-url") == tool_data["tool-url"]), None)
 
     if existing_tool:
-        if is_submission:
-            fail("This tool already exists. Submit an edit instead.")
-        existing_tool.update(tool_data)
-        set_output("commit_message", "updated tool: " + get_commit_text(existing_tool))
+        fail("This tool already exists. Submit an edit instead.")
     else:
-        if is_suggestion and "tool-url" in tool_data:
-            fail("This tool was not found. Make sure the tool URL matches.")
         tool_data["date_submitted"] = int(datetime.now().timestamp())
         tools.append(tool_data)
         set_output("commit_message", "added tool: " + get_commit_text(tool_data))
