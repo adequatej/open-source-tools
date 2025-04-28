@@ -129,7 +129,7 @@ body:
       required: true
 
   - type: textarea
-    id: documentation-link
+    id: testing-documentation
     attributes:
       label: Testing Documentation
       description: Link to your completed testing template (Google Doc, Markdown file, etc.)

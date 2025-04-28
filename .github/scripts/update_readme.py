@@ -48,14 +48,17 @@ def update_readme():
         "|----------|-----------|-------------|---------|------------|-----------------|---------------|-------|\n"
     ]
     
-    for tool in tools:
+    # Only include tools that have been tested and approved
+    evaluated_tools = [tool for tool in tools if "version_tested" in tool]
+    
+    for tool in evaluated_tools:
         tool_name = tool.get("tool_name", "Unknown Tool")
         tool_url = tool.get("tool_url", "#")
         category = tool.get("category", "Unknown Category")
         description = tool.get("description", "No description available.")
-        status = tool.get("status", "N/A")  # Assuming the tool is active upon approval
-        deployment = ", ".join(tool.get("deployment", []))
-        technical_level = tool.get("technical-level", "Unknown Technical Level") # Default level, can be modified based on tool's complexity
+        status = tool.get("status", "Active")  # Default to Active for evaluated tools
+        deployment = ", ".join(tool.get("deployment-type", []))  # Join array into comma-separated string
+        technical_level = tool.get("technical-level", "Unknown Technical Level")
         overall_rating = tool.get("overall-rating", "N/A")
         documentation_url = f"docs/tools/{category.lower().replace(' ', '-')}/{tool_name.replace(' ', '-')}.md"
 
@@ -66,15 +69,30 @@ def update_readme():
         # Ensure the directory exists
         os.makedirs(doc_dir, exist_ok=True)
 
+        # Create or update documentation file with testing information
         if not os.path.exists(doc_file):
             with open(doc_file, "w") as df:
                 df.write(f"# {tool_name}\n\n")
-                df.write(tool.get("testing-documentation", "Documentation coming soon.") + "\n")
+                df.write(f"## Testing Information\n")
+                df.write(f"- Version Tested: {tool.get('version-tested', 'N/A')}\n")
+                df.write(f"- Testing Environment: {tool.get('testing-environment', 'N/A')}\n")
+                df.write(f"- Testing Documentation: {tool.get('testing-documentation', 'N/A')}\n")
+                df.write(f"- Evaluation Checklist: {', '.join(tool.get('evaluation-checklist', []))}\n")
+                df.write(f"\n## Additional Notes\n{tool.get('additional-notes', 'No additional notes.')}\n")
         else:
             with open(doc_file, "w") as df:
                 df.write(f"# {tool_name}\n\n")
-                df.write(tool.get("testing-documentation", "Documentation coming soon.") + "\n")
+                df.write(f"## Testing Information\n")
+                df.write(f"- Version Tested: {tool.get('version-tested', 'N/A')}\n")
+                df.write(f"- Testing Environment: {tool.get('testing-environment', 'N/A')}\n")
+                df.write(f"- Testing Documentation: {tool.get('testing-documentation', 'N/A')}\n")
+                df.write(f"- Evaluation Checklist: {', '.join(tool.get('evaluation-checklist', []))}\n")
+                df.write(f"\n## Additional Notes\n{tool.get('additional-notes', 'No additional notes.')}\n")
 
+        # Ensure all fields are properly formatted for the table
+        description = description.replace("|", "\\|")  # Escape pipe characters
+        deployment = deployment.replace("|", "\\|")
+        technical_level = technical_level.replace("|", "\\|")
 
         tools_section.append(f"| [{tool_name}]({tool_url}) | {category} | {description} | {status} | {deployment} | {technical_level} | [Details]({documentation_url}) | {overall_rating} |\n")
 

@@ -41,35 +41,37 @@ def parse_tool_body(body, is_edit, username):
         return "\n".join(sections.get(key.lower(), [])).strip()
 
     # Basic tool information
-    data["tool_name"] = get_value("Tool Name")
-    data["tool_url"] = add_https_to_url(get_value("Tool URL"))
+    data["tool-name"] = get_value("Tool Name")
+    data["tool-url"] = add_https_to_url(get_value("Tool URL"))
     data["category"] = get_value("Category")
     data["description"] = get_value("Description")
 
     # Submission type specific fields
     submission_type = get_value("Submission Type")
     if "I have completed testing" in submission_type:
-        data["version_tested"] = get_value("Version Tested")
-        data["testing_environment"] = get_value("Testing Environment")
-        data["testing_documentation"] = get_value("Testing Documentation")
-        data["evaluation_checklist"] = [
+        # Fields for tested tools
+        data["version-tested"] = get_value("Version Tested")
+        data["testing-environment"] = get_value("Testing Environment")
+        data["testing-documentation"] = get_value("Testing Documentation")
+        data["evaluation-checklist"] = [
             re.sub(r"^- \[.\] ?", "", item).strip()
             for item in checklist if "[x]" in item.lower()
         ]
-        # Add fields for evaluated tools list
+        # Fields for evaluated tools list
         data["status"] = "Active"  # All approved tools are active
-        data["deployment"] = get_value("Deployment Type").split(", ")  # Convert comma-separated list to array
-        data["technical_level"] = get_value("Technical Level")
-        data["overall_rating"] = get_value("Overall Rating")
+        data["deployment-type"] = [d.strip() for d in get_value("Deployment Type").split(",")]
+        data["technical-level"] = get_value("Technical Level")
+        data["overall-rating"] = get_value("Overall Rating")
     else:
-        data["why_valuable"] = get_value("Why is this tool valuable?")
-        data["similar_tools"] = get_value("Similar Tools")
-        data["known_limitations"] = get_value("Known Limitations")
-        data["existing_documentation"] = get_value("Existing Documentation")
-        data["interest_in_testing"] = get_value("Interest in Testing")
+        # Fields for suggested tools
+        data["why-valuable"] = get_value("Why is this tool valuable?")
+        data["similar-tools"] = get_value("Similar Tools")
+        data["known-limitations"] = get_value("Known Limitations")
+        data["existing-documentation"] = get_value("Existing Documentation")
+        data["interest-in-testing"] = get_value("Interest in Testing")
 
     # Common fields
-    data["additional_notes"] = get_value("Additional Notes")
+    data["additional-notes"] = get_value("Additional Notes")
 
     # Guess email
     last_lines = body.strip().splitlines()[-5:]
@@ -86,7 +88,7 @@ def parse_tool_body(body, is_edit, username):
 
 
 def get_commit_text(tool):
-    return f"{tool['tool_name']} ({tool['category']})"
+    return f"{tool['tool-name']} ({tool['category']})"
 
 
 def main():
@@ -112,7 +114,7 @@ def main():
     with open(".github/scripts/tools.json", "r") as f:
         tools = json.load(f)
 
-    if existing_tool := next((t for t in tools if t["tool_url"] == tool_data["tool_url"]), None):
+    if existing_tool := next((t for t in tools if t["tool-url"] == tool_data["tool-url"]), None):
         if is_submission:
             util.fail("This tool already exists. Submit an edit instead.")
         existing_tool.update(tool_data)

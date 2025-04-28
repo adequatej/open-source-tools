@@ -63,7 +63,14 @@ jobs:
           branch: main
 
       - name: Auto Close Issue
-        run: gh issue close --comment "Your contribution was accepted. Auto-closing issue" ${{ github.event.issue.number }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "🎉 Your tool submission has been approved and added to our evaluated tools list! The tool has been:
+          1. Added to the tools.json database
+          2. Listed in the README.md
+          3. Documentation has been generated
+          
+          Thank you for your contribution! The issue will now be closed."
+          gh issue close ${{ github.event.issue.number }}
         if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
