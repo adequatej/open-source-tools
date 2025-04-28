@@ -15,7 +15,11 @@ body:
         4. Assessed security implications
         5. Documented installation steps
 
-  # Basic Information
+  - type: markdown
+    attributes:
+      value: |
+        ## Basic Information
+
   - type: input
     id: tool-name
     attributes:
@@ -84,7 +88,11 @@ body:
     validations:
       required: true
 
-  # Core Features & Compatibility
+  - type: markdown
+    attributes:
+      value: |
+        ## Core Features & Compatibility
+
   - type: textarea
     id: core-features
     attributes:
@@ -148,7 +156,11 @@ body:
     validations:
       required: true
 
-  # Security & Privacy
+  - type: markdown
+    attributes:
+      value: |
+        ## Security & Privacy
+
   - type: textarea
     id: security-privacy-features
     attributes:
@@ -179,7 +191,11 @@ body:
     validations:
       required: true
 
-  # Deployment & Technical
+  - type: markdown
+    attributes:
+      value: |
+        ## Deployment & Technical
+
   - type: textarea
     id: deployment-architecture
     attributes:
@@ -212,7 +228,11 @@ body:
     validations:
       required: true
 
-  # Maintenance & Support
+  - type: markdown
+    attributes:
+      value: |
+        ## Maintenance & Support
+
   - type: textarea
     id: maintenance-sustainability
     attributes:
@@ -243,7 +263,11 @@ body:
     validations:
       required: true
 
-  # Performance & Ratings
+  - type: markdown
+    attributes:
+      value: |
+        ## Performance & Ratings
+
   - type: input
     id: operational-functionality-rating
     attributes:
@@ -280,7 +304,11 @@ body:
     validations:
       required: true
 
-  # Documentation & Testing
+  - type: markdown
+    attributes:
+      value: |
+        ## Documentation & Testing
+
   - type: textarea
     id: full-documentation
     attributes:
@@ -317,21 +345,11 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: evaluation-checklist
+  - type: markdown
     attributes:
-      label: Submission Checklist
-      description: Please check all that apply
-      options:
-        - label: I have completed the testing template
-        - label: I have documented all test results
-        - label: I have included performance metrics
-        - label: I have assessed security implications
-        - label: I have documented installation steps
-    validations:
-      required: true
+      value: |
+        ## Additional Information
 
-  # Additional Information
   - type: textarea
     id: limitations-vulnerabilities
     attributes:
@@ -347,3 +365,17 @@ body:
       label: Additional Notes
       description: Any additional information or context about your testing
       placeholder: Additional notes about your testing process or findings... 
+
+  - type: checkboxes
+    id: evaluation-checklist
+    attributes:
+      label: Submission Checklist
+      description: Please check all that apply
+      options:
+        - label: I have completed the testing template
+        - label: I have documented all test results
+        - label: I have included performance metrics
+        - label: I have assessed security implications
+        - label: I have documented installation steps
+    validations:
+      required: true 
