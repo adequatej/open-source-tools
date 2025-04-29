@@ -46,5 +46,5 @@
 - **Limitations and Vulnerabilities**: No mobile version, some websites may break due to strict settings, manual configuration needed for some features
 ## Submission Information
 - **Submitted By**: shawnp221
-- **Submission Date**: 2025-04-15
-- **Last Updated**: 2025-04-15
+- **Submission Date**: 2025-04-16
+- **Last Updated**: 2025-04-16

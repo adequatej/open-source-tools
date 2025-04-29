@@ -101,7 +101,7 @@ def update_readme():
             # Construct documentation path
             doc_dir = f"docs/tools/categories/{category.lower().replace(' ', '-')}"
             doc_file = f"{doc_dir}/{tool_name_safe}.md"
-            documentation_url = f"docs/tools/categories/{category.lower().replace(' ', '-')}/{tool_name_safe}.md"
+            documentation_url = f"categories/{category.lower().replace(' ', '-')}/{tool_name_safe}.md"
 
             # Ensure the directory exists
             os.makedirs(doc_dir, exist_ok=True)
