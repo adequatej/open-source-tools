@@ -8,3 +8,4 @@
 | [LibreWolf](https://librewolf.net/) | Browser | LibreWolf is a privacy-focused fork of Firefox that comes with enhanced security settings and privacy protections enabled by default. | Active | Desktop Application | Intermediate | [Details](categories/browser/librewolf.md) | ⭐⭐⭐⭐⯪ (4.48) | 2024-03-21 |
 | [Bitwarden](https://bitwarden.com/) | Password Management | Bitwarden is an open-source password manager with end-to-end encryption and cross-platform support. | Active | Cloud Service, Self-hosted Option | Beginner | [Details](categories/password-management/bitwarden.md) | ⭐⭐⭐⭐⯪ (4.68) | 2024-03-21 |
 | [url](#) | Messaging | ... | Active | ... | Intermediate | [Details](categories/messaging/url.md) | ⭐⭐⭐⭐⭐ (5.00) | 1-1-10 |
+| [url](#) | Messaging | ... | Active | ... | Intermediate | [Details](categories/messaging/url.md) | ⭐⭐⭐⭐⭐ (5.00) | 1-1-10 |
