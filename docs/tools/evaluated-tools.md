@@ -10,3 +10,4 @@
 | [url](#) | Messaging | ... | Active | ... | Intermediate | [Details](categories/messaging/url.md) | ⭐⭐⭐⭐⭐ (5.00) | 1-1-10 |
 | [url](#) | Messaging | ... | Active | ... | Intermediate | [Details](categories/messaging/url.md) | ⭐⭐⭐⭐⭐ (5.00) | 1-1-10 |
 | [dd](#) | File Transfer | dvvd | Active | vfs | Beginner | [Details](categories/file-transfer/dd.md) | ⭐⭐⭐⭐☆ (4.00) | 2 |
+| [vd](#) | File Transfer | cd | Active | vf | Beginner | [Details](categories/file-transfer/vd.md) | ⭐⭐⭐☆☆ (3.00) | 24 |
