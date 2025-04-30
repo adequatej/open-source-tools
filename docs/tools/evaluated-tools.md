@@ -9,3 +9,4 @@
 | [Bitwarden](https://bitwarden.com/) | Password Management | Bitwarden is an open-source password manager with end-to-end encryption and cross-platform support. | Active | Cloud Service, Self-hosted Option | Beginner | [Details](categories/password-management/bitwarden.md) | ⭐⭐⭐⭐⯪ (4.68) | 2024-03-21 |
 | [url](#) | Messaging | ... | Active | ... | Intermediate | [Details](categories/messaging/url.md) | ⭐⭐⭐⭐⭐ (5.00) | 1-1-10 |
 | [url](#) | Messaging | ... | Active | ... | Intermediate | [Details](categories/messaging/url.md) | ⭐⭐⭐⭐⭐ (5.00) | 1-1-10 |
+| [dd](#) | File Transfer | dvvd | Active | vfs | Beginner | [Details](categories/file-transfer/dd.md) | ⭐⭐⭐⭐☆ (4.00) | 2 |
