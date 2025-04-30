@@ -72,6 +72,7 @@ def update_readme():
     # Create the tools section with link to evaluated tools
     tools_section = [
         "## Evaluated Tools\n\n",
+        "### List of Tools\n"
         "View our evaluated tools in a comprehensive list with detailed ratings and information:\n\n",
         "- [Complete List of Evaluated Tools](docs/tools/evaluated-tools.md)\n\n"
     ]
