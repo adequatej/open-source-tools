@@ -3,48 +3,50 @@
 ## Basic Information
 - **Tool Name**: Tor Browser
 - **Category**: Browser
-- **URL**: https://www.torproject.org/
+- **URL**: N/A
 - **Description**: Tor Browser is a free, privacy-focused web browser that uses the Tor network to encrypt traffic and protect users' anonymity online.
 - **Status**: Active
 
 ## Core Features and Compatibility
-- **Core Features**: Onion Routing, Anonymity, No Tracking by Websites, HTTPS Everywhere, No Browsing History, Cross-Platform Compatibility, Security-Focused, Automatic Updates, Anti-Censorship, Hidden Services, Exit Node Privacy, No Unique Identifiers
-- **Operating Systems**: Windows, Linux, macOS, Android
-- **Offline Functionality**: ❌
-- **Mobile Support**: ⚠️
-- **Languages Supported**: 32 (include Chinese [Simplified & Traditional], Thai, Vietnamese, Korean, Japanese)
+- **Core Features**: Anonymous browsing, Traffic encryption via Tor network, Access to .onion sites, Tracker blocking, Fingerprint resistance, No browsing history stored, HTTPS Everywhere integration, Script blocking (via NoScript), Multi-platform support (Windows, macOS, Linux), Censorship circumvention
+- **Operating Systems**: 
+- **Offline Functionality**: ✅
+- **Mobile Support**: 
+- **Languages Supported**: 32 languages
 - **Technical Level**: Intermediate
 
 ## Security and Privacy
-- **Security Features**: Multi-layer Encryption, MITM Protection, NoScript, IP/DNS Leak Prevention, Traffic Obfuscation, Circuit Switching, Device Fingerprinting Resistance, Tracker and Cookie Isolation, Secure Defaults, Software Sandboxing
+- **Security Features**: 
 - **Data Collection Level**: Minimal
-- **Security and Privacy Rating**: ⭐⭐⭐⭐⯪ (4.80)
+- **Security and Privacy Rating**: N/A
 
 ## Deployment and Technical Details
-- **Deployment Architecture**: Desktop Application
+- **Deployment Architecture**: A service with a local client that’s hosted by a third party - You install a client on your device, but it connects to and depends on a remote server (Tor Browser is a software that runs locally on a computer but connects to the Tor network to surf the web.)
 - **License**: Mozilla Public License
-- **Cost**: Fully Free
+- **Cost**: 
 
 ## Maintenance and Support
-- **Maintenance Status**: Monthly updates and a public status page. Funded by ~$7 million, with 28.5% from individual donors. Sponsored by organizations like Open Technology Fund and Fastly.
+- **Maintenance Status**: 
 - **Community Support**: ✅
-- **Maintenance and Sustainability Rating**: ⭐⭐⭐⭐⯪ (4.50)
+- **Maintenance and Sustainability Rating**: N/A
 
 ## Performance and Ratings
-- **Operational Functionality**: ⭐⭐⭐⭐☆ (4.20)
-- **Usability**: ⭐⭐⭐⭐☆ (4.00)
-- **Effectiveness and Reliability**: ⭐⭐⭐⭐⯪ (4.30)
+- **Operational Functionality**: ⭐⭐⭐⭐⭐ (5.00)
+- **Usability**: ⭐⭐⭐⭐⯪ (4.30)
+- **Effectiveness and Reliability**: N/A
 - **Overall Rating**: ⭐⭐⭐⭐⯪ (4.51)
 
 ## Documentation & Testing
-- **Full Documentation**: [Tor Browser Documentation](https://tb-manual.torproject.org/)
-- **Version Tested**: 13.0.13
-- **Date Tested**: 2024-03-15
-- **Testing Environment**: Windows 11, macOS 14.2, Ubuntu 22.04
+- **Full Documentation**: [Tor Browser Documentation](https://github.com/user-attachments/files/20002697/Tor.Analysis.pdf)
+- **Version Tested**: 14.5a6
+- **Date Tested**: 2025-04-02
+- **Testing Environment**: Dell XPS 15, Windows, 4G
 
 ## Additional Information
-- **Limitations and Vulnerabilities**: Exit node vulnerabilities, potential for correlation attacks, slower browsing speeds, some sites block Tor traffic
+- **Limitations and Vulnerabilities**: 
+- **Additional Notes**: _No response_
+
 ## Submission Information
 - **Submitted By**: shawnp221
-- **Submission Date**: 2025-04-15
-- **Last Updated**: 2025-04-15
+- **Submission Date**: 2025-05-01
+- **Last Updated**: 2025-05-01

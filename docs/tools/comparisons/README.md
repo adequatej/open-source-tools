@@ -13,6 +13,3 @@ Our comparison pages help you make informed decisions by comparing tools within 
 ## Available Categories
 
 - [Browser](browser.md)
-- [Password Management](password-management.md)
-- [Messaging](messaging.md)
-- [File Transfer](file-transfer.md)
