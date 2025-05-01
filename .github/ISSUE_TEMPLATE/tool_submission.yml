@@ -9,7 +9,7 @@ body:
         Thanks for submitting a tool with test results! This template is for submitting tools that you have thoroughly tested. If you haven't tested the tool yet, please use the "Tool Suggestion" template instead.
 
         Please ensure you have:
-        1. Completed the [Testing Template](docs/technical/assessment/TOOL_TEMPLATE.md)
+        1. Completed the [Testing Template](blob/main/docs/technical/assessment/TOOL_TEMPLATE.md)
         2. Documented all test results
         3. Included performance metrics
         4. Assessed security implications
