@@ -36,6 +36,7 @@ def parse_tool_body(body, is_edit, username, is_submission):
             sections[current_section] = []
         elif current_section:
             sections[current_section].append(line)
+        print(line)
 
     data = {
         "id": str(uuid.uuid4()),
@@ -44,6 +45,7 @@ def parse_tool_body(body, is_edit, username, is_submission):
     }
 
     def get_value(key):
+        print(key)
         # First try to get by ID
         if key in sections:
             return "\n".join(sections[key]).strip()
