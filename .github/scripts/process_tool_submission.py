@@ -46,7 +46,7 @@ def parse_tool_body(body, is_edit, username, is_submission):
 
     def get_value(key):
         print(key)
-        lower_sections = {k.lower(): v for k, v in sections.items()}
+        lower_sections = {k.lower().replace("/", " ").replace("-", " "): v for k, v in sections.items()}
         key = key.lower()
     
         if key in lower_sections:
