@@ -113,5 +113,5 @@ This repository and its contents are licensed under the MIT License - see the [L
 ---
 
 <div align="center">
-Made with ❤️ by WPI students and the OCF community
+Made with ❤️ by WPI students and the OCF community.
 </div>
