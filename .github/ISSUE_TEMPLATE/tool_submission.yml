@@ -14,6 +14,7 @@ body:
         3. Included performance metrics
         4. Assessed security implications
         5. Documented installation steps
+        6. To avoid breaking data entries, please use continuous lines and structure the text more cohesively.
 
   - type: markdown
     attributes:
