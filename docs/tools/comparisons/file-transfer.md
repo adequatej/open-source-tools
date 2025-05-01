@@ -4,39 +4,23 @@ Quick comparison of key features and ratings:
 
 | Tool | Overall Rating | Cost | Technical Level | Key Features |
 |------|----------------|------|-----------------|--------------|
-| [hhju](#) | ⭐⭐⭐⯪☆ (3.40) |  | Beginner | cd |
-| [hhju](#) | ⭐⭐⭐⯪☆ (3.40) |  | Beginner | cd |
-| [hhju](#) | ⭐⭐⭐⯪☆ (3.40) |  | Beginner | cd |
-| [hhju](#) | ⭐⭐⭐⯪☆ (3.40) |  | Beginner | cd |
-| [ds](#) | ⭐⭐⭐⭐☆ (4.00) | Fully Free | Beginner | cd |
-| [ds](https://www.example.com) | ⭐⭐⭐⭐☆ (4.00) | Fully Free | Beginner | cd |
+| [Magic Wormhole](https://github.com/magic-wormhole/magic-wormhole) | ⭐⭐⭐⭐☆ (4.15) | Fully Free | Intermediate | Secure File Transfer, End-to-End Encryption, Human-Friendly One-Time Codes |
 
 ## Platform Support
 | Tool | Operating Systems | Mobile Support | Offline Use | Languages | Usability Rating |
 |------|------------------|----------------|--------------|-----------|------------------|
-| [hhju](#) |  |  | ✅ | dc | ⭐⭐⭐⭐☆ (4.00) |
-| [hhju](#) |  |  | ✅ | dc | ⭐⭐⭐⭐☆ (4.00) |
-| [hhju](#) |  |  | ✅ | dc | ⭐⭐⭐⭐☆ (4.00) |
-| [hhju](#) |  |  | ✅ | dc | ⭐⭐⭐⭐☆ (4.00) |
-| [ds](#) |  |  | ✅ | cdaasc | ⭐⭐⭐⭐☆ (4.00) |
-| [ds](https://www.example.com) | dca |  | ✅ | cdaasc | ⭐⭐⭐⭐☆ (4.00) |
+| [Magic Wormhole](https://github.com/magic-wormhole/magic-wormhole) | MacOS, Linux, Windows | ❌ | ❌ | English | ⭐⭐⭐⭐⯪ (4.30) |
 
 ## Security & Privacy
 | Tool | Security Features | Data Collection | License | Community Support | Security Rating |
 |------|-------------------|-----------------|----------|------------------|----------------|
-| [hhju](#) |  | No Data Collection | cdsc | ✅ | N/A |
-| [hhju](#) |  | No Data Collection | cdsc | ✅ | N/A |
-| [hhju](#) |  | No Data Collection | cdsc | ✅ | N/A |
-| [hhju](#) |  | No Data Collection | cdsc | ✅ | N/A |
-| [ds](#) |  | No Data Collection | mie | ✅ | N/A |
-| [ds](https://www.example.com) |  | No Data Collection | mie | ✅ | N/A |
+| [Magic Wormhole](https://github.com/magic-wormhole/magic-wormhole) | End-to-End Encryption, One-Time Passwords (OTPs) for Authentication, Public/Private Key Pair Encryption, Strong Cryptography (RSA & X25519), Protection Against Man-in-the-Middle (MITM) Attacks, Human-Friendly Verification Codes, Secure Key Exchange, Default Use of Secure Communication Protocols (TLS). | Minimal | GNU AGPL V3 | ✅ | ⭐⭐⭐⭐⯪ (4.60) |
 
 ## Maintenance & Deployment
 | Tool | Deployment Type | Maintenance Status | Last Tested | Maintenance Rating |
 |------|----------------|-------------------|-------------|-------------------|
-| [hhju](#) | cds |  | cd | N/A |
-| [hhju](#) | cds |  | cd | N/A |
-| [hhju](#) | cds |  | cd | N/A |
-| [hhju](#) | cds |  | cd | N/A |
-| [ds](#) | sd | vsv | 2024 | ⭐⭐⭐☆☆ (3.00) |
-| [ds](https://www.example.com) | sd | vsv | 2024 | ⭐⭐⭐☆☆ (3.00) |
+| [Magic Wormhole](https://github.com/magic-wormhole/magic-wormhole) | A service with a local client that’s hosted by a third party - You install a client on your device, but it connects to and depends on a remote server. | Updated at least once a month.
+The development team is responsive to good changes.
+No clear government funding.
+Appears to be done by an individual , which may support neutrality.
+Overall is financially stable. | 2025-04-02 | ⭐⭐⭐☆☆ (3.00) |
