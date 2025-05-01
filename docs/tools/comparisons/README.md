@@ -13,3 +13,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 ## Available Categories
 
 - [Browser](browser.md)
+- [File Transfer](file-transfer.md)
