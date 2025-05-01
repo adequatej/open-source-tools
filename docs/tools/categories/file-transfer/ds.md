@@ -3,13 +3,13 @@
 ## Basic Information
 - **Tool Name**: ds
 - **Category**: File Transfer
-- **URL**: N/A
+- **URL**: https://www.example.com
 - **Description**: vsd
 - **Status**: Active
 
 ## Core Features and Compatibility
 - **Core Features**: cd
-- **Operating Systems**: 
+- **Operating Systems**: dca
 - **Offline Functionality**: ✅
 - **Mobile Support**: 
 - **Languages Supported**: cdaasc

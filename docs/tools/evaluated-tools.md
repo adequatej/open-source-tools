@@ -11,3 +11,4 @@
 | [hhju](#) | File Transfer | dc | Active | cds | Beginner | [Details](categories/file-transfer/hhju.md) | ⭐⭐⭐⯪☆ (3.40) | cd |
 | [hhju](#) | File Transfer | dc | Active | cds | Beginner | [Details](categories/file-transfer/hhju.md) | ⭐⭐⭐⯪☆ (3.40) | cd |
 | [ds](#) | File Transfer | vsd | Active | sd | Beginner | [Details](categories/file-transfer/ds.md) | ⭐⭐⭐⭐☆ (4.00) | 2024 |
+| [ds](https://www.example.com) | File Transfer | vsd | Active | sd | Beginner | [Details](categories/file-transfer/ds.md) | ⭐⭐⭐⭐☆ (4.00) | 2024 |
