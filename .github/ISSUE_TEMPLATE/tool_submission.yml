@@ -313,8 +313,8 @@ body:
     id: full-documentation
     attributes:
       label: Full Documentation
-      description: Link to or provide the full documentation for this tool
-      placeholder: Detailed documentation about the tool...
+      description: Please provide only link/file to the full documentation for this tool
+      placeholder: Ex. "https://github.com/user-attachments/files/20002594/example.pdf"
     validations:
       required: true
 
