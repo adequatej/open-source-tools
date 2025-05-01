@@ -27,6 +27,7 @@ def fail(message):
 def parse_tool_body(body, is_edit, username, is_submission):
     sections = {}
     current_section = None
+    print(body)
 
     for line in body.splitlines():
         line = line.strip()
