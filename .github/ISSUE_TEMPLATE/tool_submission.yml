@@ -105,7 +105,7 @@ body:
   - type: textarea
     id: os-compatibility
     attributes:
-      label: OS Compatibility
+      label: Os Compatibility
       description: List all supported operating systems (comma-separated)
       placeholder: e.g., Windows, Linux, macOS, Android
     validations:
