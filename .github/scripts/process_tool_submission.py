@@ -46,12 +46,16 @@ def parse_tool_body(body, is_edit, username, is_submission):
 
     def get_value(key):
         print(key)
-        # First try to get by ID
-        if key in sections:
-            return "\n".join(sections[key]).strip()
+        lower_sections = {k.lower(): v for k, v in sections.items()}
+        key = key.lower()
+    
+        if key in lower_sections:
+            return "\n".join(lower_sections[key]).strip()
+        
         # Then try by label if ID not found
-        label_key = key.replace("-", " ").title()
-        return "\n".join(sections.get(label_key, [])).strip()
+        label_key = key.replace("-", " ").lower()
+        return "\n".join(lower_sections.get(label_key, [])).strip()
+
 
     # Basic Information
     data["tool-name"] = get_value("tool-name")
