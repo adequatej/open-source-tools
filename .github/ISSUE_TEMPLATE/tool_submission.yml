@@ -217,7 +217,7 @@ body:
   - type: dropdown
     id: cost
     attributes:
-      label: Cost Structure
+      label: Cost
       description: What is the cost structure?
       options:
         - "Fully Free"
