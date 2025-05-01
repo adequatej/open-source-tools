@@ -1,4 +1,4 @@
-# Contributing to OCF x WPI Open Source Tools
+# Contributing to Open Source Tools
 
 Thank you for your interest in contributing to our open source tools collection! This document provides guidelines and instructions for contributing.
 
