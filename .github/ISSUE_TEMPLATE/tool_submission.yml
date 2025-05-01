@@ -126,7 +126,7 @@ body:
   - type: dropdown
     id: mobile-friendly
     attributes:
-      label: Mobile Support
+      label: Mobile Friendly
       description: Is the tool mobile-friendly?
       options:
         - "Yes"
@@ -164,7 +164,7 @@ body:
   - type: textarea
     id: security-privacy-features
     attributes:
-      label: Security and Privacy Features
+      label: Security/Privacy Features
       description: List key security and privacy features (comma-separated)
       placeholder: e.g., End-to-end Encryption, 2FA, Data Encryption at Rest
     validations:
@@ -185,7 +185,7 @@ body:
   - type: input
     id: security-privacy-rating
     attributes:
-      label: Security and Privacy Rating
+      label: Security/Privacy Rating
       description: Rate the security and privacy features from 1-5
       placeholder: e.g., 4.5
     validations:
@@ -289,7 +289,7 @@ body:
   - type: input
     id: effectiveness-reliability-rating
     attributes:
-      label: Effectiveness and Reliability Rating
+      label: Effectiveness/Reliability Rating
       description: Rate the effectiveness and reliability from 1-5
       placeholder: e.g., 4.5
     validations:
@@ -353,7 +353,7 @@ body:
   - type: textarea
     id: limitations-vulnerabilities
     attributes:
-      label: Limitations and Vulnerabilities
+      label: Limitations/Vulnerabilities
       description: Describe any known limitations or vulnerabilities
       placeholder: e.g., No offline support, requires phone number, limited file size
     validations:
