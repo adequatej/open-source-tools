@@ -236,7 +236,7 @@ body:
   - type: textarea
     id: maintenance-sustainability
     attributes:
-      label: Maintenance and Sustainability
+      label: Maintenance Sustainability
       description: Describe the project's maintenance status and funding
       placeholder: e.g., Monthly updates, funded by donations, active development team
     validations:
@@ -257,7 +257,7 @@ body:
   - type: input
     id: maintenance-sustainability-rating
     attributes:
-      label: Maintenance and Sustainability Rating
+      label: Maintenance Sustainability Rating
       description: Rate the maintenance and sustainability from 1-5
       placeholder: e.g., 4.5
     validations:
