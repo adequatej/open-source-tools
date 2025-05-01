@@ -14,7 +14,7 @@ body:
         3. Included performance metrics
         4. Assessed security implications
         5. Documented installation steps
-        6. To avoid breaking data entries, please use continuous lines and structure the text more cohesively.
+        6. To avoid breaking data entries, please use continuous lines without any line breaks (\n) and ensure the text is structured cohesively.
 
   - type: markdown
     attributes:
