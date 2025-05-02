@@ -128,7 +128,7 @@
         "deployment-architecture": "A service that is hosted by a third party but can also be self-hosted.",
         "license": "MIT License",
         "cost": "Fully Free",
-        "maintenance-sustainability": "Frequent Updates.\nPretty responsive with the latest commits occurring at least a couple times a month.\nFunded by Zack Shollz (Software Engineer + Scientist & owner of project).\nNot government backed which may impact the level of security (vulnerabilities more common due to lower resources.\nThere are about 20 monthly sponsors.",
+        "maintenance-sustainability": "Frequent Updates. Pretty responsive with the latest commits occurring at least a couple times a month. Funded by Zack Shollz (Software Engineer + Scientist & owner of project). Not government backed which may impact the level of security (vulnerabilities more common due to lower resources. There are about 20 monthly sponsors.",
         "community-support": "Limited",
         "maintenance-sustainability-rating": "3.3",
         "operational-functionality-rating": "2.3",
