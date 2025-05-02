@@ -14,3 +14,14 @@ Our comparison pages help you make informed decisions by comparing tools within 
 
 - [Browser](browser.md)
 - [File Transfer](file-transfer.md)
+- [Messaging](messaging.md)
+- [Password Management](password-management.md)
+- [PasteBins](paste-bins.md)
+- [Office Suites](office-suites.md)
+- [Search Engines](search-engines.md)
+- [Desktop/PC](desktop.md)
+- [Encryption](encryption.md)
+- [Data & Metadata Redaction](data-redaction.md)
+
+
+
