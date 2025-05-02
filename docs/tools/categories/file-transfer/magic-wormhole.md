@@ -26,11 +26,7 @@
 - **Cost**: Fully Free
 
 ## Maintenance and Support
-- **Maintenance Status**: Updated at least once a month.
-The development team is responsive to good changes.
-No clear government funding.
-Appears to be done by an individual , which may support neutrality.
-Overall is financially stable.
+- **Maintenance Status**: Updated at least once a month. The development team is responsive to good changes. No clear government funding. Appears to be done by an individual , which may support neutrality. Overall is financially stable.
 - **Community Support**: ✅
 - **Maintenance and Sustainability Rating**: ⭐⭐⭐☆☆ (3.00)
 

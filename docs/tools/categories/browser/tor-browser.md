@@ -26,16 +26,7 @@
 - **Cost**: Fully Free
 
 ## Maintenance and Support
-- **Maintenance Status**: Frequent updates ~ every month there is an update.
-Status page that shows the current status of various sites of the TorProject, includes an incident history.
-Around $7 million in disclosed funding.
-Around 28.5% of the revenue was derived from individual donors, reflecting a growing base of grassroots support.
-Sponsorships:
-Open Technology Fund
-Sida (Swedish International Development Cooperation Agency)
-Craig Newmark Philanthropies
-Ford Foundation
-Fastly (provides in-kind support for hosting Tor update
+- **Maintenance Status**: Frequent updates ~ every month there is an update. Status page that shows the current status of various sites of the TorProject, includes an incident history. Around $7 million in disclosed funding. Around 28.5% of the revenue was derived from individual donors, reflecting a growing base of grassroots support. Sponsorships: Open Technology Fund, Sida (Swedish International Development Cooperation Agency), Craig Newmark Philanthropies, Ford Foundation, Fastly (provides in-kind support for hosting Tor update
 - **Community Support**: ✅
 - **Maintenance and Sustainability Rating**: ⭐⭐⭐⭐⭐ (5.00)
 
