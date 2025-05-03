@@ -14,7 +14,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 
 - [Browser](browser.md)
 - [File Transfer](file-transfer.md)
-
-
-
-
+- [Password Management](password-management.md)

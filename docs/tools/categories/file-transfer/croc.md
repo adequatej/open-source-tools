@@ -26,11 +26,7 @@
 - **Cost**: Fully Free
 
 ## Maintenance and Support
-- **Maintenance Status**: Frequent Updates.
-Pretty responsive with the latest commits occurring at least a couple times a month.
-Funded by Zack Shollz (Software Engineer + Scientist & owner of project).
-Not government backed which may impact the level of security (vulnerabilities more common due to lower resources.
-There are about 20 monthly sponsors.
+- **Maintenance Status**: Frequent Updates. Pretty responsive with the latest commits occurring at least a couple times a month. Funded by Zack Shollz (Software Engineer + Scientist & owner of project). Not government backed which may impact the level of security (vulnerabilities more common due to lower resources. There are about 20 monthly sponsors.
 - **Community Support**: ⚠️
 - **Maintenance and Sustainability Rating**: ⭐⭐⭐⯪☆ (3.30)
 
