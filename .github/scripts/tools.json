@@ -308,7 +308,7 @@
         "deployment-architecture": "A service with a local client that\u2019s hosted by a third party - You install a client on your device, but it connects to and depends on a remote server (e.g., install app (client), but servers handle message relaying, etc.).",
         "license": "GNU Affero General Public License v3.0",
         "cost": "Fully Free",
-        "maintenance-sustainability": "Publicly available update logs in appstore. Development team responds within anywhere from an hour to a day\nFunding and Sponsorship include donations from individuals and over $22,000,000 dollars in 2023.",
+        "maintenance-sustainability": "Publicly available update logs in appstore. Development team responds within anywhere from an hour to a day. Funding and Sponsorship include donations from individuals and over $22,000,000 dollars in 2023.",
         "community-support": "Yes",
         "maintenance-sustainability-rating": "5.0",
         "operational-functionality-rating": "4.7",
