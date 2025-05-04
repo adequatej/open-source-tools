@@ -8,7 +8,7 @@
 - **Status**: Active
 
 ## Core Features and Compatibility
-- **Core Features**: Client-Side EncryptionPasswor, Zero-Knowledge Architecture, d Protection, Expiration Settings (including "Burn After Reading"), Syntax Highlighting, Markdown Support, File Uploads with Previews, QR Code Generation for Sharing, Language Selection, Customizable Templates and Themes, Self-Hosting Capability, Open-Source Codebase.​
+- **Core Features**: Client-Side Encryption, Zero-Knowledge Architecture, Password Protection
 - **Operating Systems**: Windows, macOS, Linux, FreeBSD, OpenBSD, Android, iOS
 - **Offline Functionality**: ❌
 - **Mobile Support**: ✅
@@ -16,7 +16,7 @@
 - **Technical Level**: Beginner
 
 ## Security and Privacy
-- **Security Features**: Client-Side Encryption (AES-256-GCM), Zero-Knowledge Architecture, Password Protection for Pastes, Configurable Expiration and Burn-After-Reading Options, Self-Hosting Capability, No Account Required, Open-Source Codebase
+- **Security Features**: Client-Side Encryption (AES-256-GCM), Zero-Knowledge Architecture, Password Protection for Pastes, Configurable Expiration Settings and Burn-After-Reading Options, Self-Hosting Capability, No Account Required, Open-Source Codebase
 - **Data Collection Level**: Minimal
 - **Security and Privacy Rating**: ⭐⭐⭐⭐☆ (4.00)
 

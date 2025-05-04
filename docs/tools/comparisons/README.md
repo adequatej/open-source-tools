@@ -16,3 +16,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [File Transfer](file-transfer.md)
 - [Password Management](password-management.md)
 - [PasteBins](pastebins.md)
+- [Email Clients](email-clients.md)

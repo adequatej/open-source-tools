@@ -14,7 +14,7 @@ Quick comparison of key features and ratings:
 ## Security & Privacy
 | Tool | Security Features | Data Collection | License | Community Support | Security Rating |
 |------|-------------------|-----------------|----------|------------------|----------------|
-| [PrivateBin](https://privatebin.info/) | Client-Side Encryption (AES-256-GCM), Zero-Knowledge Architecture, Password Protection for Pastes, Configurable Expiration and Burn-After-Reading Options, Self-Hosting Capability, No Account Required, Open-Source Codebase | Minimal | Zlib/libpng | ✅ | ⭐⭐⭐⭐☆ (4.00) |
+| [PrivateBin](https://privatebin.info/) | Client-Side Encryption (AES-256-GCM), Zero-Knowledge Architecture, Password Protection for Pastes, Configurable Expiration Settings and Burn-After-Reading Options, Self-Hosting Capability, No Account Required, Open-Source Codebase | Minimal | Zlib/libpng | ✅ | ⭐⭐⭐⭐☆ (4.00) |
 
 ## Maintenance & Deployment
 | Tool | Deployment Type | Maintenance Status | Last Tested | Maintenance Rating |
