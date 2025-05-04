@@ -27,7 +27,6 @@ def fail(message):
 def parse_tool_body(body, is_edit, username, is_submission):
     sections = {}
     current_section = None
-    print(body)
 
     for line in body.splitlines():
         line = line.strip()
@@ -36,7 +35,6 @@ def parse_tool_body(body, is_edit, username, is_submission):
             sections[current_section] = []
         elif current_section:
             sections[current_section].append(line)
-        print(line)
 
     data = {
         "id": str(uuid.uuid4()),
@@ -45,7 +43,6 @@ def parse_tool_body(body, is_edit, username, is_submission):
     }
 
     def get_value(key):
-        print(key)
         lower_sections = {k.lower().replace("/", " ").replace("-", " "): v for k, v in sections.items()}
         key = key.lower()
     
