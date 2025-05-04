@@ -17,3 +17,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [Password Management](password-management.md)
 - [PasteBins](pastebins.md)
 - [Email Clients](email-clients.md)
+- [Encryption](encryption.md)

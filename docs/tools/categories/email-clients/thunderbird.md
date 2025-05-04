@@ -26,8 +26,7 @@
 - **Cost**: Fully Free
 
 ## Maintenance and Support
-- **Maintenance Status**: It is updated regularly with new monthly releases for users who want all available features and bug fixes monthly.
-Bug reports and feature requests are handled through [Bugzilla](https://bugzilla.mozilla.org/) and GitHub. Response times vary but important security issues are prioritized quickly. It is primarily funded by the Mozilla Foundation (a non-profit organization). Sustainable through generous donations and small partnerships. Thunderbird is financially sustainable and has long term development plans.
+- **Maintenance Status**: It is updated regularly with new monthly releases for users who want all available features and bug fixes monthly. Bug reports and feature requests are handled through [Bugzilla](https://bugzilla.mozilla.org/) and GitHub. Response times vary but important security issues are prioritized quickly. It is primarily funded by the Mozilla Foundation (a non-profit organization). Sustainable through generous donations and small partnerships. Thunderbird is financially sustainable and has long term development plans.
 - **Community Support**: ✅
 - **Maintenance and Sustainability Rating**: ⭐⭐⭐⭐⯪ (4.70)
 
