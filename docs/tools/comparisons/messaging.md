@@ -19,5 +19,4 @@ Quick comparison of key features and ratings:
 ## Maintenance & Deployment
 | Tool | Deployment Type | Maintenance Status | Last Tested | Maintenance Rating |
 |------|----------------|-------------------|-------------|-------------------|
-| [Signal](https://signal.org/) | A service with a local client that’s hosted by a third party - You install a client on your device, but it connects to and depends on a remote server (e.g., install app (client), but servers handle message relaying, etc.). | Publicly available update logs in appstore. Development team responds within anywhere from an hour to a day
-Funding and Sponsorship include donations from individuals and over $22,000,000 dollars in 2023. | 2025-03-27 | ⭐⭐⭐⭐⭐ (5.00) |
+| [Signal](https://signal.org/) | A service with a local client that’s hosted by a third party - You install a client on your device, but it connects to and depends on a remote server (e.g., install app (client), but servers handle message relaying, etc.). | Publicly available update logs in appstore. Development team responds within anywhere from an hour to a day. Funding and Sponsorship include donations from individuals and over $22,000,000 dollars in 2023. | 2025-03-27 | ⭐⭐⭐⭐⭐ (5.00) |
