@@ -18,3 +18,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [PasteBins](pastebins.md)
 - [Email Clients](email-clients.md)
 - [Encryption](encryption.md)
+- [Messaging](messaging.md)
