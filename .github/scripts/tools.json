@@ -188,7 +188,7 @@
         "category": "PasteBins",
         "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data.",
         "status": "Active",
-        "core-features": "Client-Side Encryption, Zero-Knowledge Architecture, Password Protection"
+        "core-features": "Client-Side Encryption, Zero-Knowledge Architecture, Password Protection",
         "os-compatibility": "Windows, macOS, Linux, FreeBSD, OpenBSD, Android, iOS",
         "offline-functionality": "No",
         "mobile-friendly": "Yes",
