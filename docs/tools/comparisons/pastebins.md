@@ -4,7 +4,7 @@ Quick comparison of key features and ratings:
 
 | Tool | Overall Rating | Cost | Technical Level | Key Features |
 |------|----------------|------|-----------------|--------------|
-| [PrivateBin](https://privatebin.info/) | ⭐⭐⭐⭐☆ (4.18) | Fully Free | Beginner | Client-Side EncryptionPasswor, Zero-Knowledge Architecture, d Protection |
+| [PrivateBin](https://privatebin.info/) | ⭐⭐⭐⭐☆ (4.18) | Fully Free | Beginner | Client-Side Encryption, Zero-Knowledge Architecture, Password Protection |
 
 ## Platform Support
 | Tool | Operating Systems | Mobile Support | Offline Use | Languages | Usability Rating |
