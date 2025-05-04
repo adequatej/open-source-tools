@@ -26,8 +26,7 @@
 - **Cost**: Fully Free
 
 ## Maintenance and Support
-- **Maintenance Status**: Publicly available update logs in appstore. Development team responds within anywhere from an hour to a day
-Funding and Sponsorship include donations from individuals and over $22,000,000 dollars in 2023.
+- **Maintenance Status**: Publicly available update logs in appstore. Development team responds within anywhere from an hour to a day. Funding and Sponsorship include donations from individuals and over $22,000,000 dollars in 2023.
 - **Community Support**: ✅
 - **Maintenance and Sustainability Rating**: ⭐⭐⭐⭐⭐ (5.00)
 
