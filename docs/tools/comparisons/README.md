@@ -22,3 +22,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [Language Tools](language-tools.md)
 - [Notebooks](notebooks.md)
 - [VPN Services](vpn-services.md)
+- [Data & Metadata Redaction](data-&-metadata-redaction.md)
