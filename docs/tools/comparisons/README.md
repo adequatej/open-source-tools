@@ -21,3 +21,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [Messaging](messaging.md)
 - [Language Tools](language-tools.md)
 - [Notebooks](notebooks.md)
+- [VPN Services](vpn-services.md)
