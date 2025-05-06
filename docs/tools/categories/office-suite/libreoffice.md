@@ -2,7 +2,7 @@
 
 ## Basic Information
 - **Tool Name**: LibreOffice
-- **Category**: OfficeSuite
+- **Category**: Office Suite
 - **URL**: https://www.libreoffice.org/
 - **Description**: An open source office suite designed for document creation, editing and collaboration, providing offline functionality and comprehensive document management capabilities.
 - **Status**: Active

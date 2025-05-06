@@ -2,7 +2,7 @@
 
 ## Basic Information
 - **Tool Name**: Standard Notes
-- **Category**: Note Taking software
+- **Category**: Notebooks
 - **URL**: https://standardnotes.com/
 - **Description**: Free, secure note-taking app with end-to-end encryption and privacy features, offering offline functionality and minimal data collection.
 - **Status**: Active

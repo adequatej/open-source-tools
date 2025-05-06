@@ -24,8 +24,6 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [VPN Services](vpn-services.md)
 - [Data & Metadata Redaction](data-&-metadata-redaction.md)
 - [AI Chat](ai-chat.md)
-- [OfficeSuite](officesuite.md)
 - [Office Suite](office-suite.md)
-- [Note Taking software](note-taking-software.md)
 - [Privacy Search Engine](privacy-search-engine.md)
 - [Ad-Tracker Blocking](ad-tracker-blocking.md)
