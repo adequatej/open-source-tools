@@ -15,7 +15,7 @@ Thank you for your interest in contributing to our open source tools collection!
 ## Types of Contributions
 
 ### 1. Tool Submissions
-- Submit open source tools that align with our mission
+- Submit new open source tools that align with our mission
 - Tools must be well-documented and maintained
 - Must include all required information in the submission template
 
@@ -38,49 +38,30 @@ Thank you for your interest in contributing to our open source tools collection!
 
 ### 1. Initial Submission
 - Create a new issue using the "New Tool Submission" template
-- Provide basic tool information (name, URL, category)
-- Describe deployment method and requirements
-- Explain target users and use cases
+- For existing tools, the label will be changed from 'new-tool' to 'edit-tool'
+- Provide required information:
+  - Tool name, URL, and category
+  - Deployment method and requirements
+  - Target users and use cases
 
-### 2. Initial Review
+### 2. Review Process
+- Issue is automatically labeled with 'new-tool' and 'needs-review'
 - OCF/WPI team reviews the submission
-- Assess if tool meets basic criteria:
-  - Open source
-  - Active maintenance
-  - Clear documentation
-  - Appropriate license
-- Determine if tool warrants full evaluation
+- Community members can provide feedback
+- Tool is assessed against basic criteria
 
-### 3. Evaluation Phase
-- Install and test the tool
-- Document installation process
-- Test with both technical and non-technical users
-- Assess security implications
-- Evaluate accessibility and usability
-- Compare with similar tools
-- Document any issues or limitations
-
-### 4. Documentation Creation
-- Create a new branch: `tools/your-tool-name`
-- Add tool documentation in `docs/tools/$category$/tool-name.md`
-- Include:
-  - Installation guide
-  - Usage instructions
-  - Test results
-  - Security assessment
-  - User feedback
-  - Screenshots/examples
-
-### 5. Final Review & Integration
-- Submit pull request with documentation
-- Team reviews documentation completeness
-- Community feedback period
-- Make requested revisions
-- Tool is added to the list upon approval
+### 3. Automation Process
+When approved:
+- 'approved' label is added and 'needs-review' is removed
+- Automated GitHub Action workflow triggers
+- Tool information is processed and validated
+- Documentation is automatically generated
+- Repository is updated with new tool information
+- Issue is automatically closed upon successful integration
 
 ## Documentation Requirements
 
-Each tool in our repository must include detailed documentation covering:
+Each tool in our repository must include:
 
 ### 1. Overview
 - Tool purpose and features
@@ -123,9 +104,9 @@ Each tool in our repository must include detailed documentation covering:
 - Use case validation
 
 ### 4. Final Approval
-- OCF/WPI team approval
-- Automatic integration
-- README update
+- OCF/WPI team adds 'approved' label
+- Automated integration process begins
+- Changes are committed to the repository
 
 ## Style Guidelines
 
@@ -148,9 +129,10 @@ Each tool in our repository must include detailed documentation covering:
 
 ## Need Help?
 
-If you have questions about contributing, please:
+If you have questions about contributing:
 1. Check existing issues
-2. Create a new issue with the label `question`
-3. Contact the maintainers
+2. Check the workflow run logs (if automation-related)
+3. Create a new issue with the label `question`
+4. Contact the maintainers
 
 Thank you for contributing to making open source tools more accessible and useful for everyone!

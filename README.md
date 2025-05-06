@@ -75,10 +75,10 @@ Our comparison pages help you make informed decisions by comparing tools within 
 We welcome submissions of open source tools that can benefit both technical and non-technical users. The submission process involves:
 
 1. **Initial Submission** - Submit a tool using our issue template
-2. **Evaluation** - Tool is tested for usability, security, and effectiveness
-3. **Documentation** - Comprehensive documentation is created
+2. **Initial Review** - OCF/WPI team reviews if the tool meets basic criteria (open source, active maintenance, documentation)
+3. **Documentation** - Comprehensive documentation is automatically created
 4. **Review** - Community feedback and team review
-5. **Integration** - Tool is added to our curated list
+5. **Integration** - Tool is added to our curated list upon approval
 
 For detailed submission guidelines, templates, and evaluation criteria, please see our [Contributing Guidelines](CONTRIBUTING.md).
 

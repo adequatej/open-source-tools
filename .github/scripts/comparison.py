@@ -10,7 +10,7 @@ def format_star_rating(rating):
         half_star = rating_float - full_stars >= 0.25 and rating_float - full_stars < 0.99
         stars = "⭐" * full_stars
         if half_star:
-            stars += "⯪"  # Optional: fallback to "½" or "☆"
+            stars += "⯪"  
         total_stars = full_stars + (1 if half_star else 0)
         empty_stars = 5 - total_stars
         stars += "☆" * empty_stars
