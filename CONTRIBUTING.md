@@ -124,7 +124,6 @@ Each tool in our repository must include:
 
 ## Additional Resources
 
-- [Tool Assessment Criteria](docs/technical/assessment-criteria.md) - Detailed information about how tools are evaluated
 - [Automation Process](.github/README-scripts.md) - How the automated submission process works
 
 ## Need Help?
