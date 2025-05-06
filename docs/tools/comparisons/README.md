@@ -23,3 +23,4 @@ Our comparison pages help you make informed decisions by comparing tools within 
 - [Notebooks](notebooks.md)
 - [VPN Services](vpn-services.md)
 - [Data & Metadata Redaction](data-&-metadata-redaction.md)
+- [AI Chat](ai-chat.md)
