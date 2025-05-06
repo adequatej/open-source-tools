@@ -37,7 +37,7 @@
 - **Overall Rating**: ⭐⭐⭐⭐⯪ (4.46)
 
 ## Documentation & Testing
-- **Full Documentation**: [Ollama Documentation](docs/user-attachments/files/ollama.pdf)
+- **Full Documentation**: [Ollama Documentation](https://github.com/user-attachments/files/20054085/ollama.pdf)
 - **Version Tested**: 0.6.8
 - **Date Tested**: 2025-05-06
 - **Testing Environment**: Macbook Pro (14 inch, M4 Chip), 10-core CPU, 24 GB Memory, OS: 15.2 Sequoia, Network: Wifi

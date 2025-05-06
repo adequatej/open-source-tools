@@ -495,7 +495,7 @@
         "usability-rating": "3.8",
         "effectiveness-reliability-rating": "4.5",
         "overall-rating": "4.46",
-        "full-documentation": "docs/user-attachments/files/ollama.pdf",
+        "full-documentation": "https://github.com/user-attachments/files/20054085/ollama.pdf",
         "version-tested": "0.6.8",
         "date-tested": "2025-05-06",
         "testing-environment": "Macbook Pro (14 inch, M4 Chip), 10-core CPU, 24 GB Memory, OS: 15.2 Sequoia, Network: Wifi",
