@@ -18,7 +18,7 @@
 ## Security and Privacy
 - **Security Features**: 100% Local Operation, No Data Collection or Transmission, System-Level Security, Offline Model Execution, No Cloud Dependencies, No Account Required, Open Source Codebase, Local Data Processing
 - **Data Collection Level**: No Data Collection
-- **Security and Privacy Rating**: ⭐⭐⭐⭐⯪ (4.80)
+- **Security and Privacy Rating**: ⭐⭐⭐⭐☆ (4.00)
 
 ## Deployment and Technical Details
 - **Deployment Architecture**: A standalone software - Runs entirely locally (e.g., runs on computer and doesn't depend on external server)
@@ -28,13 +28,13 @@
 ## Maintenance and Support
 - **Maintenance Status**: Regular updates with recent version 0.6.8 released on May 3, 2025. Active GitHub repository with engaged community. Development team actively responds to issues and implements community feedback. Community-driven funding model with private backers and open-source contributors. No government funding, maintaining independence.
 - **Community Support**: ✅
-- **Maintenance and Sustainability Rating**: ⭐⭐⭐⭐⯪ (4.50)
+- **Maintenance and Sustainability Rating**: ⭐⭐⭐⭐⯪ (4.70)
 
 ## Performance and Ratings
-- **Operational Functionality**: ⭐⭐⭐⭐⯪ (4.70)
-- **Usability**: ⭐⭐⭐⯪☆ (3.80)
+- **Operational Functionality**: ⭐⭐⭐⯪☆ (3.30)
+- **Usability**: ⭐⭐⭐⯪☆ (3.70)
 - **Effectiveness and Reliability**: ⭐⭐⭐⭐⯪ (4.50)
-- **Overall Rating**: ⭐⭐⭐⭐⯪ (4.46)
+- **Overall Rating**: ⭐⭐⭐⭐☆ (4.05)
 
 ## Documentation & Testing
 - **Full Documentation**: [Ollama Documentation](https://github.com/user-attachments/files/20054085/ollama.pdf)
